@@ -11,22 +11,24 @@
     <title>portfolio</title>
 
     <!-- og -->
-    <meta property="og:title" content="2024 이소연 포트폴리오">
+    <!-- <meta property="og:title" content="2024 이소연 포트폴리오">
     <meta property="og:type" content="website">
     <meta property="og:image" content="">
     <meta property="og:url" content="" >
-    <meta property="og:description" content="신입 웹퍼플리셔·uxui디자이너 이소연의 2024년 포트폴리오입니다.">
+    <meta property="og:description" content="신입 웹퍼플리셔·uxui디자이너 이소연의 2024년 포트폴리오입니다."> -->
 
 
-    <!-- <link rel="stylesheet" href="./asset/style/reset.min.css"> -->
+    <link rel="stylesheet" href="./asset/style/reset.min.css">
     <!-- font -->
+    <link rel="stylesheet" href="./asset/style/fonts.css">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./asset/style/common.css">
 </head>
 
 <body>
-    <header>
-        <div class="logo">portfolio</div>
-        <ul class="global-navigation-bar">
+    <header class="flex-wrapper">
+        <div class="logo"><a href="#">portfolio</a></div>
+        <ul class="global-navigation-bar flex-wrapper">
             <li><a href="#">home</a></li>
             <li><a href="#">project</a></li>
             <li><a href="#">skill</a></li>
@@ -36,31 +38,119 @@
 
     <!-- https://www.rawlab.co/ -->
     <section class="main">
-        <div class="main-maintitle">
-            <p>creative</p>
-            <p>team player .</p>
-            <p>reponsible</p>
+        <div class="main-mainTitle">
+            <h1>creative</h1>
+            <video src="./asset/video/color.mp4" muted autoplay loop></video>
+            <h1>team player .</h1>
+            <h1>reponsible</h1>
+            <video src="./asset/video/wave1.mp4" muted autoplay loop></video>
         </div>
 
-        <div class="main-subtitle">
+        <div class="main-subTitle">
             <span>web publisher</span>
             <span>ux ui designer</span>
 
-            <div class="main-video">
-                <video src="./asset/video/color.mp4" muted autoplay loop></video>
-                <video src="./asset/video/wave1.mp4" muted autoplay loop></video>
-            </div>
         </div>
     </section>
 
     <!-- https://justhappiness.fr/ -->
-     <section class="project"></section>
+     <section class="project">
+
+        <div class="project_wrapper"></div>
+        <h3>application redesign</h3>
+        <h2>railorad crime reporing</h2>
+        <a href="#">View  project</a>
+
+     </section>
 
 
-    <section class="skill"></section>
+    <section class="skill">
+        <h3>Ready for chllange !</h3>
+        <p>간단한 문구가 들어갈 예정 ex. 자신있다~ 이런 인재다~ 열심히 하겠다~ <br>
+            별 하나에 시와 별 하나에 어머니, 어머니, 어머님, 나는 별 하나에 아름다운 말 한 마디씩 </p>
+
+        <ul>
+            <li>
+                <h4>HTML5</h4>
+                <p>웹 접근성을 고려한 시맨틱 마크업 구현
+                    이미지, 오디오, 비디오 등 멀티미디어 요소 삽입
+                    SEO 최적화를 위한 메타 태그 적용
+                    웹 접근성 지침에 따른 페이지 제작</p>
+            </li>
+            <li>
+                <h4>CSS3</h4>
+                <p>ES6+ 문법 이해
+                    미디어 쿼리를 활용한 반응형 디자인 구현, 다양한 디바이스에 대응
+                    transform, transition, animation 속성을 활용한 동적 사용자 경험 제공 
+                    Flex와 Gird를 사용한 레이아웃 구성
+                    의사 클래스와 요소를 활용한 특정 부분의 스타일 적용
+                    CSS 변수를 활용한 유지보수성 향상</p>
+            </li>
+            <li>
+                <h4>JS</h4>
+                <p>동적인 웹 페이지 생성 및 DOM 조작</p>
+            </li>
+            <li>
+                <h4>Design</h4>
+                <p>Figma를 사용한 프로토타입 제작 
+                    Lottie를 활용한 애니메이션 구현
+                    Photoshop을 이용한 이미지 편집
+                    Illustrator를 사용한 벡터 그래픽 작업 
+                    Indesign을 활용한 편집 디자인
+                    Premiere pro와 Davinci resolve를 사용한 기본적인 영상편집</p>
+            </li>
+            <li>
+                <h4>other</h4>
+                <p>ITQ 한글, 파워포인트, 엑셀 MASTER 자격증
+                    운전면허 2종 보통
+                    퍼스널컨설턴트 1급</p>
+            </li>
+
+        </ul>
+    </section>
+
+    <section class="contact">
+        <div class="contact_Wrapper">
+        <h3>협업할 동료가 필요하신가요?</h3>
+        <p>언제든지 연락주세요! </p>
+        <p>기쁜 마음으로 응답하겠습니다 :) </p>
+    </div>
+
+    <ul class="" >
+        <li>
+            <span>이메일</span>
+            <span>ye8n@gmail.com</span>
+        </li>
+        <li>
+            <span>카카오톡</span>
+            <span>yeon8300</span>
+        </li>
+    </ul>
+    </section>
 
     <footer>
         <!-- foot-navigation -->
+    
+        <ul class="address">
+            <li>Lee, so yeon</li>
+            <li>1999.08.30</li>
+            <li>Osan-si, Gyeonggi-do</li>
+        </ul>
+
+        <ul class="copyright">
+            <li>© 2024 Lee, so yeon - All rights reserved.</li>
+            <li>본 포트폴리오는 개인 목적으로 제작되었습니다</li>
+        </ul>
+
+        <ul class="studyLog">
+            <li>GITHUB 학습 일지</li>
+            <li>포트폴리오 제작 일지</li>
+            <li> <img src="./asset/image/github-logo.png" alt="github"></li>
+            <li><img src="./asset/image/notion-logo.png" alt="notion"></li>
+           
+            
+
+        </ul>
     </footer>
 
     <!--  -->

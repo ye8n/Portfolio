@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/* Goia Display - Bold */
+@font-face {
+	font-family: 'Goia Display';
+	src: url('../font/Goia_Display_Bold.woff2');
+}
+
+/* KoPub Batang - light */
+@font-face {
+	font-family: 'KoPub Batang';
+	src: url('../font/KoPub\ Batang\ Light.woff2');
+	font-weight:300;
+}
+/* KoPub Batang - Regular */
+@font-face {
+	font-family: 'KoPub Batang';
+	src: url('../font/KoPub\ Batang\ Bold.woff2');
+	font-weight:400;
+}
+
+/* Gowun Dodum - Regular	 */
+@font-face {
+	font-family: 'Gowun Dodum';
+	src: url('../font/GowunDodum-Regular.woff2');
+	font-weight:400;
+}
+
+
+/* pretendard - Regular */
+@font-face {
+	font-family: 'Pretendard';
+	src: url('../font/Pretendard-Regular.woff2') format('woff2');
+	font-weight:400;
+}
+
+/* pretendard - Bold */
+@font-face {
+	font-family: 'Pretendard';
+	src: url('../font/Pretendard-Bold.woff2') format('woff2');
+	font-weight:600;
+}
+

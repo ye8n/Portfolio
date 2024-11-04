@@ -1,1 +1,73 @@
 @charset "utf-8";
+
+
+/****** home ******/
+header{
+  justify-content: space-between;
+  margin-right: 2.375rem;
+
+}
+header .logo a{
+  background: url(./asset/image/github-logo.png) no-repeat 0 50% / contain;
+  text-indent: -9999px;
+  display: block;
+  width: 30px;
+  aspect-ratio: 1/1;
+  margin: 0.5rem 1rem;
+}
+header .global-navigation-bar li{
+  margin: 2.625rem;
+  font-family: 'KoPub Batang';
+  text-transform: uppercase;
+  font-size: 1.125rem;
+}
+.main {
+  display: block;
+  /* padding: 6rem; */
+  margin: 0 auto;
+  height: 100vh;
+
+  /* background: goldenrod; */
+}
+.main .main-mainTitle h1{
+  font-family: 'Goia Display';
+  font-size: 8.75rem; /* 140px */
+  text-align: left;
+}
+.main .main-mainTitle h1:nth-of-type(2){
+  text-align: right;
+}
+.main .main-subTitle{
+  text-align: center;
+  font-family: 'Gowun Dodum';
+  font-size: 1rem;
+}
+
+.main-mainTitle{
+  position: relative;
+  display: block;
+  margin: 0 19.75rem;
+  /* background: #ccc; */
+}
+
+/* video */
+.main-mainTitle video:nth-of-type(1){
+  width: 21.813rem;
+  position: absolute;
+  left:  -2rem;
+  /* z-index: -9; */
+}
+
+.main-mainTitle video:nth-of-type(2){
+  height: 9.063rem;
+  position: absolute;
+  right:  0;
+}
+
+
+/****** project ******/
+.project{
+  height: 100vh;
+  /* background: url(./asset/image/project1_background.png) no-repeat contain; */
+}
+.project .project_wrapper{}
