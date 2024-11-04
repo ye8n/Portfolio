@@ -20,7 +20,7 @@ header .global-navigation-bar li{
   font-family: 'KoPub Batang';
   text-transform: uppercase;
   font-size: 1.125rem;
-}
+} 
 .main {
   display: block;
   /* padding: 6rem; */
@@ -52,14 +52,14 @@ header .global-navigation-bar li{
 
 /* video */
 .main-mainTitle video:nth-of-type(1){
-  width: 21.813rem;
+  width: 20vw;
   position: absolute;
   left:  -2rem;
-  /* z-index: -9; */
+  z-index: -9;
 }
 
 .main-mainTitle video:nth-of-type(2){
-  height: 9.063rem;
+  height: 8vw;
   position: absolute;
   right:  0;
 }
@@ -68,6 +68,139 @@ header .global-navigation-bar li{
 /****** project ******/
 .project{
   height: 100vh;
-  /* background: url(./asset/image/project1_background.png) no-repeat contain; */
+  background: #ddd;
+  position: relative;
+  background-image: url(./asset/image/project1_background.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50%;
+
 }
-.project .project_wrapper{}
+.project .project_wrapper{
+  /* background: orange; */
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-transform: capitalize;
+
+
+}
+
+.project .project_wrapper h3{
+  font-family: 'KoPub Batang';
+  font-size: 1.5rem;
+  
+  letter-spacing: -0.08rem;
+}
+.project .project_wrapper h2{
+  font-family: 'Goia Display';
+  font-size: 4.688rem; /* 75px */
+  letter-spacing: -0.125rem;
+  margin-bottom: 3.75rem;
+}
+.project .project_wrapper a{
+  font-family: 'Pretendard';
+  font-size: 1rem; 
+  margin: 0 auto;
+  border: 2px solid #000;
+  border-radius: 1.875rem;
+
+  padding: 0.65rem 2rem;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+}
+.project .project_wrapper a:after{
+  content: " ";
+  display: inline-block;
+  height: 1.5rem;
+  aspect-ratio: 1/1;
+  background: url(./asset/image/icon_north_east.svg);
+  background-repeat: no-repeat;
+  margin-left: 0.2rem;
+  
+  
+}
+
+/***** skill *****/
+/* https://www.doyeon0430.com/engineer/django/58/ */
+.skill{
+  /* background: #ccc; */
+  margin-top: 14.125rem;
+  margin-left: 15rem; /* 스타일 저장할 것 */
+}
+
+.skill .skill-wrapper{
+  margin-bottom: 6.25rem;
+}
+
+.skill .skill-wrapper h3{
+  font-family: 'KoPub Batang';
+  font-size: 1.5rem;
+  letter-spacing: -0.063rem;
+}
+
+.skill .skill-wrapper p {
+  font-family: 'Gowun Dodum';
+  letter-spacing: -0.08rem;
+}
+
+.skill .carousel_main .carousel_wrapper{
+  display: flex;
+}
+
+.contact {
+  margin-top: 14.125rem;
+  margin-left: 15rem;
+
+}
+
+
+.contact .contact_wrapper_top h3{
+  font-family: 'Gowun Dodum';
+  font-size: 2.5rem;
+  letter-spacing: -0.1rem;
+}
+
+.contact .contact_wrapper_top p{
+  font-family: 'Gowun Dodum';
+  font-size: 1.5rem;
+  letter-spacing: -0.08rem;
+  padding-left: 0.5rem;
+}
+
+.contact .contact_wrapper_bottom{
+  display: flex;
+  padding: 14rem 0 ;
+  /* transform: translateX(50%/-50%); 가운데 정렬... 어떻게? */ 
+  font-family: 'Pretendard';
+  font-size: 1.25rem;
+}
+.contact .contact_wrapper_bottom .email{
+  display: flex;
+  flex-flow: column; /* 스타일 저장할 것 */
+}
+.contact .contact_wrapper_bottom .kakao{
+  display: flex;
+  flex-flow: column; /* 스타일 저장할 것 */
+}
+
+.contact .contact_wrapper_bottom li span:nth-child(2){
+  font-size: 3rem;
+}
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 14rem;
+  font-family: 'Gowun Dodum';
+}
+footer .studyLog img{
+  width: 2rem;
+
+}
