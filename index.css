@@ -6,8 +6,24 @@
 
 html{
   background: rgb(238, 238, 238);
+
 }
 
+.noise {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1001;
+  background-image: url('https://cdn.prod.website-files.com/64144000a24d13596a775e66/645cbb8ec449398255b76326_noise.gif');
+  background-position: 0 0;
+  background-size: auto;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .2s cubic-bezier(.445, .05, .55, .95);
+  visibility: hidden;
+}
 
 /****** home ******/
 
@@ -29,7 +45,7 @@ header .header-wrapper .container{
 }
 
 header .logo a{
-  background: url(./asset/image/clover_64.gif) no-repeat 0 50% / contain;
+  background: url(./asset/image/clover_black.gif) no-repeat 0 50% / contain;
   text-indent: -9999px;
   display: block;
   width: 48px;
@@ -182,11 +198,12 @@ header .global-navigation-bar li{
 }
 
 .contact {
-  margin: 14.125rem 11.667vw 0;
+  background: #fff;
+  padding: 14.125rem 11.667vw 0;
 }
 
 .contact .contact_wrapper_top{
-  margin: 11.667vw 0;
+  padding: 11.667vw 0;
 }
 
 .contact .contact_wrapper_top h3{
@@ -237,7 +254,7 @@ header .global-navigation-bar li{
 .contact .contact_wrapper_bottom .rolling{
   position: absolute;
   bottom: 0;
-  z-index: -9;
+  /* z-index: -9; */
   font-family: 'Goia Display';
   font-size: 120px;
   display: flex;
@@ -248,10 +265,13 @@ header .global-navigation-bar li{
 
 /***** footer *****/
 footer{
+  background: #fff;
   display: flex;
   justify-content: space-between;
-  margin: 0 11.667vw;
+  padding: 0 11.667vw;
   font-family: 'Gowun Dodum';
+  
+  border-top: 1px solid #000;
 }
 footer .studyLog img{
   width: 2rem;
