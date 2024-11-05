@@ -1,80 +1,107 @@
-@charset "utf-8";
+/* @charset "utf-8"; */
+
+/* html::-webkit-scrollbar-track{
+
+} */
+
+html{
+  background: rgb(238, 238, 238);
+}
 
 
 /****** home ******/
-header{
-  justify-content: space-between;
-  margin-right: 2.375rem;
 
+/**** 헤더 ****/
+header .header-wrapper{
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width:100%;
+  background: rgb(238, 238, 238);
 }
+
+header .header-wrapper .container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2.375rem;
+}
+
 header .logo a{
-  background: url(./asset/image/github-logo.png) no-repeat 0 50% / contain;
+  background: url(./asset/image/clover_64.gif) no-repeat 0 50% / contain;
   text-indent: -9999px;
   display: block;
-  width: 30px;
+  width: 48px;
   aspect-ratio: 1/1;
-  margin: 0.5rem 1rem;
+  /* margin: 0.5rem 1rem; */
 }
 header .global-navigation-bar li{
-  margin: 2.625rem;
+  margin: 1.25rem 2.625rem;
   font-family: 'KoPub Batang';
   text-transform: uppercase;
   font-size: 1.125rem;
 } 
-.main {
-  display: block;
-  /* padding: 6rem; */
-  margin: 0 auto;
-  height: 100vh;
 
-  /* background: goldenrod; */
+/***** main 메인 홈 화면, 코드 카피, 수정 필요 *****/
+
+.main{
+  overflow: hidden;
+  padding-top:7.813vw;
+  padding-bottom: 15vw;
+  color: rgb(45, 45, 45);
 }
-.main .main-mainTitle h1{
+.main .main-mainTitle{
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* ?? */
+  position: relative; /* 얘가 모든 텍스트의 기준점 */
+  margin-top: 2vw;
+}
+.main .main-mainTitle .main-mainTitle-wrapper{
   font-family: 'Goia Display';
-  font-size: 8.75rem; /* 140px */
-  text-align: left;
-}
-.main .main-mainTitle h1:nth-of-type(2){
-  text-align: right;
-}
-.main .main-subTitle{
-  text-align: center;
-  font-family: 'Gowun Dodum';
-  font-size: 1rem;
-}
-
-.main-mainTitle{
+  text-transform: capitalize;
+  font-size: 7.292vw;
+  letter-spacing: -0.2rem; /* 수정하고 공통스타일로 빼기 */
   position: relative;
-  display: block;
-  margin: 0 19.75rem;
-  /* background: #ccc; */
 }
-
-/* video */
-.main-mainTitle video:nth-of-type(1){
-  width: 20vw;
+.main .main-mainTitle .main-mainTitle-wrapper .main-mainTitle-top h1:nth-of-type(1){
+  padding-left: 10vw;
+  /* background: lightblue; */
+}
+.main .main-mainTitle .main-mainTitle-wrapper h1:nth-child(2){
+  padding-left: 28vw; /* 텍스트 오른쪽으로 밀기 */
+}
+.main .main-mainTitle .main-mainTitle-wrapper .main-mainTitle-bottom h1{
+  padding-left:6vw;
+}
+.main .main-mainTitle .main-mainTitle-wrapper .main-mainTitle-top video{
   position: absolute;
-  left:  -2rem;
+  width: 20vw;
+  top: 5.5vw;
+  left: -7.8vw;
+}
+.main .main-mainTitle .main-mainTitle-wrapper .main-mainTitle-bottom video{
+  width: 21vw;
+  position: absolute;
+  bottom: 0;
+  right: 7vw;
   z-index: -9;
 }
-
-.main-mainTitle video:nth-of-type(2){
-  height: 8vw;
-  position: absolute;
-  right:  0;
+.main .main-mainTitle .main-subTitle{
+  margin-top: 2.8rem;
+}
+.main .main-mainTitle .main-subTitle span{
+  margin: 1rem;
 }
 
 
 /****** project ******/
 .project{
   height: 100vh;
-  background: #ddd;
   position: relative;
-  background-image: url(./asset/image/project1_background.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: 50%;
 
+  background: linear-gradient(rgba(8,13,28,0.65), rgba(8,13,28,0.9)), url(./asset/image/project1_background.png) no-repeat 50% / cover;
 }
 .project .project_wrapper{
   /* background: orange; */
@@ -85,7 +112,7 @@ header .global-navigation-bar li{
   transform: translate(-50%, -50%);
 
   text-transform: capitalize;
-
+  color: #E4EFFF;
 
 }
 
@@ -114,6 +141,7 @@ header .global-navigation-bar li{
   justify-content: center;
   align-items: center;
   width: 12rem;
+  color: #ffffff;
 }
 .project .project_wrapper a:after{
   content: " ";
@@ -131,8 +159,7 @@ header .global-navigation-bar li{
 /* https://www.doyeon0430.com/engineer/django/58/ */
 .skill{
   /* background: #ccc; */
-  margin-top: 14.125rem;
-  margin-left: 15rem; /* 스타일 저장할 것 */
+  margin: 14.125rem 11.667vw 0; /* 스타일 저장할 것 */
 }
 
 .skill .skill-wrapper{
@@ -155,11 +182,12 @@ header .global-navigation-bar li{
 }
 
 .contact {
-  margin-top: 14.125rem;
-  margin-left: 15rem;
-
+  margin: 14.125rem 11.667vw 0;
 }
 
+.contact .contact_wrapper_top{
+  margin: 11.667vw 0;
+}
 
 .contact .contact_wrapper_top h3{
   font-family: 'Gowun Dodum';
@@ -175,12 +203,23 @@ header .global-navigation-bar li{
 }
 
 .contact .contact_wrapper_bottom{
-  display: flex;
-  padding: 14rem 0 ;
-  /* transform: translateX(50%/-50%); 가운데 정렬... 어떻게? */ 
-  font-family: 'Pretendard';
-  font-size: 1.25rem;
+  padding: 11.667vw 0;
+  position: relative;
 }
+.contact .contact_wrapper_bottom ul{
+
+  display: flex;
+  justify-content: center;
+  /* padding: 14rem 3rem ; */
+
+  /* transform: translateX(50%/-50%); 가운데 정렬... 어떻게? */ 
+
+  /* font-size: 1.25rem; */
+  background: #ddd;
+  gap: 8.073vw;
+}
+
+
 .contact .contact_wrapper_bottom .email{
   display: flex;
   flex-flow: column; /* 스타일 저장할 것 */
@@ -191,13 +230,27 @@ header .global-navigation-bar li{
 }
 
 .contact .contact_wrapper_bottom li span:nth-child(2){
-  font-size: 3rem;
+  font-size: 2.5vw;
+  /* font-weight: 600; */
 }
 
+.contact .contact_wrapper_bottom .rolling{
+  position: absolute;
+  bottom: 0;
+  z-index: -9;
+  font-family: 'Goia Display';
+  font-size: 120px;
+  display: flex;
+  color:#A9A9A9;
+
+
+}
+
+/***** footer *****/
 footer{
   display: flex;
   justify-content: space-between;
-  margin: 0 14rem;
+  margin: 0 11.667vw;
   font-family: 'Gowun Dodum';
 }
 footer .studyLog img{

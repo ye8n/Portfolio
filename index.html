@@ -6,6 +6,7 @@
     <!-- og: https://cafe.naver.com/frontweb/224 -->
     <!-- 참고 사이트 팬스타: https://github.com/ye8n/2024training/blob/main/html/20241002_web/index.html -->
     <!-- 피그마 링크: https://www.figma.com/design/WSDpvk3NbKavumIYgEO8ec/%5B1029%5D-%ED%8F%AC%ED%8F%B4-%EA%B5%AC%EC%84%B1-2%EC%B0%A8?node-id=420-6&node-type=canvas&t=F3uXQRDniL4x6XJp-0 -->
+    <!-- px-vw https://cssunitconverter.vercel.app/px-to-vw -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <title>portfolio</title>
@@ -26,30 +27,40 @@
 </head>
 
 <body>
-    <header class="flex-wrapper">
-        <div class="logo"><a href="#">portfolio</a></div>
-        <ul class="global-navigation-bar flex-wrapper">
-            <li><a href="#">home</a></li>
-            <li><a href="#">project</a></li>
-            <li><a href="#">skill</a></li>
-            <li><a href="#">contact</a></li>
-        </ul>
+    <header>
+        <div class="header-wrapper flex-wrapper">
+            <div class="container">
+                <div class="logo"><a href="#">lee so yeon, portfolio</a></div>
+                <ul class="global-navigation-bar flex-wrapper">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">project</a></li>
+                    <li><a href="#">skill</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
 
     <!-- https://www.rawlab.co/ -->
     <section class="main">
         <div class="main-mainTitle">
-            <h1>creative</h1>
-            <h1>team player .</h1>
-            <h1>reponsible</h1>
-            <video src="./asset/video/color.mp4" muted autoplay loop></video>
-            <video src="./asset/video/wave1.mp4" muted autoplay loop></video>
-        </div>
-
-        <div class="main-subTitle">
-            <span>web publisher</span>
-            <span>ux ui designer</span>
-
+            <div class="main-mainTitle-wrapper">
+                <div class="main-mainTitle-top">
+                    <h1>creative</h1>
+                    <video src="./asset/video/color.mp4" muted autoplay loop></video>
+                </div>
+                <h1>team player .</h1>
+                <div class="main-mainTitle-bottom">
+                    <h1>reponsible</h1>
+                    <video src="./asset/video/wave1.mp4" muted autoplay loop></video>
+                </div>
+                <div class="main-video">
+                </div>
+            </div>
+            <div class="main-subTitle">
+                <span>Web Publisher</span>
+                <span>ux/ui Designer</span>
+            </div>
         </div>
     </section>
 
@@ -121,17 +132,24 @@
             <p>언제든지 연락주세요! </p>
             <p>기쁜 마음으로 응답하겠습니다 :) </p>
         </div>
-    
-        <ul class="contact_wrapper_bottom">
-            <li class="email">
-                <span>이메일</span>
-                <span>ye8n@gmail.com</span>
-            </li>
-            <li class="kakao">
-                <span>카카오톡</span>
-                <span>yeon8300</span>
-            </li>
-        </ul>
+        <div class="contact_wrapper_bottom">
+            <ul>
+                <li class="email">
+                    <span>이메일</span>
+                    <span>ye8n@gmail.com</span>
+                </li>
+                <li class="kakao">
+                    <span>카카오톡</span>
+                    <span>yeon8300</span>
+                </li>
+            </ul>
+
+            <div class="rolling">
+                <span>Let’s Talk</span>
+                <span>Let’s Talk</span>
+            </div>
+        </div>
+
     </section>
 
     <footer>
