@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="stylesheet" href="./mouse.css">
+</head>
+<body>
+    <div class="block m-3">
+        <span class="scroll-btn">
+            <a href="#">
+                <span class="mouse">
+                    <span>
+                    </span>
+                </span>
+            </a>
+            <p>scroll me</p>
+        </span>
+    </div>
+    <script>
+        var mouse_Scroll = document.getElementById('mouse-scroll');
+        var mouse_Scroll_Str = mouse_Scroll.getTotalLength();
+        mouse_Scroll.setAttribute('stroke-dashoffset', mouse_Scroll_Str);
+        mouse_Scroll.setAttribute('stroke-dasharray', mouse_Scroll_Str);
+
+    </script>
+</body>
+
+</html>

@@ -61,6 +61,18 @@
                 <p>안녕하세요. 신입 웹퍼블리셔&uxui디자이너 이소연입니다.</p>
             </div>
         </div>
+        <!-- mouse 마우스:https://codepen.io/andrejsharapov/pen/rowbQV -->
+        <div class="scrollMe">
+            <span class="scroll-btn">
+                <span>
+                    <span class="mouse">
+                        <span>
+                        </span>
+                    </span>
+                </span>
+                <p>scroll me</p>
+            </span>
+        </div>
     </section>
 
     <!-- https://justhappiness.fr/ -->
@@ -81,6 +93,9 @@
                 </div>
             </div>
         </div>
+
+        
+
         </section>
 
 
@@ -186,6 +201,13 @@
 
 
     <!-- script 스크립트 자리 -->
+    <script>
+        // 마우스
+        var mouse_Scroll = document.getElementById('mouse-scroll');
+        var mouse_Scroll_Str = mouse_Scroll.getTotalLength();
+        mouse_Scroll.setAttribute('stroke-dashoffset', mouse_Scroll_Str);
+        mouse_Scroll.setAttribute('stroke-dasharray', mouse_Scroll_Str);
+    </script>
 </body>
 
 </html>

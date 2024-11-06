@@ -29,6 +29,7 @@ header .logo a:hover {
   opacity: 0.4;
 }
 
+
 header .global-navigation-bar li{
   margin: 1.25rem 2.625rem;
   font-family: 'KoPub Batang';
@@ -42,6 +43,7 @@ header .global-navigation-bar li{
   overflow: hidden;
   padding-top:7.813vw;
   padding-bottom: 15vw;
+
 
 }
 .main .main-mainTitle{
@@ -73,6 +75,9 @@ header .global-navigation-bar li{
   top: 5.5vw;
   left: -7.8vw;
 }
+
+
+
 .main .main-mainTitle .main-mainTitle-wrapper .main-mainTitle-bottom video{
   width: 21vw;
   position: absolute;
@@ -89,11 +94,71 @@ header .global-navigation-bar li{
   /* 폰트 변경 ?*/
 }
 
+/* 마우스 mouse */
+/* 1107 위치 수정할 것, scroll me 글씨 수정 (자간, 폰트크기, 마우스랑 여백)*/
+.scrollMe{ 
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.scroll-btn {
+  display: block;
+  text-align: center;
+  color: var(--color-black);
+}
+.scroll-btn p {
+  letter-spacing: 2px;
+}
+.scroll-btn .mouse {
+  position: relative;
+  margin: auto;
+  display: block;
+  width: 35px;
+  height: 55px;
+  border: 3px solid var(--color-black);
+  border-radius: 23px;
+}
+.scroll-btn .mouse span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-black);
+  border-radius: 50%;
+  animation: ani-mouse 2.5s linear infinite;
+}
+@keyframes ani-mouse {
+  0% {
+      opacity: 1;
+      top: 29%;
+ }
+  15% {
+      opacity: 1;
+      top: 50%;
+ }
+  50% {
+      opacity: 0;
+      top: 50%;
+ }
+  100% {
+      opacity: 0;
+      top: 29%;
+ }
+}
+
+
+
+
+
 
 /****** project ******/
 .project{
   height: 100vh;
   position: relative;
+
 }
 
 .bg-video {
