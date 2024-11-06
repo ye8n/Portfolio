@@ -28,8 +28,8 @@
 
 <body>
     <header>
-        <div class="header-wrapper flex-wrapper">
-            <div class="container">
+        <div class="header-main flex-wrapper">
+            <div class="header-wrapper flex-wrapper">
                 <div class="logo"><a href="#">lee so yeon, portfolio</a></div>
                 <ul class="global-navigation-bar flex-wrapper">
                     <li><a href="#">home</a></li>
@@ -43,8 +43,8 @@
 
     <!-- https://www.rawlab.co/ -->
     <section class="main">
-        <div class="main-mainTitle">
-            <div class="main-mainTitle-wrapper">
+        <div class="main-mainTitle flex-wrapper">
+            <div class="main-mainTitle-wrapper mainTitle-en">
                 <div class="main-mainTitle-top">
                     <h1>creative</h1>
                     <video src="./asset/video/color.mp4" muted autoplay loop></video>
@@ -65,14 +65,24 @@
     </section>
 
     <!-- https://justhappiness.fr/ -->
-     <section class="project">
-        <div class="project_wrapper">
-        <h3>Application Redesign</h3>
-        <h2>railroad crime reporting</h2>
-        <video src="./asset/video/project1_6s.mp4" muted autoplay loop></video>
-        <a href="#">View project</a>
+    <section class="project">
+        <div class="bg-video">
+            <video class="bg-video__content" src="./asset/video/project1_6s.mp4" muted autoplay loop></video>
         </div>
-     </section>
+        <div class="gradi"></div>
+        <div class="project_wrapper">
+            <h2>railroad crime reporting</h2>
+            <div class="project-desc-wrapper flex-wrapper">
+                <!-- <h3>UX / UI 리디자인 프로젝트</h3> -->
+
+                <img style="width: 340px;" src="./Frame 233_fixed.svg" alt="UX / UI 리디자인 프로젝트">
+                <div class="project-desc">
+                    <p>국토교통부 제공 철도범죄신고 APP <strong>리디자인</strong></p>
+                    <p><strong>사용자 중심 디자인</strong>을 반영한 직관적인 ux/ui 구현</p>
+                </div>
+            </div>
+        </div>
+        </section>
 
 
     <section class="skill">
@@ -132,7 +142,7 @@
             <p>기쁜 마음으로 응답하겠습니다 :) </p>
         </div>
         <div class="contact_wrapper_bottom">
-            <ul>
+            <ul class="flex-wrapper">
                 <li class="email">
                     <span>이메일</span>
                     <span>ye8n@gmail.com</span>

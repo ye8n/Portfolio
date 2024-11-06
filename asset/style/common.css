@@ -1,8 +1,25 @@
 @charset "utf-8";
 
-body{
-  font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 400;
+
+/*  스크롤바 모양 추가하기
+html::-webkit-scrollbar-track{
+} */
+
+html{
+  background: var(--bg-light);
+  color: var(--color-black);
+}
+
+.noise {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1001;
+  background-image: url('../image/noise.gif');
+  pointer-events: none;
+  visibility: hidden;
 }
 
 /* global style */
@@ -10,37 +27,56 @@ body{
   display: flex;
   align-items: center; 
 }
-
 .grid-container{
   display: grid;
+}
+
+.mainTitle-en{
+  font-family: 'Goia Display';
+  text-transform: capitalize;
+  font-size: 7.292vw;
+  letter-spacing: -0.2rem;
+  
 }
 
 
 /* 변수 */
 :root{
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1.25rem;
+
+  /* 폰트 */
+  --font-title-en: 'Goia Display', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  --font-title-kr: 'Gowun Dodum', 바탕, serif;
+  --font-main-kr: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+  /* 여백 */
+  --spacing-xlg: 11.667vw;
+
+  /* 폰트 사이즈 */
+  --font-mg: 1.125rem;
+  --font-lg: 1.5rem;
+  --font-xlg: 2.5rem;
+
+  /* 배경색 */
+
+  --bg-light: #eeeeee;
+
+  /* 글자색 */
+  --color-white: #fff;
+  --color-black: #2d2d2d;
+
+  /* 주요 색상 */
+  --color-project1-primary:#E4EFFF;
+
+  /* 그레이스케일 추가 예정
+    --bg-gray-light: #e9ecef;
+    --bg-gray-dark: #adb5bd;
+   */
 
 }
 
-
-
-/* 
---font-main-title-xxlg: 2.4rem;
-  --font-main-title-xlg: 2.1rem;
-  --font-main-title-lg: 1.5rem;
-  --font-main-title-md: 1.25rem;
-  --font-main-title-sm: 0.95rem;
-
-  --color-primary:#69a9c5;
-
-  --bg-gray-light: #e9ecef;
-  --bg-gray-dark: #adb5bd;
-
-  --color-white: #fff;
-  --color-smooth-black: #222;
-
-   --border-btm-gray: 1px solid var(--bg-gray-light);
-
-  --spacing-xlg: 2.5rem;
-   */
+body{
+  font-family: var(--font-main-kr);
+  font-weight: 400;
+  font-size: 1.25rem;
+}

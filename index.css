@@ -1,46 +1,18 @@
-/* @charset "utf-8"; */
+@charset "utf-8";
 
-/* html::-webkit-scrollbar-track{
-
-} */
-
-html{
-  background: rgb(238, 238, 238);
-
-}
-
-.noise {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1001;
-  background-image: url('https://cdn.prod.website-files.com/64144000a24d13596a775e66/645cbb8ec449398255b76326_noise.gif');
-  background-position: 0 0;
-  background-size: auto;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity .2s cubic-bezier(.445, .05, .55, .95);
-  visibility: hidden;
-}
-
-/****** home ******/
+/****** Main ******/
 
 /**** 헤더 ****/
-header .header-wrapper{
+header .header-main{
   position: fixed;
   top: 0;
-  z-index: 9999;
+  z-index: 999;
   width:100%;
-  background: rgb(238, 238, 238);
 }
 
-header .header-wrapper .container{
+header .header-main .header-wrapper{
   width: 100%;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
   margin: 0 2.375rem;
 }
 
@@ -56,7 +28,7 @@ header .global-navigation-bar li{
   margin: 1.25rem 2.625rem;
   font-family: 'KoPub Batang';
   text-transform: uppercase;
-  font-size: 1.125rem;
+  font-size: var(--font-md);
 } 
 
 /***** main 메인 홈 화면, 코드 카피, 수정 필요 *****/
@@ -65,17 +37,15 @@ header .global-navigation-bar li{
   overflow: hidden;
   padding-top:7.813vw;
   padding-bottom: 15vw;
-  color: rgb(45, 45, 45);
+
 }
 .main .main-mainTitle{
-  display: flex;
-  align-items: center;
-  flex-direction: column; /* ?? */
-  position: relative; /* 얘가 모든 텍스트의 기준점 */
+  flex-direction: column;
+  position: relative; /* 모든 텍스트의 기준점 */
   margin-top: 2vw;
 }
 .main .main-mainTitle .main-mainTitle-wrapper{
-  font-family: 'Goia Display';
+  font-family: var(--font-title-en);
   text-transform: capitalize;
   font-size: 7.292vw;
   letter-spacing: -0.2rem; /* 수정하고 공통스타일로 빼기 */
@@ -84,6 +54,7 @@ header .global-navigation-bar li{
 .main .main-mainTitle .main-mainTitle-wrapper .main-mainTitle-top h1:nth-of-type(1){
   padding-left: 10vw;
   /* background: lightblue; */
+
 }
 .main .main-mainTitle .main-mainTitle-wrapper h1:nth-child(2){
   padding-left: 28vw; /* 텍스트 오른쪽으로 밀기 */
@@ -109,6 +80,7 @@ header .global-navigation-bar li{
 }
 .main .main-mainTitle .main-subTitle span{
   margin: 1rem;
+  /* 폰트 변경 ?*/
 }
 
 
@@ -116,11 +88,37 @@ header .global-navigation-bar li{
 .project{
   height: 100vh;
   position: relative;
-
-  background: linear-gradient(rgba(8,13,28,0.65), rgba(8,13,28,0.9)), url(./asset/image/project1_background.png) no-repeat 50% / cover;
 }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -999;
+  opacity: 0.85;
+}
+
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gradi{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(8,13,28,0.65);
+  z-index: -99;
+}
+
+
+
 .project .project_wrapper{
   /* background: orange; */
+
   text-align: center;
   position: absolute;
   top: 50%;
@@ -128,54 +126,40 @@ header .global-navigation-bar li{
   transform: translate(-50%, -50%);
 
   text-transform: capitalize;
-  color: #E4EFFF;
+  color: var(--color-project1-primary);
+  width: 100%;
+
 
 }
 
-.project .project_wrapper h3{
-  font-family: 'KoPub Batang';
-  font-size: 1.5rem;
-  
-  letter-spacing: -0.08rem;
-}
 .project .project_wrapper h2{
   font-family: 'Goia Display';
-  font-size: 4.688rem; /* 75px */
-  letter-spacing: -0.125rem;
-  margin-bottom: 3.75rem;
+  font-size: 5.25vw; /* 120px */
+  letter-spacing: -0.15rem;
+  margin-bottom: 1.667vw;
 }
-.project .project_wrapper a{
-  font-family: 'Pretendard';
-  font-size: 1rem; 
-  margin: 0 auto;
-  border: 2px solid #000;
-  border-radius: 1.875rem;
-
-  padding: 0.65rem 2rem;
-  
-  display: flex;
+.project_wrapper .project-desc-wrapper{
   justify-content: center;
-  align-items: center;
-  width: 12rem;
-  color: #ffffff;
+  gap: 2rem; /* 공통 스타일로 변경*/
+ }
+
+.project .project_wrapper {
+  font-size: 18px;
+  letter-spacing: -0.5px;
+
 }
-.project .project_wrapper a:after{
-  content: " ";
-  display: inline-block;
-  height: 1.5rem;
-  aspect-ratio: 1/1;
-  background: url(./asset/image/icon_north_east.svg);
-  background-repeat: no-repeat;
-  margin-left: 0.2rem;
-  
-  
+
+.project-desc-wrapper{
+  text-align: left;
+  font-size: 22px;
 }
+
 
 /***** skill *****/
 /* https://www.doyeon0430.com/engineer/django/58/ */
 .skill{
   /* background: #ccc; */
-  margin: 14.125rem 11.667vw 0; /* 스타일 저장할 것 */
+  margin: 14.125rem var(--spacing-xlg) 0; /* 스타일 저장할 것 */
 }
 
 .skill .skill-wrapper{
@@ -184,7 +168,7 @@ header .global-navigation-bar li{
 
 .skill .skill-wrapper h3{
   font-family: 'KoPub Batang';
-  font-size: 1.5rem;
+  font-size: var(--font-lg);
   letter-spacing: -0.063rem;
 }
 
@@ -199,11 +183,11 @@ header .global-navigation-bar li{
 
 .contact {
   background: #fff;
-  padding: 14.125rem 11.667vw 0;
+  padding: 14.125rem var(--spacing-xlg) 0;
 }
 
 .contact .contact_wrapper_top{
-  padding: 11.667vw 0;
+  padding: var(--spacing-xlg) 0;
 }
 
 .contact .contact_wrapper_top h3{
@@ -214,24 +198,19 @@ header .global-navigation-bar li{
 
 .contact .contact_wrapper_top p{
   font-family: 'Gowun Dodum';
-  font-size: 1.5rem;
+  font-size: var(--font-lg);
   letter-spacing: -0.08rem;
   padding-left: 0.5rem;
 }
 
 .contact .contact_wrapper_bottom{
-  padding: 11.667vw 0;
+  padding: var(--spacing-xlg) 0;
   position: relative;
 }
 .contact .contact_wrapper_bottom ul{
 
   display: flex;
   justify-content: center;
-  /* padding: 14rem 3rem ; */
-
-  /* transform: translateX(50%/-50%); 가운데 정렬... 어떻게? */ 
-
-  /* font-size: 1.25rem; */
   background: #ddd;
   gap: 8.073vw;
 }
@@ -239,11 +218,11 @@ header .global-navigation-bar li{
 
 .contact .contact_wrapper_bottom .email{
   display: flex;
-  flex-flow: column; /* 스타일 저장할 것 */
+  flex-flow: column;
 }
 .contact .contact_wrapper_bottom .kakao{
   display: flex;
-  flex-flow: column; /* 스타일 저장할 것 */
+  flex-flow: column;
 }
 
 .contact .contact_wrapper_bottom li span:nth-child(2){
@@ -255,7 +234,7 @@ header .global-navigation-bar li{
   position: absolute;
   bottom: 0;
   /* z-index: -9; */
-  font-family: 'Goia Display';
+  font-family: var(--font-title-en);
   font-size: 120px;
   display: flex;
   color:#A9A9A9;
@@ -268,8 +247,8 @@ footer{
   background: #fff;
   display: flex;
   justify-content: space-between;
-  padding: 0 11.667vw;
-  font-family: 'Gowun Dodum';
+  padding: 0 var(--spacing-xlg);
+  font-family: var(--font-title-kr);
   
   border-top: 1px solid #000;
 }
