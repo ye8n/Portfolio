@@ -22,8 +22,13 @@ header .logo a{
   display: block;
   width: 48px;
   aspect-ratio: 1/1;
-  /* margin: 0.5rem 1rem; */
+  transition: all 0.5s;
 }
+
+header .logo a:hover {
+  opacity: 0.4;
+}
+
 header .global-navigation-bar li{
   margin: 1.25rem 2.625rem;
   font-family: 'KoPub Batang';
@@ -75,6 +80,7 @@ header .global-navigation-bar li{
   right: 7vw;
   z-index: -9;
 }
+
 .main .main-mainTitle .main-subTitle{
   margin-top: 2.8rem;
 }
