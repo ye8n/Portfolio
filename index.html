@@ -19,15 +19,24 @@
     <meta property="og:description" content="신입 웹퍼플리셔·uxui디자이너 이소연의 2024년 포트폴리오입니다."> -->
 
 
+    <!-- css -->
     <link rel="stylesheet" href="./asset/style/reset.min.css">
-    <!-- font -->
     <link rel="stylesheet" href="./asset/style/fonts.css">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./asset/style/common.css">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+
+    <!-- JS -->
+    <script src="./asset/script/jquery-3.7.1.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="./asset/script/cursor.js"></script>
 </head>
 
 <body>
-    
     <header>
         <div class="header-main flex-wrapper">
             <div class="header-wrapper flex-wrapper">
@@ -99,61 +108,74 @@
                 </div>
             </div>
         </div>
-
-        
-
         </section>
 
-
-    <section class="skill">
-        <div class="skill-wrapper">
-        <h3>Ready for chllange !</h3>
-        <p>간단한 문구가 들어갈 예정 ex. 자신있다~ 이런 인재다~ 열심히 하겠다~ <br>
-            별 하나에 시와 별 하나에 어머니, 어머니, 어머님, 나는 별 하나에 아름다운 말 한 마디씩 </p>
-        </div>
-
-        <!-- https://www.doyeon0430.com/engineer/django/58/ -->
-    <div class="carousel_main">
-        <ul class="carousel_wrapper">
-            <li>
-                <h4>HTML5</h4>
-                <p>웹 접근성을 고려한 시맨틱 마크업 구현
-                    이미지, 오디오, 비디오 등 멀티미디어 요소 삽입
-                    SEO 최적화를 위한 메타 태그 적용
-                    웹 접근성 지침에 따른 페이지 제작</p>
-            </li>
-            <li>
-                <h4>CSS3</h4>
-                <p>ES6+ 문법 이해
-                    미디어 쿼리를 활용한 반응형 디자인 구현, 다양한 디바이스에 대응
-                    transform, transition, animation 속성을 활용한 동적 사용자 경험 제공 
-                    Flex와 Gird를 사용한 레이아웃 구성
-                    의사 클래스와 요소를 활용한 특정 부분의 스타일 적용
-                    CSS 변수를 활용한 유지보수성 향상</p>
-            </li>
-            <li>
-                <h4>JS</h4>
-                <p>동적인 웹 페이지 생성 및 DOM 조작</p>
-            </li>
-            <li>
-                <h4>Design</h4>
-                <p>Figma를 사용한 프로토타입 제작 
-                    Lottie를 활용한 애니메이션 구현
-                    Photoshop을 이용한 이미지 편집
-                    Illustrator를 사용한 벡터 그래픽 작업 
-                    Indesign을 활용한 편집 디자인
-                    Premiere pro와 Davinci resolve를 사용한 기본적인 영상편집</p>
-            </li>
-            <li>
-                <h4>other</h4>
-                <p>ITQ 한글, 파워포인트, 엑셀 MASTER 자격증
-                    운전면허 2종 보통
-                    퍼스널컨설턴트 1급</p>
-            </li>
-
-        </ul>
-    </div>
-    </section>
+        <section class="skill">
+            <div class="skill-container">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <!-- 첫번째 스킬 이미지 -->
+                  <div class="swiper-slide card">
+                    <p>웹 접근성 고려한 <strong>시맨틱 마크업</strong> 구현</p>
+                    <p>이미지, 비디오 등 멀티미디어 삽입</p>
+                    <p><strong>SEO 최적화</strong>를 위한 메타 태그 적용</p>
+                    <p><strong>웹 접근성 지침</strong>에 따른 페이지 제작</p>
+                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi a et expedita facere assumenda tempore deserunt earum nulla dicta saepe quos ullam, iste nobis, eveniet dolore odit incidunt aspernatur eum!</p> -->
+                    <div class="card-body">
+                      <p>HTML5</p>
+                    </div>
+                  </div>
+        
+                  <!-- 두번째 스킬 이미지 -->
+                  <div class="swiper-slide card">
+                    <p>ES6+ 문법 이해</p>
+                    <p>미디어쿼리를 활용한 <strong>반응형 디자인</strong></p>
+                    <p>transform, transition, animation 등의 속성을 활용한 <strong>동적 사용자 경험 제공</strong></p>
+                    <p>Flex와 Gird를 사용한 레이아웃 구성</p>
+                    <p>의사 클래스와 요소를 활용한 특정 부분의 스타일 적용</p>
+                    <p>CSS 변수를 활용한 유지보수성 향상</p>
+                    <div class="card-body">
+                      <p>CSS3</p>
+                    </div>
+                  </div>
+        
+        
+                  <!-- 세번째 스킬 이미지 -->
+                  <div class="swiper-slide card">
+                    <p>동적인 웹 페이지 생성 및 DOM 조작</p>
+                    <div class="card-body">
+                      <p>JavaScript</p>
+                    </div>
+                  </div>
+        
+        
+                  <!-- 네 번째 스킬 이미지 -->
+                  <div class="swiper-slide card">
+                    <p>Figma를 사용한 <strong>프로토타입 제작</strong></p>
+                    <p> Lottie를 활용한 애니메이션 구현</p>
+                    <p>Photoshop을 이용한 <strong>이미지 편집</strong></p>
+                    <p> Illustrator를 사용한 <strong>벡터 그래픽 작업</strong></p>
+                    <p>Indesign을 활용한 편집 디자인 </p>
+                    <p>Premiere pro와 Davinci resolve를 <br> 사용한 기본적인 <strong>영상편집</strong></p>
+                    <div class="card-body">
+                      <p>Design</p>
+                    </div>
+                  </div>
+        
+                  <!-- 다섯 번째 스킬 이미지 -->
+                  <div class="swiper-slide card">
+                    <p>ITQ 한글, 파워포인트, 엑셀 MASTER <br> 자격증</p>
+                    <p>운전면허 2종 보통</p>
+                    <p>퍼스널컨설턴트 1급</p>
+                    <div class="card-body">
+                      <p>Other …</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+              </div>
+            </div>
+          </section>
 
     <section class="contact">
         <div class="contact_wrapper_top">
@@ -203,8 +225,34 @@
         </ul>
         </footer>
 
+        <!-- noise -->
         <div class="noise" style="opacity: 0.04; visibility: visible;"></div>
+        <!-- mouse -->
+        <div class="cursor">
+            <div class="cursor__ball cursor__ball--big ">
+              <svg height="30" width="30">
+                <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+              </svg>
+            </div>
+            
+            <div class="cursor__ball cursor__ball--small">
+              <svg height="10" width="10">
+                <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+              </svg>
+            </div>
+          </div>
 
+          <div class="left">
+            <h1>Hello</h1>
+            <p>Check out this link:</p>
+            <a class="hoverable">Hover meh</a>  
+          </div>
+          
+          <div class="right">
+            <h1>Hello</h1>
+            <p>Check out this link:</p>
+            <a class="hoverable">Hover meh</a>  
+          </div>
 
     <!-- script 스크립트 자리 -->
     <script>
@@ -272,6 +320,99 @@
             document.body.appendChild(css);
         };
     </script>
+
+    <!-- swiper -->
+    <script>
+        const cardActionsControllers = document.querySelectorAll(
+      ".card-actions-controller"
+    );
+    
+    cardActionsControllers.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const targetId = btn.getAttribute("data-target");
+        const cardActionsContent = document.getElementById(targetId);
+    
+        if (cardActionsContent) {
+          const isVisible = cardActionsContent.getAttribute("data-visible");
+    
+          if (isVisible === "false") {
+            cardActionsContent.setAttribute("data-visible", "true");
+            cardActionsContent.setAttribute("aria-hidden", "false");
+            btn.setAttribute("aria-expanded", "true");
+          } else {
+            cardActionsContent.setAttribute("data-visible", "false");
+            cardActionsContent.setAttribute("aria-hidden", "true");
+            btn.setAttribute("aria-expanded", "false");
+          }
+        }
+      });
+    });
+    
+    function handleClickOutside(event) {
+      cardActionsControllers.forEach((btn) => {
+        const targetId = btn.getAttribute("data-target");
+        const cardActionsContent = document.getElementById(targetId);
+    
+        if (cardActionsContent && cardActionsContent.getAttribute("data-visible") === "true") {
+          if (!cardActionsContent.contains(event.target) && event.target !== btn) {
+            cardActionsContent.setAttribute("data-visible", "false");
+            cardActionsContent.setAttribute("aria-hidden", "true");
+            btn.setAttribute("aria-expanded", "false");
+          }
+        }
+      });
+    }
+    
+    document.addEventListener("click", handleClickOutside);
+    
+    cardActionsControllers.forEach((btn) => {
+      btn.addEventListener("click", (event) => {
+        event.stopPropagation();
+      });
+    });
+    
+    const likeBtns = document.querySelectorAll(".card-like");
+    
+    likeBtns.forEach((likeBtn) => {
+      likeBtn.addEventListener("click", () => {
+        if (likeBtn.classList.contains("active")) {
+          likeBtn.classList.remove("active");
+        } else {
+          likeBtn.classList.add("active");
+        }
+      });
+    });
+    
+    // Swiper
+    
+    var swiper = new Swiper(".swiper", {
+      grabCursor: true,
+      speed: 400,
+      mousewheel: {
+        invert: false,
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
+      },
+      slidesPerView: 1,
+      spaceBetween: 10,
+      // Responsive breakpoints
+      breakpoints: {
+        900: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+    });
+      </script>
+
+      <!-- 마우스 -->
+    
     </body>
     
     </html>
