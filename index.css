@@ -43,8 +43,6 @@ header .global-navigation-bar li{
   overflow: hidden;
   padding-top:7.813vw;
   padding-bottom: 15vw;
-
-
 }
 .main .main-mainTitle{
   flex-direction: column;
@@ -60,7 +58,6 @@ header .global-navigation-bar li{
 }
 .main .main-mainTitle .main-mainTitle-wrapper .main-mainTitle-top h1:nth-of-type(1){
   padding-left: 10vw;
-  /* background: lightblue; */
 
 }
 .main .main-mainTitle .main-mainTitle-wrapper h1:nth-child(2){
@@ -69,14 +66,14 @@ header .global-navigation-bar li{
 .main .main-mainTitle .main-mainTitle-wrapper .main-mainTitle-bottom h1{
   padding-left:6vw;
 }
+
+/* video */
 .main .main-mainTitle .main-mainTitle-wrapper .main-mainTitle-top video{
   position: absolute;
   width: 20vw;
   top: 5.5vw;
   left: -7.8vw;
 }
-
-
 
 .main .main-mainTitle .main-mainTitle-wrapper .main-mainTitle-bottom video{
   width: 21vw;
@@ -94,12 +91,16 @@ header .global-navigation-bar li{
   /* 폰트 변경 ?*/
 }
 
+
+/* video hover 이벤트: JS혹은 JQuery로 추가 예정 */
+/* 비디오에 호버하면, 글자색 변경 (내 욕심대로면 화면 전체 백그라운드랑 글씨색 바꾸고 싶긴 한데, 알아보기) */
+
+
 /* 마우스 mouse */
-/* 1107 위치 수정할 것, scroll me 글씨 수정 (자간, 폰트크기, 마우스랑 여백)*/
 .scrollMe{ 
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 6vw;
+
 }
 .scroll-btn {
   display: block;
@@ -107,14 +108,15 @@ header .global-navigation-bar li{
   color: var(--color-black);
 }
 .scroll-btn p {
-  letter-spacing: 2px;
+  margin-top: 4px;
+  margin-top: 0.208vw;
 }
 .scroll-btn .mouse {
   position: relative;
   margin: auto;
   display: block;
-  width: 35px;
-  height: 55px;
+  width: 32px;
+  height: 54px;
   border: 3px solid var(--color-black);
   border-radius: 23px;
 }

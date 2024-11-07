@@ -1,0 +1,176 @@
+<!-- https://codepen.io/duzccigb-the-selector/pen/bGXmYPQ -->
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>slider</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./slider.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <section id="skill">
+    <div class="recipe-container">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+
+          <!-- 첫번째 스킬 이미지 -->
+          <div class="swiper-slide post">
+            <p>웹 접근성 고려한 <strong>시맨틱 마크업</strong> 구현</p>
+            <p>이미지, 비디오 등 멀티미디어 삽입</p>
+            <p><strong>SEO 최적화</strong>를 위한 메타 태그 적용</p>
+            <p><strong>웹 접근성 지침</strong>에 따른 페이지 제작</p>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi a et expedita facere assumenda tempore deserunt earum nulla dicta saepe quos ullam, iste nobis, eveniet dolore odit incidunt aspernatur eum!</p> -->
+            <div class="post-body">
+              <p>HTML5</p>
+            </div>
+          </div>
+
+          <!-- 두번째 스킬 이미지 -->
+          <div class="swiper-slide post">
+            <p>ES6+ 문법 이해</p>
+            <p>미디어쿼리를 활용한 <strong>반응형 디자인</strong></p>
+            <p>transform, transition, animation 속성을 활용한 동적 사용자 경험 제공</p>
+            <p>Flex와 Gird를 사용한 레이아웃 구성</p>
+            <p>의사 클래스와 요소를 활용한 특정 부분의 스타일 적용</p>
+            <p>CSS 변수를 활용한 유지보수성 향상</p>
+            <div class="post-body">
+              <p>CSS3</p>
+            </div>
+          </div>
+
+
+          <!-- 세번째 스킬 이미지 -->
+          <div class="swiper-slide post">
+            <p>동적인 웹 페이지 생성 및 DOM 조작</p>
+            <div class="post-body">
+              <p>JavaScript</p>
+            </div>
+          </div>
+
+
+          <!-- 네 번째 스킬 이미지 -->
+          <div class="swiper-slide post">
+            <p>Figma를 사용한 프로토타입 제작 </p>
+            <p> Lottie를 활용한 애니메이션 구현</p>
+            <p>Photoshop을 이용한 이미지 편집</p>
+            <p> Illustrator를 사용한 벡터 그래픽 작업</p>
+            <p>Indesign을 활용한 편집 디자인 </p>
+            <p>Premiere pro와 Davinci resolve를 사용한 기본적인 영상편집</p>
+            <div class="post-body">
+              <p>Design</p>
+            </div>
+          </div>
+
+          <!-- 다섯 번째 스킬 이미지 -->
+          <div class="swiper-slide post">
+            <p>ITQ 한글, 파워포인트, 엑셀 MASTER 자격증</p>
+            <p>운전면허 2종 보통</p>
+            <p>퍼스널컨설턴트 1급</p>
+            <div class="post-body">
+              <p>Other</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const postActionsControllers = document.querySelectorAll(
+  ".post-actions-controller"
+);
+
+postActionsControllers.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const targetId = btn.getAttribute("data-target");
+    const postActionsContent = document.getElementById(targetId);
+
+    if (postActionsContent) {
+      const isVisible = postActionsContent.getAttribute("data-visible");
+
+      if (isVisible === "false") {
+        postActionsContent.setAttribute("data-visible", "true");
+        postActionsContent.setAttribute("aria-hidden", "false");
+        btn.setAttribute("aria-expanded", "true");
+      } else {
+        postActionsContent.setAttribute("data-visible", "false");
+        postActionsContent.setAttribute("aria-hidden", "true");
+        btn.setAttribute("aria-expanded", "false");
+      }
+    }
+  });
+});
+
+function handleClickOutside(event) {
+  postActionsControllers.forEach((btn) => {
+    const targetId = btn.getAttribute("data-target");
+    const postActionsContent = document.getElementById(targetId);
+
+    if (postActionsContent && postActionsContent.getAttribute("data-visible") === "true") {
+      if (!postActionsContent.contains(event.target) && event.target !== btn) {
+        postActionsContent.setAttribute("data-visible", "false");
+        postActionsContent.setAttribute("aria-hidden", "true");
+        btn.setAttribute("aria-expanded", "false");
+      }
+    }
+  });
+}
+
+document.addEventListener("click", handleClickOutside);
+
+postActionsControllers.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+});
+
+const likeBtns = document.querySelectorAll(".post-like");
+
+likeBtns.forEach((likeBtn) => {
+  likeBtn.addEventListener("click", () => {
+    if (likeBtn.classList.contains("active")) {
+      likeBtn.classList.remove("active");
+    } else {
+      likeBtn.classList.add("active");
+    }
+  });
+});
+
+// Swiper
+
+var swiper = new Swiper(".swiper", {
+  grabCursor: true,
+  speed: 400,
+  mousewheel: {
+    invert: false,
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
+  slidesPerView: 1,
+  spaceBetween: 10,
+  // Responsive breakpoints
+  breakpoints: {
+    900: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
+});
+
+  </script>
+
+</body>
+</html>
