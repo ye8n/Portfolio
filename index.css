@@ -260,7 +260,7 @@ header .global-navigation-bar li{
 
 /* 카드 하나 크기 */
 .card {
-  max-width: 400px;
+  /* max-width: 400px; */
   /* font-size: 1rem; */
   background: #fff;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
@@ -324,90 +324,48 @@ header .global-navigation-bar li{
 }
 
 
-
-
-.contact {
-  background: #fff;
-  padding: 14.125rem var(--spacing-xlg) 0;
-   background: var(--color-black);
-}
-
-.contact .contact_wrapper_top{
-  padding: var(--spacing-xlg) 0;
-}
-
-.contact .contact_wrapper_top h3{
-  font-family: 'Gowun Dodum';
-  font-size: 2.5rem;
-  letter-spacing: -0.1rem;
-}
-
-.contact .contact_wrapper_top p{
-  font-family: 'Gowun Dodum';
-  font-size: var(--font-lg);
-  letter-spacing: -0.08rem;
-  padding-left: 0.5rem;
-}
-
-.contact .contact_wrapper_bottom{
-  padding: var(--spacing-xlg) 0;
+/* contact */
+.contact{
   position: relative;
-}
-.contact .contact_wrapper_bottom ul{
 
-  display: flex;
-  justify-content: center;
-  background: #ddd;
-  gap: 8.073vw;
+}
+.contact .contact-video {
+  filter: brightness(60%);
+  z-index: -999;
 }
 
-
-.contact .contact_wrapper_bottom .email{
-  display: flex;
-  flex-flow: column;
-}
-.contact .contact_wrapper_bottom .kakao{
-  display: flex;
-  flex-flow: column;
-}
-
-.contact .contact_wrapper_bottom li span:nth-child(2){
-  font-size: 2.5vw;
-  /* font-weight: 600; */
-}
-
-.contact .contact_wrapper_bottom .rolling{
+.contact_wrapper{
   position: absolute;
-  bottom: 0;
-  /* z-index: -9; */
-  font-family: var(--font-title-en);
-  font-size: 120px;
-  display: flex;
-  color:#A9A9A9;
-
-
+  top: 0;
+  left: 0;
+  /* background: #000; */
+  width: 100%;
 }
 
+.contact-contents{
+  display: grid;
+  margin: 0 var(--spacing-xlg) ;
+  margin-bottom: 0;
+}
 
-
-
-
-
-
-
-
+.contact-contents p:nth-child(1){
+  font-size: 20px;
+}
+.contact-contents p:nth-child(2){
+  font-size: 80px;
+}
 
 /***** footer *****/
 footer{
-  background: #fff;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 0 var(--spacing-xlg);
   font-family: var(--font-title-kr);
-  
-  border-top: 1px solid #000;
-}
-footer .studyLog img{
-  width: 2rem;
+  color: #a8a8a8;
+  text-align: center;
 
+  
+}
+.cursor_container{
+  display: none;
 }
