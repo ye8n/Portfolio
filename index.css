@@ -17,12 +17,13 @@ header .header-main .header-wrapper{
 }
 
 header .logo a{
-  background: url(./asset/image/clover_black.gif) no-repeat 0 50% / contain;
+  background: url(./asset/image/logo-black.png) no-repeat 0 50% / contain;
   text-indent: -9999px;
   display: block;
-  width: 48px;
+  width: 32px;
   aspect-ratio: 1/1;
   transition: all 0.5s;
+  color: #2d2d2d;
 }
 
 header .logo a:hover {
@@ -43,6 +44,7 @@ header .global-navigation-bar li{
   overflow: hidden;
   padding-top:7.813vw;
   padding-bottom: 15vw;
+  user-select: none;
 }
 .main .main-mainTitle{
   flex-direction: column;
@@ -56,12 +58,14 @@ header .global-navigation-bar li{
   letter-spacing: -0.2rem; /* 수정하고 공통스타일로 빼기 */
   position: relative;
 }
+
+
+
 .main .main-mainTitle .main-mainTitle-wrapper .main-mainTitle-top h1:nth-of-type(1){
   padding-left: 10vw;
-
 }
 .main .main-mainTitle .main-mainTitle-wrapper h1:nth-child(2){
-  padding-left: 28vw; /* 텍스트 오른쪽으로 밀기 */
+  padding-left: 28vw; 
 }
 .main .main-mainTitle .main-mainTitle-wrapper .main-mainTitle-bottom h1{
   padding-left:6vw;
@@ -100,16 +104,6 @@ header .global-navigation-bar li{
 .scrollMe{ 
   position: absolute;
   right: 6vw;
-
-}
-.scroll-btn {
-  display: block;
-  text-align: center;
-  color: var(--color-black);
-}
-.scroll-btn p {
-  margin-top: 4px;
-  margin-top: 0.208vw;
 }
 .scroll-btn .mouse {
   position: relative;
@@ -119,6 +113,7 @@ header .global-navigation-bar li{
   height: 54px;
   border: 3px solid var(--color-black);
   border-radius: 23px;
+  opacity: 0;
 }
 .scroll-btn .mouse span {
   position: absolute;
@@ -245,10 +240,6 @@ header .global-navigation-bar li{
 }
 
 .skill-container {
-  /* background: rgba(189, 181, 181, 0.1); */
-  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3); */
-  /* padding: 30px 0; */
   width: min(1200px, 100%);
 }
 
@@ -260,6 +251,7 @@ header .global-navigation-bar li{
 
 /* 카드 하나 크기 */
 .card {
+  user-select: none;
   /* max-width: 400px; */
   /* font-size: 1rem; */
   background: #fff;
@@ -284,7 +276,6 @@ header .global-navigation-bar li{
   padding: 1rem 0;
   position: absolute;
   bottom: 0;
-  color: var(--background-white);
   opacity: 0.6;
   font-family: var(--font-title-kr);
 }
@@ -324,48 +315,102 @@ header .global-navigation-bar li{
 }
 
 
-/* contact */
+/***** contact *****/
 .contact{
   position: relative;
 
 }
 .contact .contact-video {
-  filter: brightness(60%);
+  filter: brightness(40%);
   z-index: -999;
+  
 }
 
 .contact_wrapper{
   position: absolute;
   top: 0;
-  left: 0;
-  /* background: #000; */
   width: 100%;
+  height: 40%;
 }
 
 .contact-contents{
-  display: grid;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
   margin: 0 var(--spacing-xlg) ;
-  margin-bottom: 0;
+  margin-bottom: 0;  height: 100%;
+  position: relative;
+}
+
+.contact-contents p{
+  position: absolute;
+  top: 4vw;
+  left: 4vw;
 }
 
 .contact-contents p:nth-child(1){
   font-size: 20px;
+  color: #cfcfcf;
+  padding-left: 4px;
+
 }
 .contact-contents p:nth-child(2){
   font-size: 80px;
+  color: var(--color-white);
+  cursor: pointer;
+  margin-top: 2vw;
+
+
 }
+
 
 /***** footer *****/
 footer{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0 var(--spacing-xlg);
+  display: flex;
+  justify-content: space-between;
   font-family: var(--font-title-kr);
   color: #a8a8a8;
   text-align: center;
-
+  font-size: 14px;
   
 }
+
+
+.github.wave span {
+  font-size: 1rem;
+  font-family: var(--font-title-en);
+  display: inline-block;
+  animation: wave-text 1.6s ease-in-out infinite;
+}
+.github.wave span:nth-of-type(1) {
+  animation-delay: 0s;
+}
+.github.wave span:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+.github.wave span:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+.github.wave span:nth-of-type(4) {
+  animation-delay: 0.3s;
+}
+.github.wave span:nth-of-type(5) {
+  animation-delay: 0.4s;
+}
+@keyframes wave-text {
+  0% {
+      transform: translateY(0em);
+ }
+  60% {
+      transform: translateY(-0.6em);
+ }
+  100% {
+      transform: translateY(0em);
+ }
+}
+
+
+
 .cursor_container{
   display: none;
 }
