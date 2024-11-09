@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="./asset/style/fonts.css">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./asset/style/common.css">
+    <!-- <link rel="stylesheet" href="./asset/style/index_mq.css"> -->
 
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
@@ -41,19 +42,25 @@
     <header>
         <div class="header-main flex-wrapper">
             <div class="header-wrapper flex-wrapper">
-                <div class="logo"><a href="#">lee so yeon, 포트폴리오 로고</a></div>
-                <ul class="global-navigation-bar flex-wrapper">
+                  <a class="logo" href="#">lee so yeon, 포트폴리오 로고</a>
+                
+                  <ul class="mobile-global-navigation-bar">
+                    <li><a href="#">menu</a></li>
+                  </ul>
+          
+                  <ul class="global-navigation-bar flex-wrapper">
                     <li><a href="#">home</a></li>
                     <li><a href="#">project</a></li>
                     <li><a href="#">skill</a></li>
                     <li><a href="#">contact</a></li>
                 </ul>
+
             </div>
         </div>
     </header>
 
     <!-- https://www.rawlab.co/ -->
-    <section class="main">
+    <section class="main flex-wrapper">
         <div class="main-mainTitle flex-wrapper">
             <div class="main-mainTitle-wrapper mainTitle-en ">
                 <div class="main-mainTitle-top">
@@ -110,6 +117,10 @@
 
         <section class="skill">
             <div class="skill-container">
+              <div class="skill-text">
+                <h3>skill</h3>
+                <p>매일 작은 노력을 쌓아 꾸준히 성장하고 있습니다.</p>
+              </div>
               <div class="swiper">
                 <div class="swiper-wrapper">
                   <!-- 첫번째 스킬 이미지 -->
@@ -285,7 +296,7 @@
             // INJECT CSS
             var css = document.createElement("style");
             css.type = "text/css";
-            css.innerHTML = ".txt-rotate > .wrap { border-right: 0.18em solid #888; }";
+            css.innerHTML = ".txt-rotate > .wrap { border-right: 0.18em solid #ccc; }";
             document.body.appendChild(css);
         };
     </script>

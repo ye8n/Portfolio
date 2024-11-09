@@ -53,9 +53,15 @@ html{
   --spacing-xlg: 11.667vw;
 
   /* 폰트 사이즈 */
-  --font-mg: 1.125rem;
+  /* 
   --font-lg: 1.5rem;
-  --font-xlg: 2.5rem;
+  --font-xlg: 2.5rem; */
+
+  --font-md: 1.125rem; /* 18px */
+  --font-desc: 1.375rem; /* 22px */
+  --font-lg: 3.229vw; /* 60px */
+  --font-xlg: 5.25vw; /* 100px */
+  --font-xxlg: 7.292vw; /* 140px */
 
   /* 배경색 */
 
@@ -78,7 +84,7 @@ html{
 body{
   font-family: var(--font-main-kr);
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: var(--font-md);
 }
 
 
