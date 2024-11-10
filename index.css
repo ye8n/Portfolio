@@ -39,25 +39,19 @@ header .header-wrapper .logo:hover{
   opacity: 0.4;
 }
 
-
-
 header .global-navigation-bar li{
   margin-left: 3rem;
   display: block;
   font-family: 'KoPub Batang';
   text-transform: uppercase;
+  position:relative;
+
 } 
 
-header .global-navigation-bar li a:after {
-  
+header .header-main .header-wrapper .global-navigation-bar a:hover{
+  text-decoration: underline;
+  animation: 3s;
 }
-
-
-
-header .mobile-global-navigation-bar{
-  display: none;
-}
-
 .main{
   overflow: hidden;
   padding-top:7.813vw;
