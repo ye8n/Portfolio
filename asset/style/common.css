@@ -10,6 +10,26 @@ html{
   color: var(--color-black);
 }
 
+::selection {
+  background: var(--color-black);
+  color: var(--bg-light);
+}
+
+::-moz-selection {
+  background: #d9d8d5;
+}
+
+/* scrollbar */
+html::-webkit-scrollbar {
+    width: 10px;
+}
+html::-webkit-scrollbar-thumb{
+  background: var(--color-black);
+}
+html::-webkit-scrollbar-track{
+  background: var(--bg-light);
+}
+
 .noise {
   position: fixed;
   left: 0;
