@@ -346,23 +346,26 @@ header .global-navigation-bar li{
   display: grid;
   margin: 0 var(--spacing-xlg) ;
   margin-bottom: 0;
+  ;
 }
 
 .contact-contents p:nth-child(1){
   font-size: 20px;
+  color: var(--bg-light);
 }
 .contact-contents p:nth-child(2){
   font-size: 80px;
+  color: var(--color-white);
 }
 
 /***** footer *****/
 footer{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0 var(--spacing-xlg);
+  grid-template-columns: 1fr 1fr 1fr;
   font-family: var(--font-title-kr);
   color: #a8a8a8;
   text-align: center;
+  place-items: center end;
 
   
 }
