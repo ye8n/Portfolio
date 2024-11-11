@@ -358,19 +358,6 @@ header .header-main .header-wrapper .global-navigation-bar a:hover{
   flex-flow: column;
   justify-content: flex-end;
   margin: 0 var(--spacing-xlg) ;
-<<<<<<< HEAD
-  margin-bottom: 0;
-  ;
-}
-
-.contact-contents p:nth-child(1){
-  font-size: 20px;
-  color: var(--bg-light);
-}
-.contact-contents p:nth-child(2){
-  font-size: 80px;
-  color: var(--color-white);
-=======
   margin-bottom: 0;  height: 100%;
   position: relative;
 }
@@ -394,28 +381,17 @@ header .header-main .header-wrapper .global-navigation-bar a:hover{
   margin-top: 2vw;
 
 
->>>>>>> 1fc81cda032396fbd153c79a1d117a23d9e222b2
 }
 
 
 /***** footer *****/
 footer{
-<<<<<<< HEAD
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  font-family: var(--font-title-kr);
-  color: #a8a8a8;
-  text-align: center;
-  place-items: center end;
-
-=======
   display: flex;
   justify-content: space-between;
   font-family: var(--font-title-kr);
   color: #a8a8a8;
   text-align: center;
   font-size: 14px;
->>>>>>> 1fc81cda032396fbd153c79a1d117a23d9e222b2
   
 }
 
