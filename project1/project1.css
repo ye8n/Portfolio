@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-@charset "utf-8";
-=======
 @charset "utf-8";
 
 /**** 헤더 ****/
@@ -70,4 +67,3 @@ section{
     margin: var(--spacing-xlg);
     word-break: keep-all;
 }
->>>>>>> aff7a33beff36b9aa51fe76e40259c595a9486b0
