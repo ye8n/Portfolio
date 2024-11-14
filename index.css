@@ -238,6 +238,7 @@ header .header-main .header-wrapper .global-navigation-bar a:hover{
   align-items: center;
   width: 100%;
   height: 100vh;
+  word-break: keep-all;
 }
 
 /* swiper */
@@ -361,24 +362,22 @@ header .header-main .header-wrapper .global-navigation-bar a:hover{
   margin-bottom: 0;  height: 100%;
   position: relative;
 }
-
 .contact-contents p{
+  font-size: var(--font-desc);
+  color: #cfcfcf;
+  padding-left: 0.208vw;
   position: absolute;
   top: 4vw;
   left: 4vw;
 }
-
-.contact-contents p:nth-child(1){
-  font-size: var(--font-desc);
-  color: #cfcfcf;
-  padding-left: 0.208vw;
-
-}
-.contact-contents p:nth-child(2){
+.contact-contents h2{
   font-size: 3.232vw;
   color: var(--color-white);
   cursor: pointer;
   margin-top: 2vw;
+  position: absolute;
+  top: 4vw;
+  left: 4vw;
 
 
 }
