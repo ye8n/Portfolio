@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>railroad crime reporting</title>
@@ -8,11 +9,13 @@
     <link rel="stylesheet" href="../asset/style/common.css">
     <link rel="stylesheet" href="./project1.css">
 </head>
-<body>
+
+<body> 
+    <div class="noise" style="opacity: 0.04; visibility: visible;"></div>
     <header>
         <div class="header-main flex-wrapper">
             <div class="header-wrapper flex-wrapper">
-                <a class="logo" href="#">lee so yeon, 포트폴리오 로고</a>
+                <a class="logo" href="../index.html">lee so yeon, 포트폴리오 로고</a>
                 <ul class="global-navigation-bar flex-wrapper">
                     <li><a href="#">home</a></li>
                     <li><a href="#">project</a></li>
@@ -27,44 +30,82 @@
         <div class="video-wrapper">
             <video src="../asset/video/project1_6s.mp4" muted autoplay loop></video>
         </div>
-        <ul class="info-txt-wrapper">
+        <ul class="info-txt-wrapper flex-wrapper">
             <li>
-                <h2>소개</h2>
+                <h3>소개</h3>
                 <p>철도범죄신고는 국토교통부에서 제공하는 철도지역 내 발생 범죄 사건 민원 신고 서비스 앱입니다. 신고 어플의 특성을 고려하여, 사용자 중심 디자인을 반영한 직관적인 ux/ui를
                     구현하고자 하였습니다.</p>
             </li>
             <li>
-                <h2>프로젝트</h2>
-                <span>팀 프로젝트</span>
-                <span>UX/UI 리디자인</span>
+                <h3>프로젝트</h3>
+                <span class="rounded-fill">팀 프로젝트</span>
+                <span class="rounded">UX/UI 리디자인</span>
             </li>
             <li>
-                <h2>담당 역할</h2>
-                <span>팀 리더</span>
-                <span>데스크리서치</span>
-                <span>와이어프레임</span>
-                <span>프로토타입 디자인 등</span>
-            </li>
-            <li>
-                <strong>Tools</strong> <span>Figma Illustrator</span>
+                <h3>담당 역할</h3>
+                <span class="rounded-fill">팀 리더</span>
+                <span class="rounded">데스크리서치</span>
+                <span class="rounded">와이어프레임</span>
+                <span class="rounded">프로토타입 디자인 등</span>
             </li>
         </ul>
     </section>
 
     <section>
-        <div class="overview">
-            <h1>Overview</h1>
+        <div class="overview layout">
+            <h2 class="project-title">Overview</h2>
             <p>‘철도범죄신고 앱’은 KTX, 전동열차, 철도역 등 철도지역 내에서 발생하는 범죄, 사건, 민원을 신고할 수 있는 서비스입니다.</p>
             <p>앱을 통해 사진 동영상을 첨부하여 신고하는 유용한 기능을 제공하지만, 가독성이 부족하고 사용자의 편의를 고려하지 않은 디자인에 아쉬움이 남았습니다.
-            <p>그래서 우리는 이를 개선하기 위해 리뉴얼하게 되었습니다.</p>
+            <p>그래서 우리는 이를 개선하기 위해 리디자인하게 되었습니다.</p>
         </div>
 
-        <div class="problem"></div>
+        <div class="problem layout">
+            <h2 class="project-title">Problem: 사용자의 편의를 고려하지 않은 디자인</h2>
+            <div class="problem-container">
+                <div class="problem-text-wrapper flex-wrapper">
+                    <h3>problem</h3>
+                    <ul>
+                        <li>① 의미가 불명확한 아이콘</li>
+                        <li>② 두 개의 버튼이 동일한 신고 기능을 수행</li>
+                        <li>③ 좁은 레이아웃</li>
+                        <li>④ 가독성을 저하시키는 작은 텍스트와 아이콘</li>
+                    </ul>
+                </div>
+                <div class="problem-img">
+                    <img src="./image/problem_2.svg" alt="철도범죄신고 APP 홈화면">
+                    <img src="./image/problem_1.svg" alt="철도범죄신고 APP 신고자 정보 화면">
+                </div>
+            </div>
+        </div>
+    
+        <div class="ux-vision">
+            <h2 class="project-title">UX-Vision</h2>
+            <p>소리 없이 빠르고 안전하게! 조용한 신고, 당신의 손안에.</p>
+        </div>
 
-        <div class="needs"></div>
+        <div class="asis-tobe">
+            <h2 class="project-title">AS-IS   TO-BE</h2>
+            <img class="img-none" src="./image/AS-IS-TO-BE.svg" alt="철도범죄신고 리디자인 AS-IS TO-BE">
+        </div>
 
-        <div class="ux-vision"></div>
+        <div class="ui-style-guide layout">
+            <h2 class="project-title">UI Style Guide</h2>
+            <div class="ui-style-guide-container">
+                <div class="color">
+                    <img class="img-none" src="./image/style-guide-color.svg" alt="UI Style Guide Color, 신뢰감을 주는 파랑을 사용. 안정감을 위해 밝은 회색과 하얀색을 사용해 가독성을 극대화함">
+                </div>
+                <div class="font">
+                    <img class="img-none" src="./image/style-guide-font.svg" alt="UI Style Guide Font, 모던하고 깔끔한 인상을 주기 위해 프리텐다드 서체를 사용함">
+                </div>
+            </div>
+            <a href="#">더 자세한 스타일 가이드 보러가기</a>
+        </div>
+        <div class="result">
+            <img class="img-none" src="./image/result.svg" alt="철도범죄신고 리디자인 결과">
+        </div>
 
+        <div class="demo"></div>
     </section>
 </body>
+
 </html>
