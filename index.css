@@ -240,7 +240,7 @@ header .header-main .header-wrapper .global-navigation-bar a:hover{
 
 /* swiper */
 .skill-container {
-  width: min(1200px, 100%)
+  width: min(1200px, 100%);
 
 }
 
@@ -264,6 +264,7 @@ header .header-main .header-wrapper .global-navigation-bar a:hover{
   --swiper-scrollbar-drag-bg-color: var(--color-black);
   --swiper-scrollbar-size: 4px;
 }
+
 
 /* 카드 하나 크기 */
 .card {
@@ -299,7 +300,6 @@ header .header-main .header-wrapper .global-navigation-bar a:hover{
 
 
 /* MEDIA QUERIES */
-
 @media (max-width: 1200px) { 
   .swiper {
       width: 80%;

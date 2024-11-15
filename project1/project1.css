@@ -241,3 +241,26 @@ header .header-main{
 @media (max-width: 900px) {
   
 }
+
+/**** result ****/
+
+.result{
+  
+}
+
+.result img{
+  z-index: -9;
+}
+
+.result-container{
+  position: relative;
+}
+
+.result-button{
+  position: absolute;
+}
+
+
+.demo img{
+  width: 80vw;
+}
