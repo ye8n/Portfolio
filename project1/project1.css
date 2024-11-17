@@ -5,7 +5,7 @@
   font-weight: bold;
   font-size: 32px;
   margin-top: var(--spacing-xlg);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .rounded{
@@ -100,6 +100,29 @@ header .header-main{
     font-weight: bold;
     margin-bottom: 1rem;
 }
+
+/**** goal ****/
+.goal .goal-txt-wrapper{
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.goal .goal-txt-wrapper p{
+
+ height: 100px;
+ text-align: center;
+ line-height: 100px;
+ width: 447px;
+ background: #d9d9d9;
+}
+
+.goal .goal-txt-wrapper p:hover{
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+
 /**** problem ****/
 .problem{
   position: relative;
@@ -244,23 +267,18 @@ header .header-main{
 
 /**** result ****/
 
-.result{
-  
+/**** demo ****/
+
+
+/**** more view ****/
+.moreView .moreView-container{
+  display: flex;
+  justify-content: space-between;  
 }
-
-.result img{
-  z-index: -9;
-}
-
-.result-container{
-  position: relative;
-}
-
-.result-button{
-  position: absolute;
-}
-
-
-.demo img{
-  width: 80vw;
+.moreView .moreView-container .moreView-contents{
+  border: 2px solid var(--color-black);
+  background: #000;
+  width: 430px;
+  aspect-ratio: 1/1;
+  /* ?? */
 }

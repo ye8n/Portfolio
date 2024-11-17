@@ -1,7 +1,6 @@
 <svg width="1920" height="966" viewBox="0 0 1920 966" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g clip-path="url(#clip0_105_202)">
 <rect width="1920" height="966" fill="#2D2D2D"/>
-<ellipse cx="511.969" cy="453.592" rx="302.969" ry="53.5923" fill="url(#paint0_radial_105_202)" fill-opacity="0.2"/>
 <g filter="url(#filter0_dii_105_202)">
 <path d="M1357.1 175.308C1322.25 155.189 1322.25 122.569 1357.1 102.449L1584.76 -28.9773C1611.57 -44.4538 1655.03 -44.4538 1681.84 -28.9773L2259.4 304.449C2294.25 324.568 2294.25 357.188 2259.4 377.308L2031.75 508.734C2004.94 524.211 1961.47 524.211 1934.66 508.734L1357.1 175.308Z" fill="#F3F5F7"/>
 </g>
@@ -139,11 +138,6 @@
 <pattern id="pattern7_105_202" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image1_105_202" transform="matrix(0.00256556 0 0 0.00118483 -0.000284324 0)"/>
 </pattern>
-<radialGradient id="paint0_radial_105_202" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(511.969 453.592) rotate(90) scale(53.5923 302.969)">
-<stop stop-color="#CBCBCB"/>
-<stop offset="0.22" stop-color="#D8D8D8"/>
-<stop offset="1" stop-color="white" stop-opacity="0"/>
-</radialGradient>
 <clipPath id="clip0_105_202">
 <rect width="1920" height="966" fill="white"/>
 </clipPath>
