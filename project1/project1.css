@@ -105,14 +105,17 @@ header .header-main{
 .goal .goal-txt-wrapper{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   user-select: none;
 }
 
 .goal .goal-txt-wrapper p{
 
  height: 100px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
  text-align: center;
- line-height: 100px;
  width: 447px;
  background: #d9d9d9;
 }
@@ -265,20 +268,63 @@ header .header-main{
   
 }
 
-/**** result ****/
-
 /**** demo ****/
+.demo .demo-navigation-menu{
+  display: flex;
+  margin: 1rem 0 42px;
+  border-top: 1px solid var(--color-black);
+  border-bottom: 1px solid var(--color-black);
+
+}
+
+.demo .demo-navigation-menu li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-right: 1px solid var(--color-black);
+  width: calc(100% / 6);
+
+}
+.demo .demo-navigation-menu li:nth-last-child(1){
+  border: none;
+}
+
+.demo .demo-navigation-menu li:hover{
+  background: var(--color-black);
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+
+.demo .demo-img-wrapper img{
+  width: 80%;
+}
+
 
 
 /**** more view ****/
 .moreView .moreView-container{
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
 }
 .moreView .moreView-container .moreView-contents{
-  border: 2px solid var(--color-black);
-  background: #000;
-  width: 430px;
   aspect-ratio: 1/1;
-  /* ?? */
+  width: 20.833vw; /*400px*/
+  border: 1px solid var(--color-black);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-content: center;
+  text-transform: capitalize;
+}
+.moreView .moreView-container .moreView-contents:hover{
+  background: var(--color-black);
+  color: var(--color-white);
+}
+.moreView .moreView-container .moreView-contents a{
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 1rem;
 }
