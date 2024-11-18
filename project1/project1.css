@@ -297,6 +297,11 @@ header .header-main{
 }
 
 
+.demo .demo-img-wrapper img{
+  width: 80%;
+}
+
+
 
 /**** more view ****/
 .moreView .moreView-container{
