@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <title>railroad crime reporting</title>
     <link rel="stylesheet" href="../asset/style/reset.min.css">
     <link rel="stylesheet" href="../asset/style/fonts.css">
@@ -26,27 +27,27 @@
         </div>
     </header>
 
-    <section class="info">
-        <div class="video-wrapper">
-            <video src="../asset/video/project1_6s.mp4" muted autoplay loop></video>
-        </div>
+    <section class="info flex-wrapper">
+            <video src="./image/project1.mp4" muted autoplay loop></video>
         <ul class="info-txt-wrapper flex-wrapper">
             <li>
-                <h3>소개</h3>
-                <p>철도범죄신고는 국토교통부에서 제공하는 철도지역 내 발생 범죄 사건 민원 신고 서비스 앱입니다. 신고 어플의 특성을 고려하여, 사용자 중심 디자인을 반영한 직관적인 ux/ui를
-                    구현하고자 하였습니다.</p>
+                <h3>프로젝트 소개</h3>
+                <p>사용자가 보다 쉽고 직관적으로 신고를 진행할 수 있도록, 기존 앱의 UX/UI를 리디자인한 프로젝트입니다. 주 기능인 '신고하기'에 초점을 맞추어, <strong>신고 과정을 빠르고 신속하게 완료할 수 있도록</strong> 디자인을 개선하였으며, 이를 통해 사용자의 경험을 향상시켰습니다.</p>
             </li>
             <li>
-                <h3>프로젝트</h3>
+                <h3>프로젝트 분류</h3>
                 <span class="rounded-fill">팀 프로젝트</span>
                 <span class="rounded">UX/UI 리디자인</span>
             </li>
             <li>
                 <h3>담당 역할</h3>
                 <span class="rounded-fill">팀 리더</span>
-                <span class="rounded">데스크리서치</span>
-                <span class="rounded">와이어프레임</span>
+                <span class="rounded" id="research">데스크리서치</span>
+                <span class="rounded" id="wire">와이어프레임</span>
                 <span class="rounded">프로토타입 디자인 등</span>
+            </li>
+            <li>
+                <p>진행 기간 2024.09.09 - 2024.10.14</p>
             </li>
         </ul>
     </section>
@@ -55,14 +56,14 @@
         <div class="overview layout">
             <h2 class="project-title">Overview</h2>
             <p>‘철도범죄신고 앱’은 KTX, 전동열차, 철도역 등 철도지역 내에서 발생하는 범죄, 사건, 민원을 신고할 수 있는 서비스입니다.</p>
-            <p>앱을 통해 사진 동영상을 첨부하여 신고하는 유용한 기능을 제공하지만, 가독성이 부족하고 사용자의 편의를 고려하지 않은 디자인에 아쉬움이 남았습니다.
+            <p>앱을 통해 사진 동영상을 첨부하여 신고하는 유용한 기능을 제공하지만, <strong>가독성이 부족하고 사용자의 편의를 고려하지 않은 디자인</strong>에 아쉬움이 남았습니다.
             <p>그래서 우리는 이를 개선하기 위해 리디자인하게 되었습니다.</p>
         </div>
 
 
         <div class="goal layout">
-            <h2 class="project-title">Goal</h2>
-            <div class="goal-txt-wrapper">
+            <h2 class="project-title">Project Goal</h2>
+            <div class="goal-txt-wrapper ">
                 <p>사용자 중심 디자인을 반영한 직관적인 ux/ui 구현</p>
                 <p>Figma 숙련</p>
                 <p>리더십과 커뮤니케이션 스킬 향상</p>
@@ -78,13 +79,13 @@
                 <div class="problem-text-wrapper flex-wrapper">
                     <h3>problem</h3>
                     <ul>
-                        <li>① 의미가 불명확한 아이콘</li>
-                        <li>② 두 개의 버튼이 동일한 신고 기능을 수행</li>
-                        <li>③ 좁은 레이아웃</li>
-                        <li>④ 가독성을 저하시키는 작은 텍스트와 아이콘</li>
+                        <li>의미가 불명확한 아이콘</li>
+                        <li>두 개의 버튼이 동일한 신고 기능을 수행</li>
+                        <li>좁은 레이아웃</li>
+                        <li>가독성을 저하시키는 작은 텍스트와 아이콘</li>
                     </ul>
                 </div>
-                <div class="problem-img">
+                <div class="problem-img flex-wrapper">
                     <img src="./image/problem_2.svg" alt="철도범죄신고 APP 홈화면">
                     <img src="./image/problem_1.svg" alt="철도범죄신고 APP 신고자 정보 화면">
                 </div>
@@ -113,7 +114,7 @@
                         alt="UI Style Guide Font, 모던하고 깔끔한 인상을 주기 위해 프리텐다드 서체를 사용함">
                 </div>
             </div>
-            <a href="#">더 자세한 스타일 가이드</a>
+            <a href="https://drive.google.com/file/d/18O8_McefQ7V6tcI0Yh5bZp71fUtCcfd-/view?usp=sharing" target="_blank"> 더 자세한 스타일 가이드</a>
         </div>
         <div class="result">
             <div class="result-container">
@@ -139,17 +140,23 @@
     <div class="moreView layout">
         <h2 class="project-title">More View</h2>
         <div class="moreView-container">
-            <div class="moreView-contents prototype">
-                <p>prototype</p>
-                <a href="https://www.figma.com/proto/Z5zFRojtgd0lxtBI4OtIEV/(%EA%B0%9C%EC%9D%B8)-%EC%B2%A0%EB%8F%84%EB%B2%94%EC%A3%84%EC%8B%A0%EA%B3%A0-%EC%95%B1-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=209-7199&node-type=frame&t=lMFtOBKHT040dAgl-1&scaling=scale-down&content-scaling=fixed&page-id=209%3A5924&starting-point-node-id=209%3A7199">프로토타입 보러가기</a>
+            <div class="moreView-contents prototype flex-wrapper">
+                <a href="https://www.figma.com/proto/Z5zFRojtgd0lxtBI4OtIEV/(%EA%B0%9C%EC%9D%B8)-%EC%B2%A0%EB%8F%84%EB%B2%94%EC%A3%84%EC%8B%A0%EA%B3%A0-%EC%95%B1-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=209-7199&node-type=frame&t=lMFtOBKHT040dAgl-1&scaling=scale-down&content-scaling=fixed&page-id=209%3A5924&starting-point-node-id=209%3A7199"
+                    target="_blank">
+                    <p>prototype</p>프로토타입 보러가기
+                </a>
             </div>
-            <div class="moreView-contents report">
-                <p>report</p>
-                <a href="#">프로젝트 완료 보고서 보러가기</a>
+            <div class="moreView-contents report flex-wrapper">
+                <a href="https://drive.google.com/file/d/14PZv4Q05Ud-Gvo4X7_ZEj_fGoFvoz9i3/view?usp=sharing"
+                    target="_blank">
+                    <p>report</p>프로젝트 완료 보고서 보러가기
+                </a>
             </div>
-            <div class="moreView-contents presentation">
-                <p>presentation</p>
-                <a href="https://www.figma.com/proto/5YGMyHItu4VHCctjD0KTUF/%EC%B2%A0%EB%8F%84%EB%B2%94%EC%A3%84%EC%8B%A0%EA%B3%A0-%EC%95%B1?node-id=1221-5450&t=DHt9RwhZwYRVqvZz-1">프레젠테이션 보러가기</a>
+            <div class="moreView-contents presentation flex-wrapper">
+                <a href="https://drive.google.com/file/d/1ff2Gmqp8_3jcVBfRW3vvrHDvpA1a5l0m/view?usp=sharing"
+                    target="_blank">
+                    <p>presentation</p>프레젠테이션 보러가기
+                </a>
             </div>
         </div>
     </div>

@@ -6,6 +6,7 @@
   font-size: 32px;
   margin-top: var(--spacing-xlg);
   margin-bottom: 2rem;
+
 }
 
 .rounded{
@@ -75,25 +76,28 @@ header .header-main{
   header .header-main .header-wrapper .global-navigation-bar a:hover{
     text-decoration: underline;
   }
-
   /**** info ****/
   .info{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: var(--spacing-xlg);
+    display: flex;
+    margin: 5rem var(--spacing-xlg);
   }
-.info .info-txt-wrapper{
-    margin: 0 2rem;
+  .info video{
+    object-fit: contain;
+    min-width: 500px;
+    max-width: 700px;
+  }
+  .info .info-txt-wrapper{
     align-self: center;
-    word-break: keep-all;
     flex-flow: column wrap;
     justify-content: space-between;
-    align-items: flex-start;
-
+    word-break: keep-all;
+    background: #fff;
+    line-height: 1.5;
 }
 .info .info-txt-wrapper li{
-    margin: 1.6rem;
-    word-break: normal;
+    padding: 1.6rem;
+    border-bottom: 1px solid rgba(136, 136, 136,0.2);
+    width: 100%;
 }
 .info .info-txt-wrapper li h3{
     font-size: 24px;
@@ -101,77 +105,112 @@ header .header-main{
     margin-bottom: 1rem;
 }
 
+.info .info-txt-wrapper li:nth-last-child(1) p{
+  color: #a9a9a9;
+  font-size: 1rem;
+}
+
+/* info - MEDIA QUERIES */
+@media (max-width: 1400px){
+  .info {
+  font-size: 80%;
+}
+.info .info-txt-wrapper #wire {
+  display: none;
+}
+
+@media (max-width: 1200px){
+  .info .info-txt-wrapper #research{
+    display: none;
+  }
+
+  .info{
+    flex-direction: column
+  }
+}
+}
+
+
+/**** overview ****/
+.overview p{
+  line-height: 1.5;
+}
+
 /**** goal ****/
-.goal .goal-txt-wrapper{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  user-select: none;
+.goal .goal-txt-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  gap: 2rem;
+  margin-top: 4rem;
 }
 
 .goal .goal-txt-wrapper p{
+  width: 100%;
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 32px 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--color-black);
+}
 
- height: 100px;
- display: flex;
- justify-content: center;
- align-items: center;
- text-align: center;
- width: 447px;
- background: #d9d9d9;
+.process img{ 
+  margin-top: 4rem;
 }
 
 .goal .goal-txt-wrapper p:hover{
-  background: var(--color-black);
-  color: var(--color-white);
-}
+  background: var(--color-white);
+  color: var(--color-black);
+  border: 2px solid var(--color-black);
+} 
 
 
 /**** problem ****/
-.problem{
-  position: relative;
-  height: 70vh;
-}
-.problem-container .problem-text-wrapper{
-  background: var(--color-black); color: var(--color-white);
 
-  border-radius: 50%;
-  display: flex;
+.problem-text-wrapper{
   flex-flow: column;
-
   justify-content: center;
-  position: absolute;
-
-  padding: 30px;
-  width: 500px ; height: 500px;
-
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  align-items: center;
+  background: var(--color-black);
+  color: var(--color-white);
+  width: 31.25rem; /* 500px;*/ aspect-ratio: 1/1;
+  border-radius: 50%;
+  margin: 5rem auto;
 }
- .problem-text-wrapper h3{
+.problem-text-wrapper h3{
   font-weight: bold;
-  font-size: 40px;
-  margin-bottom: 20px;
- }
-
- .problem-text-wrapper{
-  line-height: 2;
- }
-
-
-.problem-img {
-  max-width: 14.323vw;
-  display: flex;
-  gap: 10px;
-  position: absolute;
-  top: 30%;
-  right: var(--spacing-xlg);
+  font-size: 2rem;
+  text-transform: capitalize;
+  padding-bottom: 3rem;
 }
+.problem-text-wrapper li{
+  line-height: 2.2;
+  list-style: square;
+}
+
+.problem-container{
+  position: relative;
+}
+.problem-img{
+  position: absolute;
+  bottom: 0;
+  right: 8%;
+}
+.problem-img img{
+  margin: 0 4px;
+  width: 200px;
+}
+
 
 /* MEDIA QUERIES */
 
 @media (max-width: 1200px) { 
-  .problem-container .problem-text-wrapper{
+  .problem-img {
+    display: none;
+  }
+  /* .problem-container .problem-text-wrapper{
     width: 450px;
     height: 450px;
     left: 30%;
@@ -179,18 +218,9 @@ header .header-main{
   .problem-img {
       width: 200px;
     }
-}
+} */
 
-@media (max-width: 900px) {
-  .problem-container .problem-text-wrapper{
-    left: 50%;
-    top: 50%;
-  }
-  .problem-img {
-    display: none;
-  }
 }
-
 
 /**** ux-vision ****/
 
@@ -200,6 +230,7 @@ header .header-main{
   color: var(--color-white);
   padding: 2rem var(--spacing-xlg) 0;
   position: relative;
+
 }
 
 .ux-vision p{
@@ -209,7 +240,9 @@ header .header-main{
   transform: translate(-50%,-50%);
   font-size: 40px;
   font-weight: bold;
+  text-align: center;
 }
+/**** as-is to-be ****/
 
 .asis-tobe{
   height: 100vh;
@@ -225,13 +258,20 @@ header .header-main{
 
 .asis-tobe img{
   object-fit: contain;
-  height: 90vh;
+  height: 80%;
 }
 
 /* ui-style-guide */
 .ui-style-guide .ui-style-guide-container{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  
+  align-items: center;
+  padding-bottom:4rem;
+}
+
+.ui-style-guide .ui-style-guide-container .color, .font{
+  padding-bottom:4rem;
 }
 
 .img-none{
@@ -261,11 +301,6 @@ header .header-main{
     display:flex;
     flex-flow: column;
   }
-
-}
-
-@media (max-width: 900px) {
-  
 }
 
 /**** demo ****/
@@ -295,36 +330,40 @@ header .header-main{
   color: var(--color-white);
   font-weight: bold;
 }
-
-
 .demo .demo-img-wrapper img{
   width: 80%;
 }
-
-
-
 /**** more view ****/
+
 .moreView .moreView-container{
-  display: flex;
-  justify-content: space-between;
-}
-.moreView .moreView-container .moreView-contents{
-  aspect-ratio: 1/1;
-  width: 20.833vw; /*400px*/
-  border: 1px solid var(--color-black);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  flex-flow: column;
-  align-content: center;
-  text-transform: capitalize;
+  gap: 2rem;
+  margin-top: 4rem;
 }
-.moreView .moreView-container .moreView-contents:hover{
+
+.moreView .moreView-container .moreView-contents{
+  flex-flow: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  text-transform: capitalize;
   background: var(--color-black);
   color: var(--color-white);
+  aspect-ratio: 1/1;
 }
+
 .moreView .moreView-container .moreView-contents a{
-  font-weight: bold;
-  font-size: 24px;
-  margin-top: 1rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; width: 100%;
+}
+.moreView .moreView-container .moreView-contents a:hover{
+  background: var(--color-white);
+  color: var(--color-black);
+  border: 2px solid var(--color-black);
 }
