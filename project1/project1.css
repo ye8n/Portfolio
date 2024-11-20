@@ -307,8 +307,8 @@ header .header-main{
 .demo .demo-navigation-menu{
   display: flex;
   margin: 1rem 0 42px;
-  border-top: 1px solid var(--color-black);
-  border-bottom: 1px solid var(--color-black);
+  border-top: 2px solid var(--color-black);
+  border-bottom: 2px solid var(--color-black);
 
 }
 
@@ -317,22 +317,52 @@ header .header-main{
   justify-content: center;
   align-items: center;
   height: 50px;
-  border-right: 1px solid var(--color-black);
+  border-right: 2px solid var(--color-black);
   width: calc(100% / 6);
+  font-weight: bold;
+  cursor: pointer;
 
 }
 .demo .demo-navigation-menu li:nth-last-child(1){
   border: none;
 }
 
-.demo .demo-navigation-menu li:hover{
+.demo .demo-navigation-menu .selected{
   background: var(--color-black);
   color: var(--color-white);
-  font-weight: bold;
 }
 .demo .demo-img-wrapper img{
   width: 80%;
 }
+
+.demo span{
+  font-weight: bold;
+}
+
+/* demo - 애니메이션 */
+
+.demo-img-wrapper img {
+  opacity: 1;
+  transform: translateX(20%);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; 
+}
+
+.demo-img-wrapper img.show {
+  animation: slideInFromRight 1s forwards; 
+}
+
+@keyframes slideInFromRight {
+  0% {
+      opacity: 0;
+      transform: translateX(20%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+
 /**** more view ****/
 
 .moreView .moreView-container{
@@ -361,9 +391,17 @@ header .header-main{
   justify-content: center;
   align-items: center;
   height: 100%; width: 100%;
+  font-size: 1.563rem;
+  line-height: 1.5;
+  font-weight: bold;
 }
 .moreView .moreView-container .moreView-contents a:hover{
   background: var(--color-white);
   color: var(--color-black);
   border: 2px solid var(--color-black);
+}
+
+.moreView .moreView-container .moreView-contents a p{
+  font-size: 1.25rem;
+  font-weight: normal;
 }
