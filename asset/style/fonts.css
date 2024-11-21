@@ -47,7 +47,7 @@
 @font-face {
   font-family: 'SpoqaHanSans';
   src: local('Spoqa Han Sans Neo Bold'), 
-    url(./font/SpoqaHanSansNeo-Bold.woff2) format('woff2');
+    url(../font/SpoqaHanSansNeo-Bold.woff2) format('woff2');
   font-style: normal;
   font-display: swap;
   font-weight: 700;
@@ -75,12 +75,4 @@
   font-style: normal;
   font-display: swap;
   font-weight: 300;
-}
-@font-face {
-  font-family: 'SpoqaHanSans';
-  src: local('Spoqa Han Sans Neo Thin'), 
-    url(../font/SpoqaHanSansNeo-Thin.woff2) format('woff2');
-  font-style: normal;
-  font-display: swap;
-  font-weight: 100;
 }

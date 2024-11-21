@@ -2,12 +2,107 @@
 
 /* 공통 스타일 */
 
+/* .main-title{} 타이틀 */
+
 html{
     background: #FDFBF4;
     font-family: 'SpoqaHanSans';
 }
 
+.flex-wrapper{
+    display: flex;
+    align-items: center;
+}
 
-/* 헤더 */
+/**** 헤더 ****/
+
+/* 헤더 레이아웃 */
+header {
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+/* 로고 스타일 */
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    background: url(./image/logo1.png) no-repeat center / contain;
+    width: 150px; /* 로고 너비 */
+    height: 50px; /* 로고 높이 */
+}
+
+.logo h1 {
+    text-indent: -9999px; /* 텍스트 숨기기 */
+    overflow: hidden;
+}
+
+/* 마이페이지 섹션 */
+.myPage {
+    display: flex;
+    gap: 20px;
+}
+
+.myPage > li {
+    padding: 10px;
+}
+/* 
+ */
+ /* GNB 기본 스타일 */
+.global-navigation-bar {
+    display: flex;
+    gap: 20px;
+    position: relative; /* 서브메뉴를 기준으로 배치 */
+}
+
+/* GNB 항목 스타일 */
+header {
+    position: relative; /* 하위 메뉴 기준점 */
+}
+
+/* 서브메뉴 기본 상태 (숨김) */
+.sub-global-navigation-bar {
+    display: none;
+    position: absolute;
+    top: 170%; /* 부모 메뉴 아래 */
+    left: -10%;
+    width: 100vw; /* 화면 전체 너비 */
+    background-color: #fff; /* 서브메뉴 배경색 */
+    border-top: 1px solid #ddd; /* 상단 경계선 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    z-index: 999;
+    padding: 20px 20px; /* 서브메뉴 상하 여백 */
+}
+
+/* 서브메뉴 항목 스타일 */
+.sub-global-navigation-bar > li {
+    display: inline-block; /* 가로로 정렬 */
+    padding: 10px 10px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* 서브메뉴 링크 스타일 */
+.sub-global-navigation-bar > li > a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* 마우스 호버 시 서브메뉴 표시 */
+.global-navigation-bar > li:hover .sub-global-navigation-bar {
+    display: block; /* 숨김 해제 */
+}
+
+/* 서브메뉴 호버 효과 */
+.sub-global-navigation-bar > li:hover {
+    background-color: #eee;
+}
+
 /* 메인 */
 /* 푸터 */
