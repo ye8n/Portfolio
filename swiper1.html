@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <title>swiper1</title>
+  <link rel="stylesheet" href="asset/style/reset.min.css">
+  <link rel="stylesheet" href="./asset/style/swiper-bundle.min.css">
+  <link rel="stylesheet" href="swiper1.css">
+
+  <script src="asset/script/jquery-3.7.1.min.js"></script>
+  <script src="asset/script/swiper-bundle.min.js"></script>
+  <script defer src="swiper1.js"></script>
+</head>
+
+<body>
+
+  
+  <div id="main-slide" class="main-slide swiper">
+    <ul class="swiper-wrapper">
+      <li class="swiper-slide bg1">
+        <!-- data-swiper-parallax 이 사용자 속성을 통해 parallax효과 적용 -->
+        <div class="bg-box" data-swiper-parallax="-900">
+          <h2 class="title" data-swiper-parallax="-500">title1</h2>
+          <h3 class="subtitle" data-swiper-parallax="-200">Subtitle</h3>
+          <p class="text" data-swiper-parallax="-100">
+            프랑시스 꽃밭에 따라 날에 빛은 잊지 따라 갈라진 가을 바위틈에 밤의 누워 이다.</p>
+        </div>
+      </li>
+      <li class="swiper-slide bg2">
+        <div class="bg-box" data-swiper-parallax="-900">
+          <h2 class="title" data-swiper-parallax="-500">title2</h2>
+          <h3 class="subtitle" data-swiper-parallax="-200">Subtitle</h3>
+        </div>
+      </li>
+      <li class="swiper-slide bg3">
+        <div class="bg-box" data-swiper-parallax="-900">
+          <h2 class="title" data-swiper-parallax="-500">title3</h2>
+          <h3 class="subtitle" data-swiper-parallax="-200">Subtitle</h3>
+          <p class="text" data-swiper-parallax="-100">
+          역겨워 바다로 만들고 흐른다 거외다. 하나에 걸 릴케 하염없이 라이너 사랑했지 수 됩니다.</p>
+        </div>        
+      </li>
+      <li class="swiper-slide bg4">
+        <div class="bg-box" data-swiper-parallax="-900">
+          <h2 class="title" data-swiper-parallax="-500">title4</h2>
+          <h3 class="subtitle" data-swiper-parallax="-200">Subtitle</h3>
+        </div>
+      </li>
+    </ul>
+
+    <div class="swiper-pagination main-page-no"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <div class="sub-slide swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://placehold.co/1000x500/B1D690/000?text=pic1" alt="pic1"></div>
+      <div class="swiper-slide"><img src="https://placehold.co/1000x500/FEEC37/000?text=pic2" alt="pic2"></div>
+      <div class="swiper-slide"><img src="https://placehold.co/1000x500/FFA24C/000?text=pic3" alt="pic3"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</body>
+</html>
