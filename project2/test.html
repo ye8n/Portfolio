@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>title</title>
+  <style>
+    /* 기본 스타일 */
+header {
+  position: relative;
+  padding: 10px 20px;
+  background: #f4f4f4;
+}
+
+.global-navigation-bar {
+  display: flex;
+  gap: 20px;
+}
+
+.global-navigation-bar a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* 사이드바 기본 스타일 (숨김 상태) */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  display: none;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.sidebar ul li {
+  padding: 10px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* 햄버거 메뉴 스타일 */
+#menuToggle {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  /* 햄버거 메뉴 아이콘 보이기 */
+  #menuToggle {
+    display: block;
+  }
+
+  /* 글로벌 메뉴 숨기기 */
+  .global-navigation-bar {
+    display: none;
+  }
+
+  /* 사이드바 보이기 */
+  .sidebar {
+    display: block;
+  }
+}
+
+  </style>
+<script src="../asset/script/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <header>
+    <div id="menuToggle">
+      <a href="#">☰</a>
+    </div>
+    <nav class="global-navigation-bar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  
+    <div class="sidebar">
+      <ul>
+        <li><a href="#">Gift Set</a></li>
+        <li><a href="#">Perfume</a></li>
+        <li><a href="#">Home Fragrance</a></li>
+        <li><a href="#">Body</a></li>
+        <li><a href="#">Natural</a></li>
+        <li><a href="#">Tools</a></li>
+        <li><a href="#">Komfortable Coffee</a></li>
+      </ul>
+    </div>
+  </header>
+</body>
+</html>

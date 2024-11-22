@@ -14,14 +14,23 @@ html{
     align-items: center;
 }
 
+.grid-wrapper{
+    display: grid;
+    align-items: center;
+}
+
 /**** 헤더 ****/
 
-/* 헤더 레이아웃 */
+/* 기본 스타일링 */
 header {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
-    position: relative;
+    position: fixed;
     z-index: 1000;
+    background: #FDFBF4;
+    width: 100%;
 }
 
 /* 로고 스타일 */
@@ -29,6 +38,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .logo {
@@ -40,69 +52,126 @@ header {
 .logo h1 {
     text-indent: -9999px; /* 텍스트 숨기기 */
     overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
-/* 마이페이지 섹션 */
+/* 마이페이지 스타일 */
 .myPage {
     display: flex;
     gap: 20px;
 }
 
+/* 마이페이지 항목 스타일 */
 .myPage > li {
     padding: 10px;
 }
-/* 
- */
- /* GNB 기본 스타일 */
-.global-navigation-bar {
-    display: flex;
-    gap: 20px;
-    position: relative; /* 서브메뉴를 기준으로 배치 */
-}
 
-/* GNB 항목 스타일 */
-header {
-    position: relative; /* 하위 메뉴 기준점 */
-}
-
-/* 서브메뉴 기본 상태 (숨김) */
-.sub-global-navigation-bar {
+.global-navigation-bar{
     display: none;
+}
+
+
+/****** 메인 ******/
+
+/**** 슬라이더 *****/
+
+section .main-slide {
+    height: 80vh;
+}
+.swiper-slide{
+    margin-top: 50px;
+}
+
+section .main-slide .bg1{background: url(./image/perfume.png) no-repeat 45% / cover;}
+section .main-slide .bg2{background: url(./image/Sachet.png) no-repeat 50% / cover;}
+section .main-slide .bg3{background: url(./image/giftset.png) no-repeat 45% / cover;}
+
+.main-slide .swiper-wrapper .bg-box {
+    background-color: rgba(255,255,255,0.3);
+    /* backdrop-filter: blur(3px); */
+    width: 80%;
+    max-width: 360px;
+    height: 40%;
     position: absolute;
-    top: 170%; /* 부모 메뉴 아래 */
-    left: -10%;
-    width: 100vw; /* 화면 전체 너비 */
-    background-color: #fff; /* 서브메뉴 배경색 */
-    border-top: 1px solid #ddd; /* 상단 경계선 */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-    z-index: 999;
-    padding: 20px 20px; /* 서브메뉴 상하 여백 */
-}
 
-/* 서브메뉴 항목 스타일 */
-.sub-global-navigation-bar > li {
-    display: inline-block; /* 가로로 정렬 */
-    padding: 10px 10px;
-    white-space: nowrap;
-    text-align: center;
-}
+    top: 40%;
+    padding: 40px;
 
-/* 서브메뉴 링크 스타일 */
-.sub-global-navigation-bar > li > a {
-    color: #333;
+    word-break: keep-all;
+  }
+  
+
+  .main-slide .swiper-wrapper .bg-box .title {
     font-weight: bold;
-    text-decoration: none;
+    font-size: 1.8rem;
+    margin-bottom: 1.625rem;
+  }
+  .main-slide .swiper-wrapper .bg-box p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+
+  }
+  .main-slide .swiper-wrapper .bg-box a {
+    max-width: 400px;
+    background: #000; color: #fff;
+    border-radius: 32px;    
+    padding: 4px 15px;
+}
+   
+  .main-slide .swiper-button-prev, .main-slide .swiper-button-next {
+    margin: 0.8rem;
+  }
+
+  .main-slide  .swiper-button-prev:after, 
+.main-slide .swiper-button-next:after {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+    display: none;
 }
 
-/* 마우스 호버 시 서브메뉴 표시 */
-.global-navigation-bar > li:hover .sub-global-navigation-bar {
-    display: block; /* 숨김 해제 */
+.main-slide:hover .swiper-button-prev:after {
+    display: block;
+}
+.main-slide:hover .swiper-button-next:after {
+    display: block;
 }
 
-/* 서브메뉴 호버 효과 */
-.sub-global-navigation-bar > li:hover {
-    background-color: #eee;
+
+/**** 상품 소개 페이지 ****/
+
+/* 시그니처 */
+/*
+section .signature{
+    grid-template-columns: 1fr 3fr;
+}
+section .signature-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-/* 메인 */
+
+section .peaceKeeper{
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+
+section .komfortable{
+    grid-template-columns: 3fr 1fr;
+}
+section .komfortable-list{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+section .identity{
+    grid-template-columns: repeat(4, 1fr);
+}
+    */
+  
+.blank{
+    height: 2rem;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
 /* 푸터 */

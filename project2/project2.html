@@ -2,261 +2,292 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <title>GRANHAND.</title>
-    <link rel="stylesheet" href="../asset/style/reset.min.css">
-    <link rel="stylesheet" href="../asset/style/fonts.css">
-    <link rel="stylesheet" href="../asset/style/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./project2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <title>GRANHAND.</title>
+  <link rel="stylesheet" href="../asset/style/reset.min.css">
+  <link rel="stylesheet" href="../asset/style/fonts.css">
+  <link rel="stylesheet" href="../asset/style/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./project2.css">
 
-    <script src="../asset/script/jquery-3.7.1.min.js"></script>
-    <script src="../asset/script/swiper-bundle.min.js"></script>
-    <script src="./project2.js" defer></script>
+  <script src="../asset/script/jquery-3.7.1.min.js"></script>
+  <script src="../asset/script/swiper-bundle.min.js"></script>
+  <script src="./project2.js" defer></script>
 </head>
 
 <body>
-    <header class="flex-wrapper">
-        <ul class="global-navigation-bar flex-wrapper">
-            <li><a href="#">Shop</a>
-                <ul class="sub-global-navigation-bar">
-                    <li><a href="#">Gift Set</a></li>
-                    <li><a href="#">Perfume</a></li>
-                    <li><a href="#">Home Fragrance</a></li>
-                    <li><a href="#">Body</a></li>
-                    <li><a href="#">Natural</a></li>
-                    <li><a href="#">Tools</a></li>
-                    <li><a href="#">Komfortable Coffee</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Journal</a>
-                <ul class="sub-global-navigation-bar">
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Culture</a></li>
-                    <li><a href="#">Life</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Essay</a></li>
-                    <li><a href="#">Film</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Wallpaper</a></li>
-            <li><a href="#">Stores</a>
-                <ul class="sub-global-navigation-bar">
-                    <li><a href="#">GRANHAND.</a></li>
-                    <li><a href="#">Komfortable COFFEE</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Index</a>
-                <ul class="sub-global-navigation-bar">
-                    <li><a href="#">Signature</a></li>
-                    <li><a href="#">Perfume</a></li>
-                    <li><a href="#">Fragrance</a></li>
-                    <li><a href="#">Natural</a></li>
-                </ul>
-            </li>
+  <header class="flex-wrapper">
+    <ul class="mobile-navigation-bar">
+      <div id="menuToggle">
+        <a href="#">menu☰</a>
+      </div>
+    </ul>
+    <ul class="global-navigation-bar flex-wrapper">
+      <li><a href="#">Shop+</a>
+        <ul class="sub-global-navigation-bar">
+          <li><a href="#">Gift Set</a></li>
+          <li><a href="#">Perfume</a></li>
+          <li><a href="#">Home Fragrance</a></li>
+          <li><a href="#">Body</a></li>
+          <li><a href="#">Natural</a></li>
+          <li><a href="#">Tools</a></li>
+          <li><a href="#">Komfortable Coffee</a></li>
         </ul>
-        <div class="logo-wrapper">
-        <div class="logo" id="logo">
-            <a href="#"><h1>GRANHAND. Logo</h1></a>
-        </div>
+      </li>
+      <li><a href="#">Journal+</a>
+        <ul class="sub-global-navigation-bar">
+          <li><a href="#">News</a></li>
+          <li><a href="#">Culture</a></li>
+          <li><a href="#">Life</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Essay</a></li>
+          <li><a href="#">Film</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Wallpaper</a></li>
+      <li><a href="#">Stores+</a>
+        <ul class="sub-global-navigation-bar">
+          <li><a href="#">GRANHAND.</a></li>
+          <li><a href="#">Komfortable COFFEE</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Index+</a>
+        <ul class="sub-global-navigation-bar">
+          <li><a href="#">Signature</a></li>
+          <li><a href="#">Perfume</a></li>
+          <li><a href="#">Fragrance</a></li>
+          <li><a href="#">Natural</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="logo-wrapper">
+      <div class="logo" id="logo">
+        <a href="#">
+          <h1>GRANHAND. Logo</h1>
+        </a>
+      </div>
     </div>
-        <ul class="myPage flex-wrapper">
-            <li><a href="#">SEARCH</a></li>
-            <li><a href="#">LOGIN</a></li>
-            <li><a href="#">CART</a></li>
+    <ul class="myPage flex-wrapper">
+      <li><a href="#">SEARCH</a></li>
+      <li><a href="#">LOGIN</a></li>
+      <li><a href="#">CART</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <!-- 메인 슬라이더 -->
+    <section>
+      <div id="main-slide" class="main-slide swiper">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide bg1">
+            <div class="bg-box" data-swiper-parallax="-900">
+              <h2 class="title" data-swiper-parallax="-500">Perfume
+              </h2>
+              <p class="text" data-swiper-parallax="-200">
+                데일리 하면서도 유니크한 매력이 담긴 그랑핸드만의 다섯 가지 향을 만나보세요</p>
+              <a href="#" data-swiper-parallax="-100">MORE</a>
+            </div>
+          </li>
+          <li class="swiper-slide bg2">
+            <div class="bg-box" data-swiper-parallax="-900">
+              <h2 class="title" data-swiper-parallax="-500">Sachet</h2>
+              <p class="text" data-swiper-parallax="-200">
+                향수 원액을 흡수한 암석을 담은 주머니 형태의 방향 제품입니다. 공간에 은은하게 퍼지는 향을 느껴보세요</p>
+              <a href="#" data-swiper-parallax="-100">MORE</a>
+            </div>
+          </li>
+          <li class="swiper-slide bg3">
+            <div class="bg-box" data-swiper-parallax="-900">
+              <h2 class="title" data-swiper-parallax="-500">Gift Set</h2>
+              <p class="text" data-swiper-parallax="-200">
+                그랑핸드 기프트 세트로 고마운 사람에게 특별한 향기로움을 전해보세요
+                </p>
+              <a href="#" data-swiper-parallax="-100">MORE</a>
+            </div>
+          </li>
         </ul>
-    </header>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
 
-    <main>
+    <!-- 여백 -->
+    <div class="blank"></div>
 
-        <!-- 메인 슬라이더 -->
-        <section>
-            <div id="main-slide" class="main-slide swiper">
-                <ul class="swiper-wrapper">
-                    <li class="swiper-slide bg1">
-                        <div class="bg-box" data-swiper-parallax="-900">
-                            <h2 class="title" data-swiper-parallax="-500">GRANHAND. Gift Set</h2>
-                            <p class="text" data-swiper-parallax="-200">
-                                고마운 사람에게 특별한 향기로움을 전해보세요</p>
-                            <a href="#" data-swiper-parallax="-100">MORE</a>    
-                        </div>
-                    </li>
-                    <li class="swiper-slide bg2">
-                        <div class="bg-box" data-swiper-parallax="-900">
-                            <h2 class="title" data-swiper-parallax="-500">그랑핸드 핸드워시 수지 살몬(Susie Salmon)</h2>
-                            <p class="text" data-swiper-parallax="-200">
-                                그랑핸드만의 풍부한 향을 느낄 수 있는 액상 타입의 핸드워시입니다.</p>
-                            <a href="#" data-swiper-parallax="-100">MORE</a>    
-                        </div>
-                    </li>
-                    <li class="swiper-slide bg3">
-                        <div class="bg-box" data-swiper-parallax="-900">
-                            <h2 class="title" data-swiper-parallax="-500">향낭 규장(Kyujang)</h2>
-                            <p class="text" data-swiper-parallax="-200">
-                                향수 원액을 흡수한 암석을 담은 주머니 형태의 방향 제품입니다.</p>
-                            <a href="#" data-swiper-parallax="-100">MORE</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        
-        <!-- 여백 -->
-        <div class="blank"></div>
-
-        <!-- 시그니처 -->
-        <section>
-            <div class="signature">
-                <div class="main-title">
-                    <h2>signature</h2>
-                    <p>그랑핸드만의 독창성과 정체성을 담아낸 특별하고 아름다운 향입니다</p>
-                </div>
-                <div class="signature-list">
-                    <ul>
-                        <li>
-                            <div class="signature-item">
-                                <div class="thumbnail">
-                                    <img src="./image/Soie+Signature+Perfume.jpg" alt="수아 시그니처 퍼퓸">
-                                </div>
-                                <div class="description">
-                                    <h3>Soie Signature Perfume</h3>
-                                    <span>110,000 KRW</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="signature-item">
-                                <div class="thumbnail">
-                                    <img src="./image/Sopni+Signature+Perfume.jpg" alt="솝니 시그니처 퍼퓸">
-                                </div>
-                                <div class="description">
-                                    <h3>Sopni Signature Perfume</h3>
-                                    <span>110,000 KRW</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="signature-item">
-                                <div class="thumbnail">
-                                    <img src="./image/Cask+Signature+Perfume.jpg" alt="캐스크 시그니처 퍼퓸">
-                                </div>
-                                <div class="description">
-                                    <h3>Cask Signature Perfume</h3>
-                                    <span>110,000 KRW</span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 피스키퍼 -->
-        <section>
-            <div class="peaceKeeper">
-                <img src="./image/Peace+Keeper.jpg" alt="Peace Keeper">
-                <div class="main-title">
-                    <h2>Peace Keeper</h2>
-                    <p>일상의 평화를 지켜주는 그랑 핸드의 시그니처 허브티</p>
-                </div>
-                <video src="./image/Peace+Keeper.mp4" muted autoplay loop></video>
-            </div>
-        </section>
-
-        <!-- 여백 -->
-        <div class="blank"></div>
-
-        <!-- 콤포터블 -->
-        <section>
-            <div class="komfortable">
-                <div class="komfortable-list">
-                    <ul>
-                        <li>
-                            <div class="komfortable-item">
-                                <div class="thumbnail">
-                                    <img src="./image/프루티+베리+드립백.jpg" alt="프루티 베리 드립백">
-                                </div>
-                                <div class="description">
-                                    <h3>Soie Signature Perfume</h3>
-                                    <span>15,000 KRW</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="komfortable-item">
-                                <div class="thumbnail">
-                                    <img src="./image/프루티+선라이트+블렌드.jpg" alt="프루티 선라이트 블렌드">
-                                </div>
-                                <div class="description">
-                                    <h3>Sopni Signature Perfume</h3>
-                                    <span>14,000 KRW</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="komfortable-item">
-                                <div class="thumbnail">
-                                    <img src="./image/너티+브라운+블렌드.jpg" alt="너티 브라운 블렌드.jpg">
-                                </div>
-                                <div class="description">
-                                    <h3>Cask Signature Perfume</h3>
-                                    <span>14,000 KRW</span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="main-title">
-                    <h2>Komfortable</h2>
-                    <p>시간과 공간에 구애받지 않고 콤포타블만의 스페셜티 커피를 즐겨보세요</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="identity">
-            <img src="./image/Sometimes+you+win,Sometimes+you+learn.jpg" alt="Sometimes you win, Sometimes you learn">
-            <div class="text-wrapper">
-                <div class="slogan">
-                    <span>Sometimes you win, </span>
-                    <span>Sometimes you learn.</span>
-                </div>
-                <p>향은 보이지도, 잡히지도 않지만, 우리에게 수많은 기억과 감정을 각인시키고, 나아가 우리 삶 속에서 많은 부분을 결정합니다. 
-                    그랑핸드는 이러한 향의 가치를 믿으며, 이를 매개로 한 끊임없는 시도를 통해 향의 일상화를 꿈꿉니다. 
-                    그랑핸드는 쉽게 소비되고 잊혀질 무언가가 아닌, 보이지 않는 곳에서 뚜렷한 존재감으로 모든 사람들에게 우리의 마음과 온기를 전하고 싶습니다.</p>
-            </div>
+    <!-- 시그니처 -->
+    <section>
+      <div class="signature grid-wrapper">
+        <div class="main-title">
+          <h2>signature</h2>
+          <p>그랑핸드만의 독창성과 정체성을 담아낸 특별하고 아름다운 향입니다</p>
         </div>
-        </section>
-
-    </main>
-        <!-- 푸터 -->
-        <footer class="footer">
-            <div>
-                <ul class="footer-nav">
-                    <li><a href="#">자주 묻는 질문</a></li>
-                    <li><a href="#">회사 소개</a></li>
-                    <li><a href="#">채용 안내</a></li>
-                    <li><a href="#">제휴 문의</a></li>
-                </ul>
-                <span>상호 (유)그랑핸드</span>
-                <span>대표 정준혁</span>
-                <span>전화 02-333-6525</span>
-                <span>메일 hello@granhand.com</span>
-                <span>주소 서울시  종로구 자하문로4길 14-2</span>
-                <span>사업자번호 127-88-01898</span>
-                <span>통신판매업 2020-서울종로-0623</span>
-                <span>개인정보처리방침</span>
-                <span>개인정보관리책임자 정지호</span>
-                <span>호스팅(주)아임웹</span>
+        <div class="signature-list">
+          <div class="signature-item">
+            <div class="thumbnail">
+              <img src="./image/Soie+Signature+Perfume.jpg" alt="수아 시그니처 퍼퓸">
             </div>
-            <div>
-                <a href="#">Instargram</a>
-                <span>평일 10:00-17:00</span>
-                <span>주말, 공휴일 휴무</span>
+            <div class="description">
+              <h3>Soie Signature Perfume</h3>
+              <span>110,000 KRW</span>
             </div>
-        </footer>
+          </div>
+          <div class="signature-item">
+            <div class="thumbnail">
+              <img src="./image/Sopni+Signature+Perfume.jpg" alt="솝니 시그니처 퍼퓸">
+            </div>
+            <div class="description">
+              <h3>Sopni Signature Perfume</h3>
+              <span>110,000 KRW</span>
+            </div>
+          </div>
+          <div class="signature-item">
+            <div class="thumbnail">
+              <img src="./image/Cask+Signature+Perfume.jpg" alt="캐스크 시그니처 퍼퓸">
+            </div>
+            <div class="description">
+              <h3>Cask Signature Perfume</h3>
+              <span>110,000 KRW</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 피스키퍼 -->
+    <section>
+      <div class="peaceKeeper grid-wrapper">
+        <img src="./image/Peace+Keeper.jpg" alt="Peace Keeper">
+        <div class="main-title">
+          <h2>Peace Keeper</h2>
+          <p>일상의 평화를 지켜주는 그랑 핸드의 시그니처 허브티</p>
+        </div>
+        <video src="./image/Peace+Keeper.mp4" muted autoplay loop></video>
+      </div>
+    </section>
 
 
+    <!-- 콤포터블 -->
+    <section>
+      <div class="komfortable grid-wrapper">
+        <div class="komfortable-list grid-wrapper">
+          <div class="komfortable-item">
+            <div class="thumbnail">
+              <img src="./image/프루티+베리+드립백.jpg" alt="프루티 베리 드립백">
+            </div>
+            <div class="description">
+              <h3>Soie Signature Perfume</h3>
+              <span>15,000 KRW</span>
+            </div>
+          </div>
+          <div class="komfortable-item">
+            <div class="thumbnail">
+              <img src="./image/프루티+선라이트+블렌드.jpg" alt="프루티 선라이트 블렌드">
+            </div>
+            <div class="description">
+              <h3>Sopni Signature Perfume</h3>
+              <span>14,000 KRW</span>
+            </div>
+          </div>
+          <div class="komfortable-item">
+            <div class="thumbnail">
+              <img src="./image/너티+브라운+블렌드.jpg" alt="너티 브라운 블렌드.jpg">
+            </div>
+            <div class="description">
+              <h3>Cask Signature Perfume</h3>
+              <span>14,000 KRW</span>
+            </div>
+          </div>
+        </div>
+        <div class="main-title">
+          <h2>Komfortable</h2>
+          <p>시간과 공간에 구애받지 않고 콤포타블만의 스페셜티 커피를 즐겨보세요</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 여백 -->
+    <div class="blank"></div>
+
+    <section>
+      <div class="identity grid-wrapper">
+        <img src="./image/Sometimes+you+win,Sometimes+you+learn.jpg" alt="Sometimes you win, Sometimes you learn">
+        <div class="text-wrapper">
+          <div class="slogan">
+            <span>Sometimes you win, </span>
+            <span>Sometimes you learn.</span>
+          </div>
+          <p>향은 보이지도, 잡히지도 않지만, 우리에게 수많은 기억과 감정을 각인시키고, 나아가 우리 삶 속에서 많은 부분을 결정합니다.
+            그랑핸드는 이러한 향의 가치를 믿으며, 이를 매개로 한 끊임없는 시도를 통해 향의 일상화를 꿈꿉니다.
+            그랑핸드는 쉽게 소비되고 잊혀질 무언가가 아닌, 보이지 않는 곳에서 뚜렷한 존재감으로 모든 사람들에게 우리의 마음과 온기를 전하고 싶습니다.</p>
+        </div>
+        <div class="journal ">
+          <div class="thumbnail">
+            <img src="./image/Journal.png" alt="Journal">
+          </div>
+          <div class="description">
+            <h3>Journal</h3>
+            <div class="caption">
+              <span>Autumn 2024</span>
+              <span>#Life</span>
+              <p>화려하고 볼 것 많은 대형 서점, 주인의 취향이 담긴 개성 있는 독립서점과 북카페 등 책을 다루는 다양한 공간이 많은데요. 정작 도서관은 10대 시절 공부할 때 이후로는 거의 찾아간
+                적이 없는 것 같습니다. </p>
+              <span>자세히 보기</span>
+            </div>
+          </div>
+        </div>
+        <div class="stores">
+          <div class="thumbnail">
+            <img src="./image/stores.png" alt="stores">
+          </div>
+          <div class="description">
+            <h3>Stores</h3>
+            <div class="caption">
+              <span>Autumn 2024</span>
+              <span>#Life</span>
+              <p>오프라인 스토어는 그랑핸드가 보여주고 싶은 모든 것이 담겨있는 공간입니다. 바쁜 일상 속 잠시 숨을 돌리는 시간과 경험이 됩니다.</p>
+              <span>자세히 보기</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="footer flex-wrapper">
+    <div>
+      <ul class="footer-nav flex-wrapper">
+        <li><a href="#">자주 묻는 질문</a></li>
+        <li><a href="#">회사 소개</a></li>
+        <li><a href="#">채용 안내</a></li>
+        <li><a href="#">제휴 문의</a></li>
+      </ul>
+      <span>상호 (유)그랑핸드</span>
+      <span>대표 정준혁</span>
+      <span>전화 02-333-6525</span>
+      <span>메일 hello@granhand.com</span>
+      <span>주소 서울시  종로구 자하문로4길 14-2</span>
+      <span>사업자번호 127-88-01898</span>
+      <span>통신판매업 2020-서울종로-0623</span>
+      <span>개인정보처리방침</span>
+      <span>개인정보관리책임자 정지호</span>
+      <span>호스팅(주)아임웹</span>
+    </div>
+    <div>
+      <a href="#">Instargram</a>
+      <span>평일 10:00-17:00</span>
+      <span>주말, 공휴일 휴무</span>
+    </div>
+  </footer>
+
+<script>
+  document.getElementById('menuToggle').addEventListener('click', function() {
+    this.classList.toggle('active'); // 토글 active 클래스
+    document.querySelector('.global-navigation-bar').classList.toggle('active'); // GNB 보이기
+});
+
+</script>
 
 </body>
 
