@@ -11,8 +11,9 @@
 </head>
 
 <body>
-    <header class="flex-wrapper">
-        <div id="menuToggle" class="mobile-navigation-bar">
+    <div class="header-container"> 
+    <header>
+            <div id="menuToggle" class="mobile-navigation-bar">
             <a href="#"><i class="fa-sharp fa-solid fa-bars"></i></a>
         </div>
         <ul class="global-navigation-bar flex-wrapper">
@@ -74,6 +75,10 @@
             <li><a href="#">CART</a></li>
         </ul>
     </header>
+</div>
+    <main>
+        <div class="contents" style="height: 200vh;"></div>
+    </main>
     <script>
         const menuToggle = document.getElementById('menuToggle');
         const globalNavBar = document.querySelector('.global-navigation-bar');
