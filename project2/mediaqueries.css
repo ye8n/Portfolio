@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+@media all and (min-width:310px){
+    html{
+        font-size: 14px;
+    }
+}
+
+@media all and (min-width:375px){
+    html{
+        font-size: 16px;
+    }
+
+    section .main-slide {
+        height: 80vh;
+    }
+
+    section .identity .slogan-container p{
+        letter-spacing: -1px;
+      }
+}
+
+@media all and (min-width:768px){
+    
+    .main-slide .swiper-wrapper .bg-box{
+        left: 0;
+        text-align: left;
+        margin-left: 2rem;
+    }
+    .main-slide .bg1{background: linear-gradient(to right, rgba(117, 117, 117, 0.4), rgba(255, 255, 255, 0.1)), url(./image/perfume.png) no-repeat 45% / cover; }
+    .main-slide .bg2{background: linear-gradient(to right, rgba(117, 117, 117, 0.4), rgba(255, 255, 255, 0.1)), url(./image/Sachet.png) no-repeat 55% / cover;}
+    .main-slide .bg3{background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.1)), url(./image/giftset.png) no-repeat 45% / cover;}
+
+
+    .peaceKeeper{
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    .tablet{
+        display: block;
+    }
+
+    .identity{
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    .identity .slogan-container img{
+        display: none;
+        
+    }    
+    .identity .slogan-container .slogan{
+        font-size: 14px;
+        color: #000;
+        position: static;
+        transform: none;
+        padding: 1.25rem;
+
+        letter-spacing: -0.5px;
+    }
+    .identity .slogan-container .slogan p{
+        margin-bottom: .875rem;
+    }
+    .identity .slogan-container{
+        order: 1;
+        overflow: hidden;
+    }
+    .journal{
+        order: 2;
+        border-right: 1px solid #000;
+        border-left: 1px solid #000;
+      }
+    .stores{
+       order:3;
+       border-right: 1px solid rgba(0, 0, 0,0);
+      }
+    }
+
+@media all and (min-width:1000px){
+        .signature-list{
+            grid-template-columns: repeat(4,1fr);
+            border: none;
+        }
+
+        .signature-list .signature-item:nth-child(1){
+            border-top: 1px solid #000;
+        }
+        .signature-list .signature-item:nth-child(2){
+            border-top: 1px solid #000;
+            border-right: 1px solid #000;
+        }
+
+        .komfortable-list{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .komfortable-list .komfortable-item:nth-last-child(1){
+            display: block;
+            border-right: 1px solid rgba(0, 0, 0,0);
+        }
+
+        .komfortable-list .komfortable-item:nth-child(2){
+            border-right: 1px solid #000 
+        }
+
+}
+
+@media all and (min-width:1200px){
+    .signature{
+        display: flex;
+    }
+    .signature-list{
+        grid-template-columns: repeat(3,1fr);
+        width: 100%;
+    }
+    .signature-list .signature-item:last-child{
+        display: none;
+    }
+    .signature .signature-list .signature-item{
+        border-top: none;
+    }
+    .signature .signature-list .signature-item:nth-child(1){
+        border-left: 1px solid #000;
+    }
+    .signature .signature-list .signature-item:nth-child(3){
+        border-right: 1px solid rgba(0, 0, 0,0);
+    }
+
+    section .komfortable{
+        display: flex;
+    }
+    .komfortable-list{
+        grid-template-columns: repeat(3,1fr);
+        width: 100%;
+        border-top: none;
+    }
+    .komfortable .komfortable-list .komfortable-item{
+        border-top: none;
+    }
+    .komfortable .komfortable-list{
+        border-left: 1px solid #000;
+    }
+
+    .identity .identity-menu .description .caption p{
+        min-height: 76.77px;
+    }
+
+    .main-slide .swiper-wrapper .bg-box{
+        margin-left: 4rem;
+    }
+
+}

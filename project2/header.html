@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>헤더 테스트용</title>
+    <link rel="stylesheet" href="../asset/style/reset.min.css">
+    <link rel="stylesheet" href="./header.css">
+    <script src="https://kit.fontawesome.com/d9579df74d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="flex-wrapper">
+        <div id="menuToggle" class="mobile-navigation-bar">
+            <a href="#"><i class="fa-sharp fa-solid fa-bars"></i></a>
+        </div>
+        <ul class="global-navigation-bar flex-wrapper">
+            <li>
+                <ul class="mobile-myPage flex-wrapper">
+                    <li><a href="#">SEARCH</a></li>
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">CART</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Shop<i class="fa-sharp fa-solid fa-caret-down"></i></a>
+                <ul class="sub-global-navigation-bar">
+                    <li><a href="#">Gift Set</a></li>
+                    <li><a href="#">Perfume</a></li>
+                    <li><a href="#">Home Fragrance</a></li>
+                    <li><a href="#">Body</a></li>
+                    <li><a href="#">Natural</a></li>
+                    <li><a href="#">Tools</a></li>
+                    <li><a href="#">Komfortable Coffee</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Journal<i class="fa-sharp fa-solid fa-caret-down"></i></a>
+                <ul class="sub-global-navigation-bar">
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Culture</a></li>
+                    <li><a href="#">Life</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Essay</a></li>
+                    <li><a href="#">Film</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Wallpaper</a></li>
+            <li><a href="#">Stores<i class="fa-sharp fa-solid fa-caret-down"></i></a>
+                <ul class="sub-global-navigation-bar">
+                    <li><a href="#">GRANHAND.</a></li>
+                    <li><a href="#">Komfortable COFFEE</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Index<i class="fa-sharp fa-solid fa-caret-down"></i></a>
+                <ul class="sub-global-navigation-bar">
+                    <li><a href="#">Signature</a></li>
+                    <li><a href="#">Perfume</a></li>
+                    <li><a href="#">Fragrance</a></li>
+                    <li><a href="#">Natural</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="logo-wrapper">
+            <div class="logo" id="logo">
+                <a href="#">
+                    <h1>GRANHAND. Logo</h1>
+                </a>
+            </div>
+        </div>
+        <ul class="myPage flex-wrapper">
+            <li><a href="#">SEARCH</a></li>
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">CART</a></li>
+        </ul>
+    </header>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const globalNavBar = document.querySelector('.global-navigation-bar');
+    
+        menuToggle.addEventListener('click', function() {
+            // 'active' 클래스 토글 (메뉴 보이기/숨기기)
+            globalNavBar.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

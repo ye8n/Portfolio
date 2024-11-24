@@ -1,41 +1,5 @@
 @charset "utf-8";
 
-/**** 공통 스타일 common style : 나중에 옮길 것 ****/
-.project-title{
-  font-weight: bold;
-  font-size: 32px;
-  margin-top: var(--spacing-xlg);
-  margin-bottom: 2rem;
-
-}
-
-.rounded{
-  border: 1px solid var(--color-black);
-  padding: 4px 10px;
-  border-radius: 1rem;
-  margin: 0 2px;
-}
-
-.rounded-fill{
-  background: var(--color-black);
-  color: var(--color-white);
-  padding: 4px 10px;
-  border-radius: 1rem;
-  border: 1px solid var(--color-black);
-  margin: 0 2px;
-}
-
-
-section{    
-
-  word-break: keep-all;
-  line-height: 1.3;
-  letter-spacing: -1px;
-}
-.layout{
-  margin: var(--spacing-xlg);
-}
-
 /**** 헤더 ****/
 header .header-main{
     position: fixed;

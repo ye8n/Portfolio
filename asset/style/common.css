@@ -1,10 +1,5 @@
 @charset "utf-8";
 
-
-/*  스크롤바 모양 추가하기
-html::-webkit-scrollbar-track{
-} */
-
 html{
   background: var(--bg-light);
   color: var(--color-black);
@@ -42,7 +37,6 @@ html::-webkit-scrollbar-track{
   visibility: hidden;
 }
 
-/* global style */
 .flex-wrapper{
   display: flex;
   align-items: center; 
@@ -57,6 +51,40 @@ html::-webkit-scrollbar-track{
   font-size: 7.292vw;
   letter-spacing: -0.2rem;
   
+}
+
+.project-title{
+  font-weight: bold;
+  font-size: 32px;
+  margin-top: var(--spacing-xlg);
+  margin-bottom: 2rem;
+
+}
+
+.rounded{
+  border: 1px solid var(--color-black);
+  padding: 4px 10px;
+  border-radius: 1rem;
+  margin: 0 2px;
+}
+
+.rounded-fill{
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 4px 10px;
+  border-radius: 1rem;
+  border: 1px solid var(--color-black);
+  margin: 0 2px;
+}
+
+section{    
+  word-break: keep-all;
+  line-height: 1.3;
+  letter-spacing: -1px;
+}
+
+.layout{
+  margin: var(--spacing-xlg);
 }
 
 
@@ -94,11 +122,6 @@ html::-webkit-scrollbar-track{
   /* 주요 색상 */
   --color-project1-primary:#E4EFFF;
 
-  /* 그레이스케일 추가 예정
-    --bg-gray-light: #e9ecef;
-    --bg-gray-dark: #adb5bd;
-   */
-
 }
 
 body{
@@ -106,6 +129,3 @@ body{
   font-weight: 400;
   font-size: var(--font-md);
 }
-
-
-/* 마우스 커서 */
