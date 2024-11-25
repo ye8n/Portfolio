@@ -103,9 +103,36 @@
         border-right: 1px solid #000
     }
 
-    .footer-text-wrapper{
-        width: 60%;
+    footer {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
     }
+
+    .footer .footer-right{
+        flex-flow: column;
+        align-self: center;
+        justify-content: flex-end;
+        text-align: right;
+        align-items: flex-end;
+    }
+
+    .business{
+        display: flex;
+        flex-flow: column;
+        order: 2;
+    }
+
+    .instargram-mobile{display: none;}
+    .instargram-pc{display: inline-block;
+        margin-bottom: 0.5rem;
+        order: 1;
+        color: #000;
+        border-bottom: 1px solid #000;
+    }
+
+
+
 }
 
 @media all and (min-width:1274px) {

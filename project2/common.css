@@ -5,6 +5,7 @@
 html{
     background: #FDFBF4;
     font-family: 'SpoqaHanSans';
+    scroll-behavior: smooth;
 }
 
 ::selection {
@@ -12,6 +13,7 @@ html{
     background-color: #000; /* 드래그된 배경의 색상 */
   }
 
+  
 
 .flex-wrapper{
     display: flex;
@@ -43,6 +45,7 @@ html{
     
     --gray1: #555;
     --gray2: #aeaeae;
+    --gray3: #d9d9d9;
 }
 
 .border-top{
