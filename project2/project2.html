@@ -25,25 +25,24 @@
         <a href="#"><i class="fa-sharp fa-solid fa-bars"></i></a>
     </div>
     <ul class="global-navigation-bar">
-        <li>
+        <li class="mobile-menu">
             <ul class="mobile-myPage">
                 <li><a href="#"><i class="fa-brands fa-instagram"></i>INSTARGRAM</a></li>
                 <li><a href="#"><i class="fa-regular fa-user"></i>LOGIN</a></li>
                 <li><a href="#"><i class="fa-sharp fa-solid fa-cart-shopping"></i>CART</a></li>
             </ul>
         </li>
-        <li class="depth-1"><a href="#">Shop<i class="fa-sharp fa-solid fa-caret-down"></i></a>
+        <li class="menu-item"><a href="#">Shop<i class="fa-sharp fa-solid fa-caret-down"></i></a>
             <ul class="sub-global-navigation-bar">
                 <li><a href="#">Gift Set</a></li>
                 <li><a href="#">Perfume</a></li>
                 <li><a href="#">Home Fragrance</a></li>
                 <li><a href="#">Body</a></li>
                 <li><a href="#">Natural</a></li>
-                <li><a href="#">Tools</a></li>
-                <li><a href="#">Komfortable Coffee</a></li>
+                <li><a href="#">Tools</a></li><li><a href="#">Komfortable Coffee</a></li>
             </ul>
         </li>
-        <li class="depth-1"><a href="#">Journal<i class="fa-sharp fa-solid fa-caret-down"></i></a>
+        <li class="menu-item"><a href="#">Journal<i class="fa-sharp fa-solid fa-caret-down"></i></a>
             <ul class="sub-global-navigation-bar">
                 <li><a href="#">News</a></li>
                 <li><a href="#">Culture</a></li>
@@ -53,14 +52,14 @@
                 <li><a href="#">Film</a></li>
             </ul>
         </li>
-        <li class="depth-1"><a href="#">Wallpaper</a></li>
-        <li class="depth-1"><a href="#">Stores<i class="fa-sharp fa-solid fa-caret-down"></i></a>
+        <li class="menu-item"><a href="#">Wallpaper</a></li>
+        <li class="menu-item"><a href="#">Stores<i class="fa-sharp fa-solid fa-caret-down"></i></a>
             <ul class="sub-global-navigation-bar">
                 <li><a href="#">GRANHAND.</a></li>
                 <li><a href="#">Komfortable COFFEE</a></li>
             </ul>
         </li>
-        <li class="depth-1"><a href="#">Index<i class="fa-sharp fa-solid fa-caret-down"></i></a>
+        <li class="menu-item"><a href="#">Index<i class="fa-sharp fa-solid fa-caret-down"></i></a>
             <ul class="sub-global-navigation-bar">
                 <li><a href="#">Signature</a></li>
                 <li><a href="#">Perfume</a></li>
@@ -322,6 +321,7 @@
   </footer>
 
   <script>
+    // 모바일 메뉴
     const menuToggle = document.getElementById('menuToggle');
     const globalNavBar = document.querySelector('.global-navigation-bar');
 
@@ -329,6 +329,40 @@
         // 'active' 클래스 토글 (메뉴 보이기/숨기기)
         globalNavBar.classList.toggle('active');
     });
+
+// PC 메뉴에서 마우스 올리면 서브 메뉴 보이기/숨기기
+
+document.querySelectorAll('.menu-item').forEach(menuItem => {
+    menuItem.addEventListener('mouseenter', () => {
+        // 서브 메뉴를 보여주기
+        const subMenu = menuItem.querySelector('.sub-global-navigation-bar');
+        if (subMenu) {
+            subMenu.style.display = 'block';
+        }
+    });
+
+    menuItem.addEventListener('mouseleave', () => {
+        // 서브 메뉴를 숨기기
+        const subMenu = menuItem.querySelector('.sub-global-navigation-bar');
+        if (subMenu) {
+            subMenu.style.display = 'none';
+        }
+    });
+
+    // 서브 메뉴 항목 클릭 시 해당 메뉴가 클릭된 상태 유지
+    const subMenu = menuItem.querySelector('.sub-global-navigation-bar');
+    if (subMenu) {
+        subMenu.addEventListener('mouseenter', () => {
+            subMenu.style.display = 'block'; // 마우스를 서브 메뉴에 올렸을 때 보이게 유지
+        });
+        subMenu.addEventListener('mouseleave', () => {
+            subMenu.style.display = 'none'; // 마우스를 서브 메뉴에서 내리면 사라지게
+        });
+    }
+});
+
+
+
 </script>
 
 </body>

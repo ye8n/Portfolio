@@ -33,26 +33,26 @@ header {
     display: flex; /* 메뉴 활성화 시 보이기 */
 }
 
-.depth-1{
+.menu-item{
     font-weight: bold;
 }
 .sub-global-navigation-bar {
-    display: none; /* 기본적으로 숨김 */
+    display: none; /*기본적으로 숨김*/
     position: absolute; /* 부모 항목 기준 배치 */
     top: 100%; /* 부모 메뉴 바로 아래 */
-    width: 100%; /* 부모 메뉴 크기에 맞춤 */
+    
     color: var(--gray1);
     margin-top: 1rem;
+    
 }
 .sub-global-navigation-bar li:hover a{
     color: var(--gray2);
+    transition: 0.3s;
 }
 .global-navigation-bar li i {
     margin-left: 0.25rem;
 }
-.global-navigation-bar li:hover .sub-global-navigation-bar {
-    display: block; /* 호버 시 서브 메뉴 표시 */
-}
+
 #menuToggle a i {
     font-size: 24px;
 }
@@ -67,7 +67,7 @@ header {
 }
 
 .logo {
-    background: url(./image/logo1.png) no-repeat center / contain;
+    background: url(./image/logox2.png) no-repeat center / contain;
     width: 150px; /* 로고 너비 */
     height: 50px; /* 로고 높이 */
 }
@@ -96,7 +96,7 @@ header {
     }
 
 /* 모바일 버전 스타일 */
-@media (max-width: 767px) {
+@media (max-width: 1090px) {
     header{
         align-items: flex-start;
         justify-content: center;
@@ -120,7 +120,7 @@ header {
         display: flex; /* 활성화 시 메뉴 보이기 */
         /* padding: 20px 0; 여백 추가 */
     }
-    .depth-1{
+    .menu-item{
         padding: 1rem;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
@@ -154,35 +154,46 @@ header {
     .sub-global-navigation-bar {
         display: none; /* 서브 메뉴 기본적으로 숨김 */
     }
-
 }
 
 /* PC 버전 스타일 */
-@media (min-width: 768px) {
+@media (min-width: 1091px) {
     .global-navigation-bar {
         display: flex; /* 기본적으로 보이기 */
-        flex-direction: row; /* 수평 배열 */
+        flex-flow: row; /* 수평 배열 */
         justify-content: space-between; /* 간격 조정 */
         position: relative; /* 위치 재설정 */
-        top: auto;
+        top: 0;
         width: 450px; /* 고정 너비 */
+        height: 100%;
+        line-height: 60px;
+        
     }
-
     #menuToggle {
         display: none; /* PC에서는 메뉴 토글 버튼 숨김 */
     }
-
     .global-navigation-bar li {
-        position: relative; /* 서브 메뉴 위치 설정 */
         display: inline-block;
-        /* padding: 10px 20px; 메뉴 간격 */
+        padding-right: 0.5rem; /* 메뉴 간격*/
         white-space: nowrap; /* 한 줄로 텍스트 표시 */
+        
     }
+    .sub-global-navigation-bar {
+        background: #fff;
+        display: block;
+        margin: 0;
+        padding: 0 1rem;
+        display: none;
+        box-shadow: var(--gray1) 0px 8px 24px -24px;
 
+    }
     .myPage {
-        display: flex; 
+        display: flex;
+        padding: 1rem 0.5rem 1rem 1rem;
     }
-
+    .myPage li{
+        padding: 0.5rem;
+    }
     .mobile-myPage{
         display: none;
     }
