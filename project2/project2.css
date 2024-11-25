@@ -485,9 +485,11 @@ section .komfortable .komfortable-list{
 /* 푸터 */
 
 footer{
+    display: flex;
     flex-flow: column;
     font-size: 0.875rem;
     color: var(--gray1);
+
 }
 
 footer{border-top: 2px solid #000;

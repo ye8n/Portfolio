@@ -21,16 +21,17 @@
     .main-slide .swiper-wrapper .bg-box {
         left: 0;
         text-align: left;
-        margin-left: 2rem;
+        margin-left: 10%;
+        top: 50;
     }
     .main-slide .bg1 {
-        background: linear-gradient(to right, rgba(117, 117, 117, 0.4), rgba(255, 255, 255, 0.1)), url(./image/perfume.png) no-repeat 45% / cover;
+        background: linear-gradient(to right, rgba(117, 117, 117, 0.4), rgba(255, 255, 255, 0.1)), url(./image/perfume.png) no-repeat 45% 30% / cover;
     }
     .main-slide .bg2 {
-        background: linear-gradient(to right, rgba(117, 117, 117, 0.4), rgba(255, 255, 255, 0.1)), url(./image/Sachet.png) no-repeat 55% / cover;
+        background: linear-gradient(to right, rgba(117, 117, 117, 0.4), rgba(255, 255, 255, 0.1)), url(./image/Sachet.png) no-repeat 55% 70%  / cover;
     }
     .main-slide .bg3 {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.1)), url(./image/giftset.png) no-repeat 45% / cover;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.1)), url(./image/giftset.png) no-repeat 45% 70% / cover;
     }
     .peaceKeeper {
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -71,6 +72,7 @@
         order: 3;
         border-right: 1px solid rgba(0, 0, 0, 0);
     }
+
 }
 
 @media all and (min-width:1000px) {
@@ -101,6 +103,9 @@
         border-right: 1px solid #000
     }
 
+    .footer-text-wrapper{
+        width: 60%;
+    }
 }
 
 @media all and (min-width:1200px) {
@@ -111,42 +116,39 @@
     .signature-list {
         grid-template-columns: repeat(3, 1fr);
         width: 100%;
+        border-left: 1px solid #000;
     }
-
     .signature-list .signature-item:last-child {
         display: none;
     }
-
     .signature .signature-list .signature-item {
         border-top: none;
-    }
-
-    .signature .signature-list .signature-item:nth-child(1) {
-        border-left: 1px solid #000;
     }
     .signature .signature-list .signature-item:nth-child(3) {
         border-right: 1px solid rgba(0, 0, 0, 0);
     }
     section .komfortable {
         grid-auto-flow: column;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 3fr 1fr;
+    }
+    .komfortable .main-title{
+        order: 2;
     }
     .komfortable-list {
         grid-template-columns: repeat(3, 1fr);
         width: 100%;
         border-top: none;
+        order: 1;
     }
     .komfortable .komfortable-list .komfortable-item {
         border-top: none;
-    }
-    .komfortable .komfortable-list {
-        border-left: 1px solid #000;
+        border-right: 1px solid #000;
     }
     .identity .identity-menu .description .caption p {
         min-height: 76.77px;
     }
     .main-slide .swiper-wrapper .bg-box {
-        margin-left: 4rem;
+        margin-left: 10%;
     }
     .identity .identity-menu{
         border-left: none;
@@ -162,11 +164,24 @@
         align-items: flex-start;
         flex-flow: column;
     }
+    .main-title h2{
+        font-size: 2rem;
+    }
 }
 
 @media all and (min-width:1400px){
+    .main-slide .swiper-wrapper .bg-box {
+        margin-left: 10%;
+    }
+    .identity .identity-menu{
+        height: 100%;
+    }
     .identity .slogan-container img {
         display: block;
+        aspect-ratio: 4/5;
+        height: 100%;
+        object-fit: cover;
+        filter: none;
     }
     section .identity .slogan-container .slogan{
         display: block;
@@ -179,6 +194,7 @@
         overflow: hidden;
         display: grid;
         grid-template-columns: 1fr 1fr;
-
     }
+
+
 }
