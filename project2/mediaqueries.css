@@ -5,21 +5,17 @@
         font-size: 14px;
     }
 }
-
 @media all and (min-width:375px) {
     html {
         font-size: 16px;
     }
-
     section .main-slide {
         height: 80vh;
     }
-
     section .identity .slogan-container p {
         letter-spacing: -1px;
     }
 }
-
 @media all and (min-width:768px) {
 
     .main-slide .swiper-wrapper .bg-box {
@@ -27,24 +23,18 @@
         text-align: left;
         margin-left: 2rem;
     }
-
     .main-slide .bg1 {
         background: linear-gradient(to right, rgba(117, 117, 117, 0.4), rgba(255, 255, 255, 0.1)), url(./image/perfume.png) no-repeat 45% / cover;
     }
-
     .main-slide .bg2 {
         background: linear-gradient(to right, rgba(117, 117, 117, 0.4), rgba(255, 255, 255, 0.1)), url(./image/Sachet.png) no-repeat 55% / cover;
     }
-
     .main-slide .bg3 {
         background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.1)), url(./image/giftset.png) no-repeat 45% / cover;
     }
-
-
     .peaceKeeper {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-
     .peaceKeeper .main-title{
         grid-column: 2 / 4;
     }
@@ -53,9 +43,7 @@
     }
     .identity {
         grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    
+    } 
     .identity .slogan-container img {
         display: none;
     }
@@ -65,7 +53,6 @@
         position: static;
         transform: none;
         padding: 1.25rem;
-
         letter-spacing: -0.5px;
     }
     .identity .slogan-container .slogan p {
