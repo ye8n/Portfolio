@@ -108,7 +108,7 @@
     }
 }
 
-@media all and (min-width:1200px) {
+@media all and (min-width:1274px) {
     .signature {
         grid-auto-flow: column;
         grid-template-columns: 1fr 3fr;
@@ -158,14 +158,28 @@
         border-right: 1px solid #000;
     }
     section .identity .slogan-container .slogan {
+        /* 여기부터! 이어서 계속 */
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: flex-start;
         flex-flow: column;
+        padding: 2rem;
+        font-size: 1rem;
+        line-height: 180%; /*??*/
+    }
+    .signature .main-title{
+        text-align: left;
+        padding: 10%;
+        align-items: flex-start;
     }
     .main-title h2{
         font-size: 2rem;
+    }
+    .komfortable .main-title{
+        text-align: left;
+        padding: 10%;
+        align-items: flex-start;
     }
 }
 
@@ -184,7 +198,7 @@
         filter: none;
     }
     section .identity .slogan-container .slogan{
-        display: block;
+        display: flex;
     }
     section .identity {
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -194,6 +208,13 @@
         overflow: hidden;
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .main-title h2{
+        font-size: 2.875rem;
+    }
+    .main-title p{
+        font-size: 1.125rem;
     }
 
 
