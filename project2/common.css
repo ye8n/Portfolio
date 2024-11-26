@@ -1,106 +1,126 @@
 @charset "utf-8";
 
-/* 공통 스타일 */
-
-html{
-    background: #FDFBF4;
-    font-family: 'SpoqaHanSans';
+html {
+    background: var(--background);
+    font-family: 'SpoqaHanSans', -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
     scroll-behavior: smooth;
 }
 
 ::selection {
-    color: #FDFBF4; /* 드래그된 텍스트의 색상 */
-    background-color: #000; /* 드래그된 배경의 색상 */
-  }
+    color: var(--background);
+    background-color: var(--black);
+}
 
-  
-
-.flex-wrapper{
+.flex-wrapper {
     display: flex;
     align-items: center;
 }
 
-.grid-wrapper{
+.grid-wrapper {
     display: grid;
     align-items: center;
 }
 
-.blank{
+.blank {
     height: 2.5rem;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
+    border-top: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
 }
 
-.tablet{
+.tablet {
     display: none;
 }
 
-
-/* .main-title{} 타이틀 */
-
-:root{
-    --spacing-s:0.5rem;
-    --spacing-m:1rem;
-    --spacing-l:1.375rem;
-    
-    --gray1: #555;
-    --gray2: #aeaeae;
-    --gray3: #d9d9d9;
-}
-
-.border-top{
-    border-top: 1px solid #000;
-}
-.border-right{
-    border-right: 1px solid #000;
-}
-.border-bottom{
-    border-bottom: 1px solid #000;
-}
-
-/* 썸네일 호버 */
-.thumbnail .hover-img {opacity: 0;}
-.thumbnail:hover .hover-img {opacity: 1;}
-.thumbnail:hover .base-img {opacity: 0;}
-
-.main-title{
+.main-title {
     text-align: center;
     padding: 3.875rem;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    
+    color: var(--black);
 
 }
-.main-title h2{
+
+.main-title h2 {
     font-weight: bold;
     font-size: 1.5rem;
     letter-spacing: -0.5px;
     margin-bottom: 1.75rem;
     text-transform: capitalize;
-}
-.main-title p{
-    letter-spacing: -1px;
-    line-height: 160%;
+    color: var(--black);
 }
 
-.thumbnail{
-    width: 100%; 
+.main-title p {
+    letter-spacing: -1px;
+    line-height: 160%;
+    color: var(--black);
+}
+
+.description{
+    color: var(--black);
+}
+
+.thumbnail {
+    width: 100%;
     overflow: hidden;
     cursor: pointer;
     position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 5; /* 반응형 비율 */
-  overflow: hidden;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    /* 반응형 비율 */
+    overflow: hidden;
 }
 
-.thumbnail img{
+.thumbnail img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity 0.3s ease-in-out;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --background: #FDFBF4;
+
+    --spacing-s: 0.5rem;
+    --spacing-m: 1rem;
+    --spacing-l: 1.375rem; /*22px*/
+    --spacing-xl: 2rem; /*32px*/
+
+    --spacing-10: 10%;
+    --spacing-20: 20%;
+
+    --gray1: #555;
+    --gray2: #aeaeae;
+    --gray3: #d9d9d9;
+}
+
+.border-top {
+    border-top: 1px solid var(--black);
+}
+
+.border-right {
+    border-right: 1px solid var(--black);
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--black);
+}
+
+/* 썸네일 호버 */
+.thumbnail .hover-img {
+    opacity: 0;
+}
+
+.thumbnail:hover .hover-img {
+    opacity: 1;
+}
+
+.thumbnail:hover .base-img {
+    opacity: 0;
 }

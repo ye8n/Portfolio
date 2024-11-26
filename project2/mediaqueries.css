@@ -21,7 +21,7 @@
     .main-slide .swiper-wrapper .bg-box {
         left: 0;
         text-align: left;
-        margin-left: 10%;
+        margin-left: var(--spacing-10);
         top: 50;
     }
     .main-slide .bg1 {
@@ -50,7 +50,7 @@
     }
     .identity .slogan-container .slogan {
         font-size: 14px;
-        color: #000;
+        color: var(--black);
         position: static;
         transform: none;
         padding: 1.25rem;
@@ -65,8 +65,8 @@
     }
     .journal {
         order: 2;
-        border-right: 1px solid #000;
-        border-left: 1px solid #000;
+        border-right: 1px solid var(--black);
+        border-left: 1px solid var(--black);
     }
     .stores {
         order: 3;
@@ -82,12 +82,12 @@
     }
 
     .signature-list .signature-item:nth-child(1) {
-        border-top: 1px solid #000;
+        border-top: 1px solid var(--black);
     }
 
     .signature-list .signature-item:nth-child(2) {
-        border-top: 1px solid #000;
-        border-right: 1px solid #000;
+        border-top: 1px solid var(--black);
+        border-right: 1px solid var(--black);
     }
 
     .komfortable-list {
@@ -100,7 +100,7 @@
     }
 
     .komfortable-list .komfortable-item:nth-child(2) {
-        border-right: 1px solid #000
+        border-right: 1px solid var(--black);
     }
 
     footer {
@@ -125,13 +125,11 @@
 
     .instargram-mobile{display: none;}
     .instargram-pc{display: inline-block;
-        margin-bottom: 0.5rem;
+        margin-bottom: var(--spacing-s);
         order: 1;
-        color: #000;
-        border-bottom: 1px solid #000;
+        color: var(--black);
+        border-bottom: 1px solid var(--black);
     }
-
-
 
 }
 
@@ -143,7 +141,7 @@
     .signature-list {
         grid-template-columns: repeat(3, 1fr);
         width: 100%;
-        border-left: 1px solid #000;
+        border-left: 1px solid var(--black);
     }
     .signature-list .signature-item:last-child {
         display: none;
@@ -169,20 +167,20 @@
     }
     .komfortable .komfortable-list .komfortable-item {
         border-top: none;
-        border-right: 1px solid #000;
+        border-right: 1px solid var(--black);
     }
     .identity .identity-menu .description .caption p {
         min-height: 76.77px;
     }
     .main-slide .swiper-wrapper .bg-box {
-        margin-left: 10%;
+        margin-left: var(--spacing-10);
     }
     .identity .identity-menu{
         border-left: none;
     }
     section .identity .slogan-container{
         height: 100%;
-        border-right: 1px solid #000;
+        border-right: 1px solid var(--black);
     }
     section .identity .slogan-container .slogan {
         /* 여기부터! 이어서 계속 */
@@ -191,13 +189,13 @@
         justify-content: center;
         align-items: flex-start;
         flex-flow: column;
-        padding: 2rem;
+        padding: var(--spacing-xl);
         font-size: 1rem;
         line-height: 180%; /*??*/
     }
     .signature .main-title{
         text-align: left;
-        padding: 10%;
+        padding: var(--spacing-10);
         align-items: flex-start;
     }
     .main-title h2{
@@ -205,14 +203,14 @@
     }
     .komfortable .main-title{
         text-align: left;
-        padding: 10%;
+        padding: var(--spacing-10);
         align-items: flex-start;
     }
 }
 
 @media all and (min-width:1400px){
     .main-slide .swiper-wrapper .bg-box {
-        margin-left: 10%;
+        margin-left: var(--spacing-10);
     }
     .identity .identity-menu{
         height: 100%;
