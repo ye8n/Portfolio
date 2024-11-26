@@ -155,46 +155,32 @@ header .header-main .header-wrapper .global-navigation-bar a:hover{
       top: 29%;
  }
 }
-
-
-
-
-
-
 /****** project ******/
-.project{
-  height: 100vh;
+.project-rcr{
   position: relative;
-
 }
-
 .bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
   z-index: -999;
   opacity: 0.85;
+  position: relative;
 }
-
-.bg-video__content {
-  height: 100%;
+.bg-video_content {
   width: 100%;
   object-fit: cover;
+  aspect-ratio: 16/9;
+  height: 100vh;
 }
-
 .gradi{
   position: absolute;
   width: 100%;
   height: 100%;
   background: rgba(8,13,28,0.65);
   z-index: -99;
+  top: 0; left: 0;
 }
-
-
-
-.project .project_wrapper{
+.project_wrapper{
   text-align: center;
   position: absolute;
   top: 50%;
@@ -206,14 +192,14 @@ header .header-main .header-wrapper .global-navigation-bar a:hover{
   width: 100%;
 }
 
-.project .project_wrapper h2{
+.project_wrapper h2{
   font-family: 'Goia Display';
   font-size: var(--font-xlg);
   letter-spacing: -0.15rem;
   margin-bottom: 1.667vw;
 
 }
-.project_wrapper .project-desc-wrapper{
+.project-desc-wrapper{
   justify-content: center;
   gap: 2rem; /* 공통 스타일로 변경*/
  }
@@ -229,8 +215,19 @@ header .header-main .header-wrapper .global-navigation-bar a:hover{
 }
 
 
+/* 두번째 프로젝트 projec2 */
+
+.project-gh{
+  position: relative;
+}
+
+.project-gh .project_wrapper {
+  color: var(#FDFBF4);
+}
 
 
+
+/**** skill ****/
 .skill {
   flex-direction: column;
   width: 100%;
