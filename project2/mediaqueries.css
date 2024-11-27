@@ -159,34 +159,22 @@
     header {
         align-items: flex-start;
         justify-content: center;
-    }
-
-    .global-navigation-bar {
-        display: none;
-        background-color: var(--background);
-        width: 100%;
-        position: fixed;
-        top: 60px;
-        left: 0;
-    }
-
-    header {
         flex-flow: column;
     }
 
     .global-navigation-bar {
+        position: fixed;
+        max-height: 0; /* 숨김 상태 */
+        overflow: hidden; /* 내용 잘림 */
+        background-color: var(--background);
         box-shadow: var(--gray1) 0px 8px 24px -24px;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        transition: max-height 0.4s ease-in-out; /* 애니메이션 효과 */
     }
 
     .global-navigation-bar {
-        display: flex;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease-in-out;
-
-    }
-
-    .global-navigation-bar.active {
         display: flex;
     }
 
@@ -195,42 +183,21 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
-    .global-navigation-bar li:hover .sub-global-navigation-bar {
-        display: block;
-        position: relative;
-    }
-
     .global-navigation-bar li {
         text-align: left;
     }
 
     .sub-global-navigation-bar li {
-        margin: var(--spacing-s) 0;
+        margin-top: var(--spacing-s);
+        padding: .25rem;
     }
 
-    .global-navigation-bar li:nth-child(1) {
-        order: 6;
-    }
-
-    .global-navigation-bar li:nth-child(2) {
-        order: 1;
-    }
-
-    .global-navigation-bar li:nth-child(3) {
-        order: 2;
-    }
-
-    .global-navigation-bar li:nth-child(4) {
-        order: 3;
-    }
-
-    .global-navigation-bar li:nth-child(5) {
-        order: 4;
-    }
-
-    .global-navigation-bar li:nth-child(6) {
-        order: 5;
-    }
+    .global-navigation-bar li:nth-child(1) {order: 6;}
+    .global-navigation-bar li:nth-child(2) {order: 1;}
+    .global-navigation-bar li:nth-child(3) {order: 2;}
+    .global-navigation-bar li:nth-child(4) {order: 3;}
+    .global-navigation-bar li:nth-child(5) {order: 4;}
+    .global-navigation-bar li:nth-child(6) {order: 5;}
 
     #menuToggle {
         display: block;
@@ -240,8 +207,19 @@
     }
 
     .sub-global-navigation-bar {
-        display: none;
+        display: flex;
+        position: relative;
+        max-height: 0; /* 숨김 상태 */
+        overflow: hidden; /* 내용 잘림 */
+        transition: max-height 0.4s ease-in-out; /* 애니메이션 효과 */
     }
+  
+  
+  /* 메뉴 활성화 시 */
+.global-navigation-bar.active,
+.sub-global-navigation-bar.active {
+    max-height: 500px; /* 충분히 큰 값 */
+  }
 }
 
 /* PC 버전 스타일 */

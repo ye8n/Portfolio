@@ -47,7 +47,6 @@ header {
     position: absolute;
     top: 100%;
     color: var(--gray2);
-    margin-top: var(--spacing-m);
 }
 
 .sub-global-navigation-bar li:hover a {
