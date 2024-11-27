@@ -156,6 +156,9 @@
 
 /* 모바일 버전 헤더 */
 @media (max-width: 1090px) {
+    .header-container{
+    /* background: var(--background); */
+    }
     header {
         align-items: flex-start;
         justify-content: center;
@@ -178,6 +181,13 @@
         display: flex;
     }
 
+    
+
+    .global-navigation-bar .menu-item i{
+        display: none;
+    }
+
+    
     .menu-item {
         padding: var(--spacing-m);
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -258,7 +268,7 @@
 
     .myPage {
         display: flex;
-        padding: var(--spacing-m) var(--spacing-s) var(--spacing-m) var(--spacing-m);
+        padding: var(--spacing-m);
     }
 
     .myPage li {
@@ -286,7 +296,10 @@
         height: auto;
         opacity: 1;
     }
-
+    .main-slide .swiper-wrapper .bg-box a{
+        font-size: 1rem;
+        font-weight: 400;
+    }
 }
 
 @media all and (min-width:1274px) {
@@ -340,7 +353,16 @@
 
     .main-slide .swiper-wrapper .bg-box {
         margin-left: var(--spacing-10);
+        max-width: 550px;
     }
+
+    .main-slide .swiper-wrapper .bg-box .title{
+        font-size: 2.5rem;
+    }
+    .main-slide .swiper-wrapper .bg-box .text{
+        font-size: 1.5rem;
+    }
+
 
     .identity .identity-menu {
         border-left: none;

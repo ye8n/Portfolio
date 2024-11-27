@@ -3,12 +3,12 @@
 
 /* 공통 스타일 */
 
-
 .header-container {
     position: fixed;
     width: 100%;
     z-index: 9999;
     background: var(--background);
+    backdrop-filter: none;
     box-shadow: var(--gray1) 0px 8px 24px -24px;
 }
 
@@ -18,11 +18,25 @@ header {
     position: relative;
     align-items: center;
     height: 60px;
+
+}
+
+.header-container.scrolled {
+    background: none;
+    backdrop-filter: blur(40px); /* 스크롤 내릴 때 블러 적용 */
 }
 
 .myPage {
     display: none;
+    font-size: 0.875rem;
+    color: var(--gray1);
 }
+
+.myPage li:hover a{
+    color: var(--black);
+    transition: 0.4s;
+    }
+
 
 .global-navigation-bar {
     display: none;
@@ -32,6 +46,7 @@ header {
     left: 0;
     flex-direction: column;
     z-index: 10;
+
 }
 
 .global-navigation-bar.active {
@@ -157,7 +172,7 @@ header {
     margin-bottom: 1.7rem;
 }
 
-.main-slide .swiper-wrapper .bg-box p {
+.main-slide .swiper-wrapper .bg-box .text{
     font-weight: 400;
     font-size: 1.25rem;
     margin-bottom: 2.75rem;
@@ -173,7 +188,11 @@ header {
     border-radius: 2rem;
     padding: 0.625rem 1.5625rem;
     font-size: 0.875rem;
-    font-weight: 300;
+}
+
+.main-slide .swiper-wrapper .bg-box a:hover{
+    transition: all 5s ease-in;
+    background: #131313;
 }
 
 .main-slide .swiper-button-prev,

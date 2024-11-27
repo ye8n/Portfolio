@@ -67,3 +67,19 @@ const mainSwiper = new Swiper("#main-slide", {
 $('a[href="#"]').on('click', function(e) {
   e.preventDefault()
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('.header-container');
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener('scroll', () => {
+      if (window.scrollY > lastScrollY) {
+          // 스크롤 아래로 내려가면
+          header.classList.add('scrolled');
+      } else {
+          // 스크롤 위로 올라가면
+          header.classList.remove('scrolled');
+      }
+      lastScrollY = window.scrollY;
+  });
+});
