@@ -30,6 +30,7 @@ header {
     display: none;
     font-size: 0.875rem;
     color: var(--gray1);
+    transition: 4s;
 }
 
 .myPage li:hover a{
@@ -53,19 +54,15 @@ header {
     display: flex;
 }
 
-.menu-item {
-    font-weight: bold;
-}
-
 .sub-global-navigation-bar {
     display: none;
     position: absolute;
     top: 100%;
-    color: var(--gray2);
+    color: var(--gray1);
 }
 
 .sub-global-navigation-bar li:hover a {
-    color: var(--gray1);
+    color: var(--gray3);
     transition: 0.4s;
 }
 

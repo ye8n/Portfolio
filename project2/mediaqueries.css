@@ -218,12 +218,12 @@
 
     .sub-global-navigation-bar {
         display: flex;
+        flex-flow: column;
         position: relative;
         max-height: 0; /* 숨김 상태 */
         overflow: hidden; /* 내용 잘림 */
         transition: max-height 0.4s ease-in-out; /* 애니메이션 효과 */
     }
-  
   
   /* 메뉴 활성화 시 */
 .global-navigation-bar.active,
@@ -233,58 +233,67 @@
 }
 
 /* PC 버전 스타일 */
-@media (min-width: 1091px) {
+@media (min-width: 1278px) {
     .global-navigation-bar {
         display: flex;
         flex-flow: row;
-        justify-content: space-between;
         position: relative;
         top: 0;
         width: 450px;
         height: 100%;
         line-height: 60px;
+        align-items: center;
     }
 
     #menuToggle {
         display: none;
     }
 
-    .global-navigation-bar li {
+    .global-navigation-bar .menu-item {
         display: inline-block;
-        padding-right: var(--spacing-s);
+        padding: 0 var(--spacing-xl);
         white-space: nowrap;
+        cursor: pointer;
         /* 한 줄로 텍스트 표시 */
+    }
+    .global-navigation-bar .menu-item:nth-child(1){
+        padding-left: 0;
     }
 
     .sub-global-navigation-bar {
         background: var(--white);
-        display: block;
-        margin: 0;
-        padding: 0 var(--spacing-m);
-        display: none;
+        padding: var(--spacing-s);
         box-shadow: var(--gray1) 0px 8px 24px -24px;
         transition: 0.4s;
-    }
+        display: flex;
+        flex-flow: column;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.4s ease-in-out, opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+        line-height: 0;
 
+
+        visibility: hidden; /* 초기 상태에서는 보이지 않음 */
+        opacity: 0;
+        position: absolute; /* 부모 요소 기준 위치 조정 */
+        top: 100%; /* 부모 메뉴 바로 아래 */
+        left: 0;
+        width: 200px; /* 원하는 너비 */
+        transform: translateY(-10px); /* 살짝 위로 이동 */
+
+        z-index: 1000;
+    }
     .myPage {
         display: flex;
-        padding: var(--spacing-m);
     }
 
+    /* 여기부터 다시 */
     .myPage li {
-        padding: var(--spacing-s);
+        padding: var(--spacing-xl);
     }
 
     .mobile-myPage {
         display: none;
-    }
-
-    .sub-global-navigation-bar {
-        display: block;
-        height: 0;
-        opacity: 0;
-        overflow: hidden;
-        transition: height 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
 
     .global-navigation-bar li:hover .sub-global-navigation-bar {
@@ -300,6 +309,73 @@
         font-size: 1rem;
         font-weight: 400;
     }
+
+    /* 코드추가 */
+    .global-navigation-bar {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .menu-item {
+        position: relative; /* 서브메뉴 위치 제어 */
+    }
+    
+    .sub-global-navigation-bar {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        visibility: hidden; /* 초기 상태에서는 보이지 않음 */
+        opacity: 0;
+        position: absolute; /* 부모 요소 기준 위치 조정 */
+        top: 100%; /* 부모 메뉴 바로 아래 */
+        left: 0;
+        background-color: #fff; /* 배경색 추가 */
+        width: 200px; /* 원하는 너비 */
+        transform: translateY(-10px); /* 살짝 위로 이동 */
+        transition: all 0.3s ease-in-out;
+        z-index: 1000;
+    }
+    
+    .menu-item:hover .sub-global-navigation-bar {
+        visibility: visible; /* 보이게 전환 */
+        opacity: 1;
+        transform: translateY(0); /* 원래 위치로 이동 */
+    }
+
+    .sub-global-navigation-bar li {
+        padding: var(--spacing-l) var(--spacing-m);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* 구분선 추가 */
+    }
+    
+    .sub-global-navigation-bar li:last-child {
+        border-bottom: none;
+    }
+
+    /* 로그인과 회원가입 <li>에만 애니메이션 적용 */
+.myPage li:first-child a,
+.myPage li:nth-child(2) a {
+    position: relative; /* ::after를 위한 기준 */
+}
+
+.myPage li:first-child a::after,
+.myPage li:nth-child(2) a::after {
+    content: ''; /* 빈 내용 */
+    position: absolute;
+    bottom: -2px; /* 텍스트 아래쪽 */
+    left: 0;
+    width: 0; /* 초기 너비 */
+    height: 2px; /* 보더 두께 */
+    background-color: #000; /* 애니메이션 색상 */
+    transition: width 0.4s ease-in-out; /* 애니메이션 효과 */
+}
+
+.myPage li:first-child a:hover::after,
+.myPage li:nth-child(2) a:hover::after {
+    width: 100%; /* 호버 시 애니메이션 확장 */
+}
+
+
 }
 
 @media all and (min-width:1274px) {
