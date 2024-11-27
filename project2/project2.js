@@ -84,3 +84,32 @@ document.addEventListener('DOMContentLoaded', () => {
       lastScrollY = window.scrollY;
   });
 });
+
+
+
+const track = document.querySelector('.carousel-track');
+let position = 0;
+let animationId; // 애니메이션 ID 저장 변수
+
+// 이미지 스크롤 함수
+function scrollImages() {
+  position -= 1; // 왼쪽으로 이동
+  if (Math.abs(position) >= track.offsetWidth / 2) {
+    position = 0; // 무한 스크롤 효과
+  }
+  track.style.transform = `translateX(${position}px)`;
+  animationId = requestAnimationFrame(scrollImages); // 애니메이션 ID 저장
+}
+
+// 마우스 올리면 애니메이션 멈춤
+track.addEventListener('mouseenter', () => {
+  cancelAnimationFrame(animationId); // 현재 진행 중인 애니메이션 중단
+});
+
+// 마우스 떼면 애니메이션 다시 시작
+track.addEventListener('mouseleave', () => {
+  scrollImages(); // 애니메이션 다시 시작
+});
+
+// 초기 애니메이션 실행
+scrollImages();

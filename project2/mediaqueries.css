@@ -155,7 +155,7 @@
 }
 
 /* 모바일 버전 헤더 */
-@media (max-width: 1090px) {
+@media (max-width: 1277px) {
     .header-container{
     /* background: var(--background); */
     }
@@ -213,7 +213,7 @@
         display: block;
         position: relative;
         z-index: 20;
-        padding-left: var(--spacing-m);
+        padding: var(--spacing-xl);
     }
 
     .sub-global-navigation-bar {
@@ -289,7 +289,7 @@
 
     /* 여기부터 다시 */
     .myPage li {
-        padding: var(--spacing-xl);
+        padding: var(--spacing-xl) var(--spacing-l) var(--spacing-xl) var(--spacing-l);
     }
 
     .mobile-myPage {

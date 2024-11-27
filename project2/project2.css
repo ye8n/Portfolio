@@ -245,7 +245,34 @@ header {
     color: var(--gray1);
 }
 
+/* 캐러셀 */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 50vh;
+  }
+  
+  .carousel-track {
+    position: absolute;
+    white-space: nowrap;
+  }
+  
+  .carousel-track img {
+    height: 100%; /* 트랙 높이에 맞게 이미지 높이 조정 */
+    height: 50vh;
+    width: auto; /* 가로 비율 유지 */
+    object-fit: cover; /* 이미지가 잘릴 경우에도 비율 유지 */
+    margin-right: var(--spacing-m); /* 이미지 간격 */
 
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  #carousel-blank1{border-bottom: none;}
+  #carousel-blank2{border-top: none;}
+  
+/* 콤포타블 */
 .komfortable {
     grid-template-columns: none;
 }
@@ -440,6 +467,7 @@ footer {
     flex-flow: column;
     font-size: 0.875rem;
     color: var(--gray1);
+
 }
 
 footer {
@@ -451,7 +479,7 @@ footer {
     padding-right: var(--spacing-s);
     font-weight: bold;
     margin-bottom: var(--spacing-m);
-    color: var(--black);
+    color: var(--gray1);
 }
 
 .footer-text-wrapper {
@@ -478,6 +506,7 @@ footer {
 .footer-right {
     width: 100%;
     justify-content: space-between;
+    color: var(--black);
 }
 
 .footer-right .business span {
