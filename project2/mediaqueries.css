@@ -251,7 +251,7 @@
 
     .global-navigation-bar .menu-item {
         display: inline-block;
-        padding: 0 var(--spacing-xl);
+        padding: 0 var(--spacing-l);
         white-space: nowrap;
         cursor: pointer;
         /* 한 줄로 텍스트 표시 */
@@ -271,7 +271,6 @@
         overflow: hidden;
         transition: height 0.4s ease-in-out, opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
         line-height: 0;
-
 
         visibility: hidden; /* 초기 상태에서는 보이지 않음 */
         opacity: 0;
@@ -352,14 +351,17 @@
         border-bottom: none;
     }
 
-    /* 로그인과 회원가입 <li>에만 애니메이션 적용 */
+    /* 기존 로그인과 회원가입 <li> 애니메이션 */
 .myPage li:first-child a,
-.myPage li:nth-child(2) a {
-    position: relative; /* ::after를 위한 기준 */
+.myPage li:nth-child(2) a,
+.global-navigation-bar .menu-item,
+.global-navigation-bar .menu-item .item-title {
+    position: relative;
 }
 
 .myPage li:first-child a::after,
-.myPage li:nth-child(2) a::after {
+.myPage li:nth-child(2) a::after,
+.global-navigation-bar .menu-item .item-title::after {
     content: ''; /* 빈 내용 */
     position: absolute;
     bottom: -2px; /* 텍스트 아래쪽 */
@@ -371,7 +373,8 @@
 }
 
 .myPage li:first-child a:hover::after,
-.myPage li:nth-child(2) a:hover::after {
+.myPage li:nth-child(2) a:hover::after,
+.global-navigation-bar .menu-item:hover .item-title::after {
     width: 100%; /* 호버 시 애니메이션 확장 */
 }
 

@@ -18,7 +18,6 @@ header {
     position: relative;
     align-items: center;
     height: 60px;
-
 }
 
 .header-container.scrolled {
@@ -58,11 +57,11 @@ header {
     display: none;
     position: absolute;
     top: 100%;
-    color: var(--gray1);
+    color: var(--gray2);
 }
 
 .sub-global-navigation-bar li:hover a {
-    color: var(--gray3);
+    color: var(--black);
     transition: 0.4s;
 }
 
@@ -250,23 +249,54 @@ header {
     width: 100%;
     overflow: hidden;
     position: relative;
-    height: 50vh;
+    height: 30vh;
   }
   
   .carousel-track {
     position: absolute;
-    white-space: nowrap;
+    display: flex;
+    transition: transform 0.4s linear; /* 부드러운 이동 */
+    will-change: transform; /* 성능 최적화 */
+  
   }
   
   .carousel-track img {
     height: 100%; /* 트랙 높이에 맞게 이미지 높이 조정 */
-    height: 50vh;
+    height: 30vh;
     width: auto; /* 가로 비율 유지 */
     object-fit: cover; /* 이미지가 잘릴 경우에도 비율 유지 */
     margin-right: var(--spacing-m); /* 이미지 간격 */
+    flex-shrink: 0;
 
     user-select: none;
     -webkit-user-drag: none;
+  }
+
+  #roller1 {
+    animation: rollingleft1 20s linear infinite;
+  }
+  
+  #roller2 {
+    animation: rollingleft2 20s linear infinite;
+  }
+  
+  /* 롤링 애니메이션 */
+  @keyframes rollingleft1 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes rollingleft2 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 
   #carousel-blank1{border-bottom: none;}
@@ -471,7 +501,6 @@ footer {
 }
 
 footer {
-    border-top: 2px solid var(--black);
     padding: 2.625rem var(--spacing-m);
 }
 
