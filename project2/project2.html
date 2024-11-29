@@ -14,13 +14,16 @@
   <link rel="stylesheet" href="../asset/style/reset.min.css">
   <link rel="stylesheet" href="../asset/style/fonts.css">
   <link rel="stylesheet" href="../asset/style/swiper-bundle.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./common.css">
   <link rel="stylesheet" href="./project2.css">
   <link rel="stylesheet" href="./mediaqueries.css">
+  
 
   <script src="../asset/script/jquery-3.7.1.min.js"></script>
   <script src="../asset/script/swiper-bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/d9579df74d.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
   <script src="./project2.js" defer></script>
 </head>
 
@@ -67,7 +70,7 @@
         </li>
         <li class="menu-item"><a href="#" class="item-title">Index</i></a>
             <ul class="sub-global-navigation-bar">
-                <li><a href="#">Signature</a><p>Signature</p></li>
+                <li><a href="#">Signature</a></li>
                 <li><a href="#">Perfume</a></li>
                 <li><a href="#">Fragrance</a></li>
                 <li><a href="#">Natural</a></li>
@@ -96,9 +99,9 @@
     <!-- 메인 슬라이더 -->
     <section>
       <div id="main-slide" class="main-slide swiper">
-        <ul class="swiper-wrapper">
+        <ul class="swiper-wrapper"  data-aos="fade-up" data-aos-offset="50" data-aos-duration="800">
           <li class="swiper-slide bg1">
-            <div class="bg-box" data-swiper-parallax="-1200">
+            <div class="bg-box" data-swiper-parallax="-1200" >
               <h2 class="title" data-swiper-parallax="-900">GRANHAND. Perfume
               </h2>
               <p class="text" data-swiper-parallax="-500">
@@ -135,7 +138,7 @@
     <!-- 시그니처 -->
     <section>
       <div class="signature grid-wrapper">
-        <div class="main-title">
+        <div class="main-title" data-aos="fade-up" data-aos-offset="50" data-aos-duration="800">
           <h2>signature</h2>
           <p>그랑핸드만의 독창성과 정체성을 담아낸 <br> 특별하고 아름다운 향입니다</p>
         </div>
@@ -194,12 +197,12 @@
           <img class="base-img" src="./image/Peace+Keeper.jpg" alt="Peace Keeper">
           <img class="hover-img" src="./image/Peace+Keeper2.jpg" alt="Peace Keeper">
         </div>
-        <div class="main-title">
+        <div class="main-title"  data-aos="fade-up" data-aos-offset="50" data-aos-duration="800">
           <h2>Peace Keeper</h2>
           <p>일상의 평화를 지켜주는 <br> 그랑 핸드의 시그니처 허브티</p>
         </div>
         <div class="peaceKeeper-video-wrapper ">
-          <video src="./image/Peace+Keeper2_13s.mp4" muted autoplay loop></video>
+          <video src="./image/Peace+Keeper2.mp4" muted autoplay loop></video>
         </div>
       </div>
     </section>
@@ -211,7 +214,7 @@
     <!-- 콤포터블 -->
     <section>
       <div class="komfortable grid-wrapper">
-        <div class="main-title">
+        <div class="main-title"  data-aos="fade-up" data-aos-offset="50" data-aos-duration="800">
           <h2>Komfortable</h2>
           <p>시간과 공간에 구애받지 않고 <br> 콤포타블만의 스페셜티 커피를 즐겨보세요</p>
         </div>
@@ -250,25 +253,7 @@
       </div>
     </section>
 
-    <section  class="carousel">
-      <div class="blank" id="carousel-blank1"></div>
-      <!-- 캐러셀 Carousel -->
-      <div class="carousel-container">
-        <div class="carousel-track flex-wrapper">
-          <img src="./image/track-image/track-image1.jpg" alt="Toit Vert Sachet"/>
-          <img src="./image/track-image/track-image2.jpg" alt="NOLL Perfume"/>
-          <img src="./image/track-image/track-image3.jpg" alt="granhand slogan"/>
-          <img src="./image/track-image/track-image4.jpg" alt="Violette Candle"/>
-          <img src="./image/track-image/track-image5.jpg" alt="EPEUL Perfume"/>
-          <img src="./image/track-image/track-image6.jpg" alt="Toit Vert Sachet"/>
-          <img src="./image/track-image/track-image7.png" alt="Sachet"/>
-          <img src="./image/track-image/track-image8.jpg" alt="hand wash"/>
-          <img src="./image/track-image/track-image9.jpg" alt="EPEUL Perfume"/>
-          <img src="./image/track-image/track-image10.jpg" alt="Violette Sachet"/>
-        </div>
-      </div>
-      <div class="blank" id="carousel-blank2"></div>
-    </section>
+    <div class="blank"></div>
 
     <section>
       <div class="identity grid-wrapper">

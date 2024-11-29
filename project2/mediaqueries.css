@@ -4,6 +4,10 @@
     html {
         font-size: 14px;
     }
+
+    .carousel-container{
+        display: none;
+    }
 }
 
 @media all and (min-width:375px) {
@@ -38,7 +42,7 @@
     }
 
     .main-slide .bg3 {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.1)), url(./image/giftset.png) no-repeat 45% 70% / cover;
+        background: linear-gradient(to right, rgba(117, 117, 117, 0.4), rgba(255, 255, 255, 0.1)), url(./image/giftset.png) no-repeat 45% 70% / cover;
     }
 
     .peaceKeeper {
@@ -120,6 +124,10 @@
         border-right: 1px solid var(--black);
     }
 
+    .carousel-container{
+        display: flex;
+    }
+
     footer {
         display: flex;
         flex-flow: row;
@@ -148,8 +156,7 @@
         display: inline-block;
         margin-bottom: var(--spacing-s);
         order: 1;
-        color: var(--black);
-        border-bottom: 1px solid var(--black);
+        border-bottom: 1px solid var(--background);
     }
 
 }
@@ -310,11 +317,6 @@
     }
 
     /* 코드추가 */
-    .global-navigation-bar {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
     
     .menu-item {
         position: relative; /* 서브메뉴 위치 제어 */
@@ -478,6 +480,8 @@
         padding: var(--spacing-10);
         align-items: flex-start;
     }
+
+
 }
 
 @media all and (min-width:1400px) {

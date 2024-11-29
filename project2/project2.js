@@ -23,29 +23,6 @@ $("#menuToggle").click(function() {
     }
 });
 
-/* 
-// PC 메뉴에서 마우스 올리면 서브 메뉴 보이기/숨기기
-document.querySelectorAll('.menu-item').forEach(menuItem => {
-  menuItem.addEventListener('mouseenter', () => {
-      // 서브 메뉴를 보여주기
-      const subMenu = menuItem.querySelector('.sub-global-navigation-bar');
-      if (subMenu) {
-          subMenu.style.display = 'block';
-      } 
-  });
-  // 서브 메뉴 항목 클릭 시 해당 메뉴가 클릭된 상태 유지
-  const subMenu = menuItem.querySelector('.sub-global-navigation-bar');
-  if (subMenu) {
-      subMenu.addEventListener('mouseenter', () => {
-          subMenu.style.display = 'block'; // 마우스를 서브 메뉴에 올렸을 때 보이게 유지
-      });
-      // subMenu.addEventListener('mouseleave', () => {
-      //     subMenu.style.display = 'none'; // 마우스를 서브 메뉴에서 내리면 사라지게
-      // });
-  }
-});
- */
-
 
 const mainSwiper = new Swiper("#main-slide", {
   speed: 900,
@@ -85,31 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
-
-const track = document.querySelector('.carousel-track');
-let position = 0;
-let animationId; // 애니메이션 ID 저장 변수
-
-// 이미지 스크롤 함수
-function scrollImages() {
-  position -= 1; // 왼쪽으로 이동
-  if (Math.abs(position) >= track.offsetWidth / 2) {
-    position = 0; // 무한 스크롤 효과
-  }
-  track.style.transform = `translateX(${position}px)`;
-  animationId = requestAnimationFrame(scrollImages); // 애니메이션 ID 저장
-}
-
-// 마우스 올리면 애니메이션 멈춤
-track.addEventListener('mouseenter', () => {
-  cancelAnimationFrame(animationId); // 현재 진행 중인 애니메이션 중단
+// AOS 초기화 코드
+document.addEventListener("DOMContentLoaded", function () {
+  AOS.init({
+    offset: 100,
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true
+  });
 });
-
-// 마우스 떼면 애니메이션 다시 시작
-track.addEventListener('mouseleave', () => {
-  scrollImages(); // 애니메이션 다시 시작
-});
-
-// 초기 애니메이션 실행
-scrollImages();
