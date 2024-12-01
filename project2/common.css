@@ -113,14 +113,6 @@ html {
 }
 
 
-.thumbnail .hover-img {
-    opacity: 0;
-}
-
-.thumbnail:hover .hover-img {
-    opacity: 1;
-}
-
-.thumbnail:hover .base-img {
-    opacity: 0;
-}
+.thumbnail .hover-img { opacity: 0; }
+.thumbnail:hover .hover-img { opacity: 1; }
+.thumbnail:hover .base-img { opacity: 0; }
