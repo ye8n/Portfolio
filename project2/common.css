@@ -112,7 +112,7 @@ html {
     border-bottom: 1px solid var(--black);
 }
 
-/* 썸네일 호버 */
+
 .thumbnail .hover-img {
     opacity: 0;
 }
