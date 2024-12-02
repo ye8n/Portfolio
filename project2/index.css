@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+
 .info{
     /* gap: 2rem; */
     height: 60vh;
@@ -44,6 +45,16 @@
     padding: 1.46rem 0;
 }
 
+
+
+.publishing-list{
+    padding:0 2rem;
+    list-style-type: circle;
+    line-height: 160%;
+}
+
+
+
 .problem img{
     width: 220px;
 }
@@ -75,4 +86,28 @@
 .problem-solution-image{
     margin: 1rem 0;
     width: 60%;
+}
+
+.review{
+    line-height: 160%;
+
+}
+
+.review-top{
+    margin: 2rem 0;
+
+}
+
+.review-bottom{
+    max-width: 800px;
+}
+
+.review i{
+    margin-right: 0.5rem;
+}
+
+.review-bottom h4{
+    font-size: 1.25rem;
+    width: fit-content;
+    margin-bottom: 0.5rem;
 }

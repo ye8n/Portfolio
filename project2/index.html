@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../project1/project1.css">
     <link rel="stylesheet" href="./index.css">
     <script src="../asset/script/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/d9579df74d.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -36,19 +37,19 @@
     </header>
 
     <section class="info">
-            <img src="./index-image/index-main-image.png" alt="그랑핸드 프로젝트 메인">
+        <img src="./index-image/index-main-image.png" alt="그랑핸드 프로젝트 메인">
         <div class="info-txt-wrapper">
             <div class="info-top">
-            <div class="info-tag">
-                <span class="rounded">개인 프로젝트</span>
-                <span class="rounded-fill">반응형 웹사이트</span>
+                <div class="info-tag">
+                    <span class="rounded">개인 프로젝트</span>
+                    <span class="rounded-fill">반응형 웹사이트</span>
+                </div>
+                <h3 class="info-title">그랑핸드 리디자인&퍼블리싱</h3>
             </div>
-            <h3 class="info-title">그랑핸드 리디자인&퍼블리싱</h3>
-        </div>
             <div class="info-desc">
                 <p>라이프스타일 브랜드 그랑핸드의 웹사이트를 리디자인&퍼블리싱한 프로젝트입니다.</p>
-                <p> 전체적인 <strong>레이아웃을 통일감 있게</strong> 구성하고, 반응형 디자인을 통해 <strong>다양한 기기에서도 
-                  <br> 일관된 사용자 경험</strong>을 제공하는 데 중점을 두었습니다.</p>
+                <p> 전체적인 <strong>레이아웃을 통일감 있게</strong> 구성하고, 반응형 디자인을 통해 <strong>다양한 기기에서도
+                        <br> 일관된 사용자 경험</strong>을 제공하는 데 중점을 두었습니다.</p>
             </div>
         </div>
     </section>
@@ -57,10 +58,10 @@
         <div class="overview layout">
             <h2 class="project-title">Overview .</h2>
             <div class="project-desc">
-            <p>‘그랑핸드’는 향의 일상화를 모토로 향수부터 캔들 사쉐 같은 제품을 연구하며, 마시는 향이라는 콘셉트의 카페 ‘콤포타블’을 운영하는 브랜드입니다.</p>
-            <p>기존 웹사이트는 브랜드의 무드는 잘 표현하고 있었으나, <strong>취급하는 제품의 정보를 명확히 전달하는 데 어려움</strong>이 있었습니다.</p>
-            <p>이러한 문제점을 개선하기 위해 웹사이트 리디자인을 진행하였습니다.</p>
-          </div>
+                <p>‘그랑핸드’는 향의 일상화를 모토로 향수부터 캔들 사쉐 같은 제품을 연구하며, 마시는 향이라는 콘셉트의 카페 ‘콤포타블’을 운영하는 브랜드입니다.</p>
+                <p>기존 웹사이트는 브랜드의 무드는 잘 표현하고 있었으나, <strong>취급하는 제품의 정보를 명확히 전달하는 데 어려움</strong>이 있었습니다.</p>
+                <p>이러한 문제점을 개선하기 위해 웹사이트 리디자인을 진행하였습니다.</p>
+            </div>
         </div>
 
         <div class="goal layout">
@@ -92,8 +93,7 @@
             <h2 class="project-title">Design UI Guide .</h2>
             <div class="ui-style-guide-container">
                 <div class="color">
-                    <img class="img-none" src="./index-image/design-keyword-color.svg"
-                        alt="기존 웹사이트의 아이보리 색상에 조화를 이루는 그레이스케일을 적용해
+                    <img class="img-none" src="./index-image/design-keyword-color.svg" alt="기존 웹사이트의 아이보리 색상에 조화를 이루는 그레이스케일을 적용해
                         일관된 분위기를 연출함">
                 </div>
                 <div class="font">
@@ -106,58 +106,83 @@
             <div class="result-container">
                 <img class="img-none" src="./index-image/result-dark.png" alt="그랑핸드 리디자인 결과">
             </div>
-        </div>       
-    <div class="problem-solution layout">
-        <h2 class="project-title">Problem & Solution .</h2>
-    
-        <div class="problem-solution-container">
-            <h3 class="problem-solution-title">
-                1. 메인 슬라이드 이미지를 수정하지 않고, 타이틀 색상과 대비를 주는 방법</h3>
-            <div class="problem-solution-desc">
-                <p>슬라이드 이미지를 html img태그로 삽입하고 css에서 background: linear-gradient 효과를 주었다.</p>
-                <p>모바일 환경은 편의성을 위해 글자와 버튼을 오른쪽에 배치했기 때문에, 그라디언트 값을 to left로, PC 환경은 반대로 to right를 주었다.</p>
-                <img class="problem-solution-image" src="./index-image/problem-solution1.png" alt="">
-            </div>
-        </div> 
-        <div class="problem-solution-container">
-            <h3 class="problem-solution-title">
-                2. 퍼블리싱 중에 발견한 미세한 어긋남
-            </h3>
-            <img class="problem-solution-image" src="./index-image/problem-solution2.png" alt="">
-            <p>box-sizing: border-box를 적용하고 그리드에 fr 값을 사용했음에도 레이아웃이 미세하게 어긋나는 현상이 발생했다. </p>
-            <p>살펴보니 두 이미지의 크기에서 1px 차이가 있었고, 이는 왼쪽 이미지에 적용된 border-right로 인해 발생한 문제였다. 이를 해결하기 위해 오른쪽 이미지에 투명한 보더 1px을 추가했다.</p>
+        </div>
+        <div class="publishing layout">
+            <h2 class="project-title">Publishing .</h2>
+            <ul class="publishing-list">
+                <li>Grid와 Flexbox를 활용한 반응형 레이아웃 구성</li>
+                <li>미디어 쿼리를 통한 해상도별 화면 최적화 <br> (mobile: 375px이상, tablet:768px이상, PC: 1400px이상)</li>
+                <li>JavaScript와 AOS를 이용한 스크롤 애니메이션 구현</li>
+                <li>Transition과 Opacity를 이용한 부드러운 애니메이션</li>
+            </ul>
+        </div>
 
+        <div class="problem-solution layout">
+            <h2 class="project-title">Problem & Solution .</h2>
+
+            <div class="problem-solution-container">
+                <h3 class="problem-solution-title">
+                    1. 메인 슬라이드 이미지를 수정하지 않고, 타이틀 색상과 대비를 주는 방법</h3>
+                <div class="problem-solution-desc">
+                    <p>슬라이드 이미지를 html img태그로 삽입하고 css에서 background: linear-gradient 효과를 주었다.</p>
+                    <p>모바일 환경은 편의성을 위해 글자와 버튼을 오른쪽에 배치했기 때문에, 그라디언트 값을 to left로, PC 환경은 반대로 to right를 주었다.</p>
+                    <img class="problem-solution-image" src="./index-image/problem-solution1.png" alt="">
+                </div>
+            </div>
+            <div class="problem-solution-container">
+                <h3 class="problem-solution-title">
+                    2. 퍼블리싱 중에 발견한 미세한 어긋남
+                </h3>
+                <img class="problem-solution-image" src="./index-image/problem-solution2.png" alt="">
+                <p>box-sizing: border-box를 적용하고 그리드에 fr 값을 사용했음에도 레이아웃이 미세하게 어긋나는 현상이 발생했다. </p>
+                <p>살펴보니 두 이미지의 크기에서 1px 차이가 있었고, 이는 왼쪽 이미지에 적용된 border-right로 인해 발생한 문제였다. 이를 해결하기 위해 오른쪽 이미지에 투명한 보더
+                    1px을 추가했다.</p>
+            </div>
+            <div class="problem-solution-container">
+                <h3 class="problem-solution-title">
+                    3. 상품 이미지 썸네일에 마우스를 올리면 이미지가 교체되는 효과
+                </h3>
+                <p>html에서 두 개의 썸네일 이미지를 겹쳐놓고, 호버 시 opacity와 transition을 조정하여 자연스럽게 교체했다.</p>
+                <img class="problem-solution-image" src="./index-image/problem-solution4.png" alt="">
+            </div>
+            <div class="problem-solution-container">
+                <h3 class="problem-solution-title">
+                    4. 스크롤을 내릴 때 헤더 GNB의 배경에 블러 효과를 적용하는 방법
+                </h3>
+                <p>css에서 scrolled 라는 이름의 class를 추가한 뒤 backdrop-filter: blur(40px) 값을 주었다.</p>
+                <p>이후, Javascript에서 스크롤을 내릴 때 클래스를 부여하고, 올리면 제거하는 이벤트를 적용하였다.</p>
+                <img class="problem-solution-image" src="./index-image/problem-solution3.png" alt="">
+            </div>
+            <div class="problem-solution-container">
+                <h3 class="problem-solution-title">
+                    5. 스크롤 움직임에 따라 특정 텍스트가 자연스럽게 위로 올라오는 애니메이션
+                </h3>
+                <p>로컬에서 AOS (Animation on Scroll) 라이브러리를 적용하고, fade-up 효과를 통해 원하는 애니메이션을 구현했다.
+                    <img class="problem-solution-image" src="./index-image/problem-solution5.png" alt="">
+            </div>
         </div>
-        <div class="problem-solution-container">
-            <h3 class="problem-solution-title">
-                3. 상품 이미지 썸네일에 마우스를 올리면 이미지가 교체되는 효과
-            </h3>
-            <p>html에서 두 개의 썸네일 이미지를 겹쳐놓고, 호버 시 opacity와 transition을 조정하여 자연스럽게 교체했다.</p>
-            <img class="problem-solution-image" src="./index-image/problem-solution4.png" alt="">
+
+        <div class="review layout">
+            <h2 class="project-title">Review .</h2>
+            <div class="review-container">
+            <div class="review-top">
+                <p><i class="fa-regular fa-face-smile"></i>Good: 섬세하게 반응형 웹사이트를 제작한 것</p>
+                <p><i class="fa-regular fa-face-sad-tear"></i>Bad: 기획 단계에서 충분한 시간과 고민을 들이지 않아, 작업 중간에 방향성을 수정하고 조정하는 과정이 있었던 점
+                </p>
+            </div>
+            <div class="review-bottom">
+                <h4>아쉬운 점 & 배운 점:</h4>
+                <P>프로젝트를 조급하게 진행하면서 <strong style="text-decoration: underline; font-weight: normal;">초기 기획 단계에서 세부적인 내용과 방향성을 명확히 하지 못해</strong> 작업 중간에 수정과 고민이 반복되었고, 그로 인해 효율성이 떨어지는 실수를 했다. 앞으로는 기획 단계에서 시간을 충분히 투자해 프로젝트의 구조와 방향을 <strong style="text-decoration: underline; font-weight: normal;">체계적으로 정리하고, 실행 과정에서 생길 수 있는 문제를 미리 예측</strong>하며 작업의 완성도를 높이고자 한다.</P>
+                <p></p>
+            </div>
+            </div>
         </div>
-        <div class="problem-solution-container">
-            <h3 class="problem-solution-title">
-                4. 스크롤을 내릴 때 헤더 GNB의 배경에 블러 효과를 적용하는 방법
-            </h3>
-            <p>css에서 scrolled 라는 이름의 class를 추가한 뒤 backdrop-filter: blur(40px) 값을 주었다.</p>
-            <p>이후, Javascript에서 스크롤을 내릴 때 클래스를 부여하고, 올리면 제거하는 이벤트를 적용하였다.</p>
-            <img class="problem-solution-image" src="./index-image/problem-solution3.png" alt="">
-        </div>
-        <div class="problem-solution-container">
-            <h3 class="problem-solution-title">
-                5. 스크롤 움직임에 따라 특정 텍스트가 자연스럽게 위로 올라오는 애니메이션
-            </h3>
-            <p>로컬에서 AOS (Animation on Scroll) 라이브러리를 적용하고, fade-up 효과를 통해 원하는 애니메이션을 구현했다.
-            <img class="problem-solution-image" src="./index-image/problem-solution5.png" alt="">
-        </div>
-    </div>
-        
     </section>
     <div class="moreView layout">
         <h2 class="project-title">More View</h2>
         <div class="moreView-container">
             <div class="moreView-contents prototype flex-wrapper">
-                <a href="https://www.figma.com/proto/Z5zFRojtgd0lxtBI4OtIEV/(%EA%B0%9C%EC%9D%B8)-%EC%B2%A0%EB%8F%84%EB%B2%94%EC%A3%84%EC%8B%A0%EA%B3%A0-%EC%95%B1-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=209-7199&node-type=frame&t=lMFtOBKHT040dAgl-1&scaling=scale-down&content-scaling=fixed&page-id=209%3A5924&starting-point-node-id=209%3A7199"
+                <a href="/portfolio/project2/project2.html"
                     target="_blank">
                     <p>Website .</p>완성된 웹사이트 보러가기
                 </a>
@@ -166,7 +191,6 @@
                 <a href="https://drive.google.com/file/d/14PZv4Q05Ud-Gvo4X7_ZEj_fGoFvoz9i3/view?usp=sharing"
                     target="_blank">
                     <p>Notion .</p>노션 제작일지 보러가기
-
                 </a>
             </div>
             <div class="moreView-contents presentation flex-wrapper">
@@ -177,5 +201,6 @@
             </div>
         </div>
     </div>
-    </body>
+</body>
+
 </html>
