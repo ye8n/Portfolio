@@ -88,9 +88,11 @@
     width: 60%;
 }
 
+.review .project-title{
+    margin-bottom: 4rem;
+}
 .review{
     line-height: 160%;
-
 }
 
 .review-top{
@@ -106,8 +108,9 @@
     margin-right: 0.5rem;
 }
 
-.review-bottom h4{
-    font-size: 1.25rem;
+.review h4{
+    font-weight: bold;
+    font-size: 22px;
     width: fit-content;
     margin-bottom: 0.5rem;
 }
