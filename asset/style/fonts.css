@@ -1,12 +1,10 @@
 @charset "utf-8";
 
-/* Index */
 /* Goia Display - Bold */
 @font-face {
 	font-family: 'Goia Display';
 	src: url('../font/Goia_Display_Bold.woff2');
 }
-
 /* KoPub Batang - light */
 @font-face {
 	font-family: 'KoPub Batang';
@@ -19,22 +17,18 @@
 	src: url('../font/KoPub\ Batang\ Bold.woff2');
 	font-weight:400;
 }
-
 /* Gowun Dodum - Regular	 */
 @font-face {
 	font-family: 'Gowun Dodum';
 	src: url('../font/GowunDodum-Regular.woff2');
 	font-weight:400;
 }
-
-
 /* pretendard - Regular */
 @font-face {
 	font-family: 'Pretendard';
 	src: url('../font/Pretendard-Regular.woff2') format('woff2');
 	font-weight:400;
 }
-
 /* pretendard - Bold */
 @font-face {
 	font-family: 'Pretendard';
@@ -47,7 +41,7 @@
 @font-face {
   font-family: 'SpoqaHanSans';
   src: local('Spoqa Han Sans Neo Bold'), 
-    url(../font/SpoqaHanSansNeo-Bold.woff2) format('woff2');
+    url('../font/SpoqaHanSansNeo-Bold.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
   font-weight: 700;
@@ -55,7 +49,7 @@
 @font-face {
   font-family: 'SpoqaHanSans';
   src: local('Spoqa Han Sans Neo Medium'), 
-    url(../font/SpoqaHanSansNeo-Medium.woff2) format('woff2');
+    url('../font/SpoqaHanSansNeo-Medium.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
   font-weight: 500;
@@ -63,7 +57,7 @@
 @font-face {
   font-family: 'SpoqaHanSans';
   src: local('Spoqa Han Sans Neo Regular'), 
-    url(../font/SpoqaHanSansNeo-Regular.woff2) format('woff2');
+    url('../font/SpoqaHanSansNeo-Regular.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
   font-weight: 400;
@@ -71,8 +65,60 @@
 @font-face {
   font-family: 'SpoqaHanSans';
   src: local('Spoqa Han Sans Neo Light'), 
-    url(../font/SpoqaHanSansNeo-Light.woff2) format('woff2');
+    url('../font/SpoqaHanSansNeo-Light.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
   font-weight: 300;
+}
+
+/* Project3 - Paperlogy.css */
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('../font/Paperlogy-4Regular.woff2') format('woff2');;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('../font/Paperlogy-5Medium.woff2') format('woff2');;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('../font/Paperlogy-9Black.woff2') format('woff2');;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+}
+/* Syne */
+@font-face {
+  font-family: 'Syne';
+  src: url('../font/Syne-Regular.woff2') format('woff2');;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Syne';
+  src: url('../font/Syne-Medium.woff2') format('woff2');;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Syne';
+  src: url('../font/Syne-Bold.woff2') format('woff2');;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Syne';
+  src: url('../font/Syne-ExtraBold.woff2') format('woff2');;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
 }
