@@ -71,53 +71,57 @@
   font-weight: 300;
 }
 
+
 /* Project3 - Paperlogy.css */
 @font-face {
   font-family: 'Paperlogy';
-  src: url('../font/Paperlogy-4Regular.woff2') format('woff2');;
+  src: local('Paperlogy Regular'), 
+       url('../font/Paperlogy-4Regular.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
   font-weight: 400;
 }
+
 @font-face {
   font-family: 'Paperlogy';
-  src: url('../font/Paperlogy-5Medium.woff2') format('woff2');;
+  src: url('../font/Paperlogy-5Medium.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
   font-weight: 500;
 }
 @font-face {
   font-family: 'Paperlogy';
-  src: url('../font/Paperlogy-9Black.woff2') format('woff2');;
+  src: url('../font/Paperlogy-9Black.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
   font-weight: 900;
 }
 /* Syne */
+
 @font-face {
   font-family: 'Syne';
-  src: url('../font/Syne-Regular.woff2') format('woff2');;
+  src: url('../font/Syne-Regular.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
   font-weight: 400;
 }
 @font-face {
   font-family: 'Syne';
-  src: url('../font/Syne-Medium.woff2') format('woff2');;
+  src: url('../font/Syne-Medium.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
   font-weight: 500;
 }
 @font-face {
   font-family: 'Syne';
-  src: url('../font/Syne-Bold.woff2') format('woff2');;
+  src: url('../font/Syne-Bold.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
   font-weight: 600;
 }
 @font-face {
   font-family: 'Syne';
-  src: url('../font/Syne-ExtraBold.woff2') format('woff2');;
+  src: url('../font/Syne-ExtraBold.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
   font-weight: 800;
