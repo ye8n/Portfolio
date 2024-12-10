@@ -1,6 +1,82 @@
 @charset "utf-8";
 
-/* swiper */
+
+.slide-menu{
+  display: none;
+}
+
+/**** header ****/
+
+header{
+  position: fixed;
+  width: 100%;
+}
+#logo{
+  display: inline-block;
+  background: url(./image/kodak-logo.png) 50% 50% / contain;
+  width: 64px; height: 55px;
+  text-indent: -9999px;
+}
+.header-wrapper{
+  width: 100%;
+  justify-content: space-between;
+  padding: 1.875rem 3.375rem;
+  height: 120px;
+}
+
+/**** intro ****/
+.intro{
+  /* padding-top: 30px; */
+}
+.intro h1{
+  font-family: var(--font-en);
+  font-weight: 900;
+  font-size: 11.25rem;
+  text-align: center;
+}
+
+.intro-image-wrapper{
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  background: #000;
+}
+.intro-image-wrapper img{
+  width: fit-content;
+}
+
+.intro-image-wrapper img:nth-child(1){
+  z-index: 4;
+  position: relative;
+  margin-top: 120px;
+  background: #000;
+}
+.intro-image-wrapper img:nth-child(2){
+  z-index: 3;
+  position: absolute;
+  right: 30.469%;
+}
+.intro-image-wrapper img:nth-child(3){
+  z-index: 2;
+  position: absolute;
+  left: 30.729%;
+}
+.intro-image-wrapper img:nth-child(4){
+  z-index: 1;
+  position: absolute;
+}
+
+.intro-bottom{
+  position: relative;
+  bottom: 50px;
+}
+
+/**** marquee ****/
+.marquee{
+  background: #000;
+}
+
+/**** swiper ****/
 .swiper {
     width: 100%;
     height: 100%;

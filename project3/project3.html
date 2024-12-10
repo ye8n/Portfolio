@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
-  <meta %name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <title>title</title>
   <link rel="stylesheet" href="../asset/style/reset.min.css">
   <link rel="stylesheet" href="../asset/style/fonts.css">
@@ -12,149 +13,264 @@
 
   <script src="../asset/script/jquery-3.7.1.min.js"></script>
   <script src="../asset/script/swiper-bundle.min.js"></script>
+  <script defer src="./project3.js"></script>
 
 </head>
+
 <body>
-<header>
-  <div class="logo" id="logo">KODAK logo</div>
-  <div class="global-menu"> MENU </div>
-</header>
-<section class="main">
-  <h1>KODAK</h1>
-  <div class="main-image-wrapper">
-    <img src="./image/intro-image-1.png" alt="KODAK CAMERA">
-    <img src="./image/intro-image-2.png" alt="KODAK CAMERA">
-    <img src="./image/intro-image-3.png" alt="KODAK CAMERA">
-    <img src="./image/intro-image-4.png" alt="KODAK CAMERA">
-  </div>
-  <h1>PHOTOPRINTER</h1>
-</section>
-
-<section class="marquee">
-  <div class="marquee-container">
-    <span>Instant Camera</span>
-    <span>Instant Camera</span>
-    <span>Instant Camera</span>
-  </div>
-  <div class="marquee-container">
-    <span>Photo Printer</span>
-    <span>Photo Printer</span>
-    <span>Photo Printer</span>
-  </div>
-  <div class="marquee-container">
-    <span>Cartridge</span>
-    <span>Cartridge</span>
-    <span>Cartridge</span>
-  </div>
-</section>
-
-<section class="product">
-<h2>코닥이라 즐거운 순간</h2>
-<h2>PRODUCT</h2>
-
-<div class="era">
-  <div class="era-left">
-    <div class="product-desc">
-      <p>35mm 필름통을 모티브한 디자인​, 아이코닉한 무드 그대로!</p>
-      <p>4PASS 기술로 더욱 선명한 ERA를 만나보세요.</p>
+  <header>
+    <div class="header-wrapper flex">
+      <a href="#" class="logo" id="logo">KODAK logo</a>
+      <button type="button" class="global-menu-toggle toggle-open">(MENU)</button>
     </div>
-    <ul class="era-list">
-      <li><a href="#">즉석카메라</a></li>
-      <li><a href="#">포토프린터</a></li>
-      <li><a href="#">라벨</a></li>
-    </ul>
-  </div>
-  <div class="era-right">
-    <h3>print</h3> 
-    <img src="./image/era-right.png" alt="era, print happiness">
-    <h3>happiness</h3>
-  </div>
-</div>
+  </header>
 
-<div class="retro">
-  <div class="retro-left">
-    <div class="product-desc">
-    <p>유니크한 디자인의 코닥 포토프린터 RETRO</p>
-    <p>취향에 따라, 활용에 따라 나에게 딱 맞는 RETRO를 찾아보세요.</p>
+  <!-- 메뉴 -->
+  <div class="slide-menu">
+    <nav class="slide-menu-navigation">
+      <button type="button" class="global-menu-toggle toggle-close">(CLOSE)</button>
+      <ul class="slide-menu-navigation-bar">
+        <li>
+          <a href="#">
+            <span>EVENT</span>
+            <span>(01)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>REVIEW</span>
+            <span>(02)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>HISTORY</span>
+            <span>(03)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>MY PAGE</span>
+            <span>(04)</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
-  <ul class="retro-list">
-    <li>즉석카메라</li>
-    <li>포토프린터</li>
-  </ul>
-  </div>
-  <div class="retro-right">
-    <h3>every</h3>
-    <img src="./image/retro-right.jpg" alt="retro, every moment">
-    <h3>moment</h3>
-  </div>
-</div>
 
-<div class="cartridge">
-  <div class="cartridge-left">
-    <div class="product-desc">
-      <p>더욱 선명하게, 당신의 행복을 출력하세요.</p>
+
+
+  <section class="intro">
+    <div class="intro-top">
+      <h1>KODAK</h1>
     </div>
-  </div>
-  <div class="cartridge-right">
-    <h3>more</h3>
-    <img src="./image/car-right.jpg" alt="cartridge, more sharply">
-    <h3>Sharply</h3>
-  </div>
-</div>
-
-<a href="#">view more</a>
-</section>
-
-<section class="event">
-  <a href="#" class="event-icon">EVENT</a>
-<h2>찰나의 즐거운 순간을 담다</h2>
-<h2>KODAK</h2>
-<div class="swiper mySwiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <img src="./image/KakaoTalk_20241205_161214561_02.jpg" alt=""></div>
-    <div class="swiper-slide">
-      <img src="./image/KakaoTalk_20241205_161214561_01.jpg" alt="">
+    <div class="intro-image-wrapper flex">
+      <img src="./image/intro-image-1.png" alt="KODAK CAMERA">
+      <img src="./image/intro-image-2.png" alt="KODAK CAMERA">
+      <img src="./image/intro-image-3.png" alt="KODAK CAMERA">
+      <img src="./image/intro-image-4.png" alt="KODAK CAMERA">
     </div>
-    <div class="swiper-slide">
-      <img src="./image/KakaoTalk_20241205_161214561_26.jpg" alt="">
+    <div class="intro-bottom">
+      <h1>PHOTOPRINTER</h1>
     </div>
-  </div>
-  <div class="swiper-pagination"></div>
-</div>
-</section>
-<section class="marquee-auto">
-  <span>PRINT HAPPINESS</span>
-  <span>KODAK ERA</span>
-  <span>MINI SHOT</span>
-  <span>EVERY MOMENT</span>
-  <span>KODAK RETRO</span>
-  <span>DOCK PLUS</span>
-</section>
-<section class="info">
-  We lead
-  the world with
-  unparalleled technology
-  and create the best
-  CAMERA 
-  FILM
-  PHOTO PRINTER
-  Create  memorable moments with
-  Eastman kodak
-</section>
-<footer>
-  
-</footer>
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: "auto",
-    centeredSlides: true,
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-</script>
+  </section>
+  <section class="marquee">
+    <div class="marquee-container">
+      <span>Instant Camera</span>
+      <span>Instant Camera</span>
+      <span>Instant Camera</span>
+    </div>
+    <div class="marquee-container">
+      <span>Photo Printer</span>
+      <span>Photo Printer</span>
+      <span>Photo Printer</span>
+    </div>
+    <div class="marquee-container">
+      <span>Cartridge</span>
+      <span>Cartridge</span>
+      <span>Cartridge</span>
+    </div>
+  </section>
+
+  <section class="product">
+    <h2>코닥이라 즐거운 순간</h2>
+    <h2>PRODUCT</h2>
+
+    <div class="era">
+      <div class="era-left">
+        <div class="product-desc">
+          <p>35mm 필름통을 모티브한 디자인​, 아이코닉한 무드 그대로!</p>
+          <p>4PASS 기술로 더욱 선명한 ERA를 만나보세요.</p>
+        </div>
+        <ul class="era-list">
+          <li><a href="#">즉석카메라</a></li>
+          <li><a href="#">포토프린터</a></li>
+          <li><a href="#">라벨</a></li>
+        </ul>
+      </div>
+      <div class="era-right">
+        <h3>print</h3>
+        <img src="./image/era-right.png" alt="era, print happiness">
+        <h3>happiness</h3>
+      </div>
+    </div>
+
+    <div class="retro">
+      <div class="retro-left">
+        <div class="product-desc">
+          <p>유니크한 디자인의 코닥 포토프린터 RETRO</p>
+          <p>취향에 따라, 활용에 따라 나에게 딱 맞는 RETRO를 찾아보세요.</p>
+        </div>
+        <ul class="retro-list">
+          <li>즉석카메라</li>
+          <li>포토프린터</li>
+        </ul>
+      </div>
+      <div class="retro-right">
+        <h3>every</h3>
+        <img src="./image/retro-right.jpg" alt="retro, every moment">
+        <h3>moment</h3>
+      </div>
+    </div>
+
+    <div class="cartridge">
+      <div class="cartridge-left">
+        <div class="product-desc">
+          <p>더욱 선명하게, 당신의 행복을 출력하세요.</p>
+        </div>
+      </div>
+      <div class="cartridge-right">
+        <h3>more</h3>
+        <img src="./image/car-right.jpg" alt="cartridge, more sharply">
+        <h3>Sharply</h3>
+      </div>
+    </div>
+
+    <a href="#">view more</a>
+  </section>
+
+  <section class="event">
+    <a href="#" class="event-icon">EVENT</a>
+    <h2>찰나의 즐거운 순간을 담다</h2>
+    <h2>KODAK</h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./image/KakaoTalk_20241205_161214561_02.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./image/KakaoTalk_20241205_161214561_01.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./image/KakaoTalk_20241205_161214561_26.jpg" alt="">
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <section class="marquee-auto">
+    <span>PRINT HAPPINESS</span>
+    <span>KODAK ERA</span>
+    <span>MINI SHOT</span>
+    <span>EVERY MOMENT</span>
+    <span>KODAK RETRO</span>
+    <span>DOCK PLUS</span>
+  </section>
+
+  <section class="info">
+    <div class="info-row1">
+      <p>We lead</p>
+      <img src="./image/history_photo.jpg" alt="history_photo">
+      <p>the world with</p>
+    </div>
+    <div class="info-row-mix">
+      <div class="info-row-mix-image">
+        <img src="./image/info-Union.png" alt="info">
+      </div>
+      <div class="info-row-mix-text">
+        <p>unparalleled technology</p>
+        <p>and create the best</p>
+      </div>
+    </div>
+    <div class="info-row4">
+      <a href="#">CAMERA</a><a href="#">FILM</a><a href="#">PHOTO PRINTER</a>
+    </div>
+    <div class="info-row5">
+      <p>Create memorable moments with</p>
+    </div>
+    <div class="info-row6">
+      <p>Eastman kodak</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-info">
+        <div class="footer-info-cs">
+          <h4>CS CENTER</h4>
+          <strong class="cs-tell">070.5213.7814</strong>
+          <p>평일 10:00-17:00, 점심 12:00-13:00 <br>
+            주말, 공휴일 휴무</p>
+        </div>
+        <div class="footer-info-bank">
+          <h4>BANK INFO</h4>
+          <p>기업은행 28714657501158 <br>
+            예금주 : 프리닉스(주)
+          </p>
+        </div>
+      </div>
+      <div class="footer-menu">
+        <ul class="footer-menu-list">
+          <li>
+            <ul class="service">
+              <li>
+                <h4>SERVICE</h4>
+              </li>
+              <li><a href="#">자주 묻는 질문</a></li>
+              <li><a href="#">상품후기</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul class="my-page">
+              <li>
+                <h4>MY PAGE</h4>
+              </li>
+              <li><a href="#">마이페이지</a></li>
+              <li><a href="#">로그인</a></li>
+              <li><a href="#">회원가입</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul class="social">
+              <li>
+                <h4>SOCIAL</h4>
+              </li>
+              <li><a href="#">인스타그램</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <ul class="footer-support">
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">TERMS OF USE</a></li>
+        <li><a href="#">HELP</a></li>
+        <li><a href="#">PRIVACY POLICY</a></li>
+      </ul>
+      <ul class="footer-address">
+        <li>상호 : 프리닉스 주식회사</li>
+        <li>대표 : 노광호</li>
+        <li>사업자등록번호 : 124-86-38688</li>
+        <li>통신판매업신고번호 : 2016-수원권선-0285</li>
+        <li>대표번호 : 070-5213-7814</li>
+        <li>메일 : sales@prinics.com</li>
+        <li>주소 : 프리닉스 경기 수원시 권선구 산업로156번길 197-50</li>
+        <li>개인정보관리자 : 석인보</li>
+      </ul>
+      <p class="copyright">© kodakphotoprinter. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
+
 </html>

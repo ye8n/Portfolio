@@ -1,1 +1,23 @@
 @charset "utf-8";
+
+:root{
+  --white: #ffffff;
+  --black: #000000;
+  --primary-yellow: #FFB700;
+  --primary-red: #E2211C;
+
+  --font-en:'Syne', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+  --font-kr:'Paperlogy', -apple-system,BlinkMacSystemFont,Malgun Gothic,맑은 고딕,helvetica,Apple SD Gothic Neo,sans-serif;
+}
+
+
+button{
+  all: unset; 
+  cursor: pointer;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
