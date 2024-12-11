@@ -1,3 +1,4 @@
+// swiper
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: "auto",
   centeredSlides: true,
@@ -7,3 +8,4 @@ var swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
 });
+

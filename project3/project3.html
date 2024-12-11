@@ -4,15 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-  <title>title</title>
+  <title>KODAK PhotoPrinter</title>
   <link rel="stylesheet" href="../asset/style/reset.min.css">
-  <link rel="stylesheet" href="../asset/style/fonts.css">
   <link rel="stylesheet" href="../asset/style/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../asset/style/fonts.css">
   <link rel="stylesheet" href="./common.css">
   <link rel="stylesheet" href="./project3.css">
 
   <script src="../asset/script/jquery-3.7.1.min.js"></script>
   <script src="../asset/script/swiper-bundle.min.js"></script>
+  <script src="../asset/script/gsap.min.js"></script>
   <script defer src="./project3.js"></script>
 
 </head>
@@ -75,94 +76,118 @@
     </div>
   </section>
   <section class="marquee">
-    <div class="marquee-container">
-      <span>Instant Camera</span>
-      <span>Instant Camera</span>
-      <span>Instant Camera</span>
+    <div class="marquee-container line1">
+      <span class="marquee-item">Instant Camera</span>
+      <!-- <img class="marquee-arrow" src="./image/arrow-right-dark.svg" alt="arrow"> -->
+      <span class="marquee-item">Instant Camera</span>
+      <span class="marquee-item">Instant Camera</span>
     </div>
-    <div class="marquee-container">
-      <span>Photo Printer</span>
-      <span>Photo Printer</span>
-      <span>Photo Printer</span>
+    <div class="marquee-container line2">
+      <span class="marquee-item">Photo Printer</span>
+      <span class="marquee-item">Photo Printer</span>
+      <span class="marquee-item">Photo Printer</span>
     </div>
-    <div class="marquee-container">
-      <span>Cartridge</span>
-      <span>Cartridge</span>
-      <span>Cartridge</span>
+    <div class="marquee-container line3">
+      <span class="marquee-item">Cartridge</span>
+      <span class="marquee-item">Cartridge</span>
+      <span class="marquee-item">Cartridge</span>
     </div>
   </section>
 
   <section class="product">
-    <h2>코닥이라 즐거운 순간</h2>
-    <h2>PRODUCT</h2>
-
-    <div class="era">
-      <div class="era-left">
-        <div class="product-desc">
-          <p>35mm 필름통을 모티브한 디자인​, 아이코닉한 무드 그대로!</p>
-          <p>4PASS 기술로 더욱 선명한 ERA를 만나보세요.</p>
-        </div>
-        <ul class="era-list">
-          <li><a href="#">즉석카메라</a></li>
-          <li><a href="#">포토프린터</a></li>
-          <li><a href="#">라벨</a></li>
-        </ul>
-      </div>
-      <div class="era-right">
-        <h3>print</h3>
-        <img src="./image/era-right.png" alt="era, print happiness">
-        <h3>happiness</h3>
-      </div>
+    <div class="product-main-title">
+      <h2 class="product-main-slogan">코닥이라 즐거운 순간</h2>
+      <h2 class="product-main-text">PRODUCT</h2>
     </div>
 
-    <div class="retro">
-      <div class="retro-left">
-        <div class="product-desc">
-          <p>유니크한 디자인의 코닥 포토프린터 RETRO</p>
-          <p>취향에 따라, 활용에 따라 나에게 딱 맞는 RETRO를 찾아보세요.</p>
-        </div>
-        <ul class="retro-list">
-          <li>즉석카메라</li>
-          <li>포토프린터</li>
-        </ul>
-      </div>
-      <div class="retro-right">
-        <h3>every</h3>
-        <img src="./image/retro-right.jpg" alt="retro, every moment">
-        <h3>moment</h3>
-      </div>
-    </div>
+    <div class="product-container">
+      <div class="product-item era">
+        <div class="product-item-left era-left">
+          <div class="product-desc">
+            <p>35mm 필름통을 모티브한 디자인​, 아이코닉한 무드 그대로!</p>
+            <p>4PASS 기술로 더욱 선명한 ERA를 만나보세요.</p>
+          </div>
 
-    <div class="cartridge">
-      <div class="cartridge-left">
-        <div class="product-desc">
-          <p>더욱 선명하게, 당신의 행복을 출력하세요.</p>
+          <div class="product-menu">
+            <strong class="product-title">ERA</strong>
+            <ul class="product-list era-list">
+              <li><a href="#">즉석카메라</a></li>
+              <li><a href="#">포토프린터</a></li>
+              <li><a href="#">라벨</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="product-item-right era-right">
+          <h3>print</h3>
+          <img src="./image/era-right.png" alt="era, print happiness">
+          <h3>happiness</h3>
         </div>
       </div>
-      <div class="cartridge-right">
-        <h3>more</h3>
-        <img src="./image/car-right.jpg" alt="cartridge, more sharply">
-        <h3>Sharply</h3>
-      </div>
-    </div>
 
-    <a href="#">view more</a>
+      <div class="product-item retro">
+        <div class="product-item-left retro-left">
+          <div class="product-desc">
+            <p>유니크한 디자인의 코닥 포토프린터 RETRO</p>
+            <p>취향에 따라, 활용에 따라 나에게 딱 맞는 RETRO를 찾아보세요.</p>
+          </div>
+          <div class="product-menu">
+            <strong class="product-title">RETRO</strong>
+            <ul class="product-list retro-list">
+              <li>즉석카메라</li>
+              <li>포토프린터</li>
+            </ul>
+          </div>
+        </div>
+        <div class="product-item-right retro-right">
+          <h3>every</h3>
+          <img src="./image/retro-right.png" alt="retro, every moment">
+          <h3>moment</h3>
+        </div>
+      </div>
+
+      <div class="product-item cartridge">
+        <div class="product-item-left cartridge-left">
+          <div class="product-desc">
+            <p>더욱 선명하게, 당신의 행복을 출력하세요.</p>
+          </div>
+          <div class="product-menu">
+            <strong class="product-title">CARTRIDGE</strong>
+            <ul class="product-list cartridge-list">
+
+              <li>cartridge</li>
+              <li>acc</li>
+            </ul>
+          </div>
+        </div>
+        <div class="product-item-right cartridge-right">
+          <h3>more</h3>
+          <img src="./image/car-right.png" alt="cartridge, more sharply">
+          <h3>Sharply</h3>
+        </div>
+      </div>
+
+      <a href="#" class="more-button">view more</a>
+    </div>
   </section>
 
   <section class="event">
-    <a href="#" class="event-icon">EVENT</a>
-    <h2>찰나의 즐거운 순간을 담다</h2>
-    <h2>KODAK</h2>
+    <div class="event-top">
+      <a href="#" class="event-icon">EVENT</a>
+      <div class="event-title">
+        <h2 class="event-slogan">찰나의 즐거운 순간을 담다</h2>
+        <h2 class="event-text">KODAK</h2>
+      </div>
+    </div>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="./image/KakaoTalk_20241205_161214561_02.jpg" alt="">
+          <img src="./image/event1.png" alt="event1">
         </div>
         <div class="swiper-slide">
-          <img src="./image/KakaoTalk_20241205_161214561_01.jpg" alt="">
+          <img src="./image/event2.png" alt="event2">
         </div>
         <div class="swiper-slide">
-          <img src="./image/KakaoTalk_20241205_161214561_26.jpg" alt="">
+          <img src="./image/event3.png" alt="event3">
         </div>
       </div>
       <div class="swiper-pagination"></div>
