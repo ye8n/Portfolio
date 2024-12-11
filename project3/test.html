@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <title>test</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <style>
+ *, *::before, *::after {
+	 padding: 0;
+	 margin: 0;
+	 box-sizing: border-box;
+	 list-style: none;
+	 list-style-type: none;
+	 text-decoration: none;
+	 -webkit-font-smoothing: antialiased;
+	 -moz-osx-font-smoothing: grayscale;
+	 text-rendering: optimizeLegibility;
+}
+ html {
+	 font-size: 100%;
+	 box-sizing: inherit;
+	 scroll-behavior: smooth;
+	 height: -webkit-fill-available;
+}
+ body {
+	 font-family: "Rubik", sans-serif;
+	 font-size: 1rem;
+	 font-weight: 400;
+	 line-height: 1.5;
+	 color: var(--black-500);
+	 background-color: var(--white-100);
+}
+ main {
+	 overflow: hidden;
+}
+ a, button {
+	 cursor: pointer;
+	 user-select: none;
+	 border: none;
+	 outline: none;
+	 background: none;
+}
+ img {
+	 display: block;
+	 max-width: 100%;
+	 height: auto;
+	 object-fit: cover;
+	 image-rendering: -webkit-optimize-contrast;
+	 image-rendering: -moz-crisp-edges;
+	 image-rendering: crisp-edges;
+   height: 720px;
+
+
+}
+ .section {
+	 margin: 0 auto;
+	 padding-block: 5rem;
+}
+ .container {
+
+	 height: auto;
+
+	 margin-inline: auto;
+	 padding-inline: 1.25rem;
+}
+ .swiper-button-next::after, .swiper-button-prev::after {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 font-size: 0.75rem;
+	 font-weight: 800;
+	 padding: 1rem;
+	 width: 2rem;
+	 height: 2rem;
+	 opacity: 0.75;
+	 border-radius: 50%;
+	 color: var(--white-100);
+	 background: var(--black-300);
+}
+
+.event-title{
+  text-align: right;
+}
+.event-slogan{
+  font-family: var(--font-kr);
+  font-size: 6rem;
+  font-weight: 500;
+}
+.event-text{
+  font-family: var(--font-en);
+  font-size: 7.75rem;
+  font-weight: 900;
+}
+
+.event-icon{
+  font-size: 2.5rem;
+  font-family: var(--font-en);
+  font-weight: 600;
+  text-align: center;
+  width: 300px; height: 300px;
+  line-height: 300px;
+  text-indent: -9999px;
+  background: url(./image/star2.png) no-repeat 50% / cover;
+  transform: translateY(20%);
+  z-index: 9;
+}
+
+.event-top{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px;
+  /* background: sandybrown; */
+  margin-top: 200px;
+}
+ 
+  </style>
+</head>
+<body>
+  
+  <div class="event-top">
+    <a href="#" class="event-icon">EVENT</a>
+    <div class="event-title">
+      <h2 class="event-slogan">찰나의 즐거운 순간을 담다</h2>
+      <h2 class="event-text">KODAK</h2>
+    </div>
+  </div>
+
+  <div class="slider-section">
+    <div class="swiper-container slider-column">
+      <div class="swiper swiper-slider">
+        <div class="swiper-wrapper">
+          <img class="swiper-slide" src="https://cdn.pixabay.com/photo/2023/04/05/09/44/landscape-7901065_1280.jpg" alt="Swiper">
+          <img class="swiper-slide" src="https://cdn.pixabay.com/photo/2023/04/05/09/44/landscape-7901065_1280.jpg" alt="Swiper">
+          <img class="swiper-slide" src="https://cdn.pixabay.com/photo/2023/04/05/09/44/landscape-7901065_1280.jpg" alt="Swiper">
+          <img class="swiper-slide" src="https://cdn.pixabay.com/photo/2020/09/04/16/18/mountains-5544365_1280.jpg" alt="Swiper">
+          <img class="swiper-slide" src="https://cdn.pixabay.com/photo/2022/12/09/22/55/trees-7646226_1280.jpg" alt="Swiper">
+          <img class="swiper-slide" src="https://cdn.pixabay.com/photo/2019/09/13/11/47/mountains-4473760_1280.jpg" alt="Swiper">
+        </div>
+        <span class="swiper-pagination"></span>
+        <span class="swiper-button-prev"></span>
+        <span class="swiper-button-next"></span>
+      </div>
+    </div>
+  </div>
+
+  </main>
+  <script>
+  const swiper = new Swiper(".swiper-slider", {
+  // Optional parameters
+  centeredSlides: true,
+  slidesPerView: 1,
+  grabCursor: true,
+  freeMode: false,
+  loop: true,
+  mousewheel: false,
+  keyboard: {
+    enabled: true
+  },
+
+  // Enabled autoplay mode
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: false,
+    clickable: true
+  },
+
+  // If we need navigation
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+
+  // Responsive breakpoints
+  breakpoints: {
+    640: {
+      slidesPerView: 1.25,
+      spaceBetween: 20
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    }
+  }
+});
+
+  </script>
+</body>
+</html>
