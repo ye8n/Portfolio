@@ -31,28 +31,28 @@
     <nav class="slide-menu-navigation">
       <button type="button" class="global-menu-toggle toggle-close">(CLOSE)</button>
       <ul class="slide-menu-navigation-bar">
-        <li>
-          <a href="#">
-            <span>EVENT</span>
-            <span>(01)</span>
+        <li class="menu-item-wrapper">
+          <a class="menu-item" href="#">
+            <span class="menu-title">EVENT</span>
+            <span class="menu-num">(01)</span>
           </a>
         </li>
-        <li>
-          <a href="#">
-            <span>REVIEW</span>
-            <span>(02)</span>
+        <li class="menu-item-wrapper">
+          <a class="menu-item" href="#">
+            <span class="menu-title">REVIEW</span>
+            <span class="menu-num">(02)</span>
           </a>
         </li>
-        <li>
-          <a href="#">
-            <span>HISTORY</span>
-            <span>(03)</span>
+        <li class="menu-item-wrapper">
+          <a class="menu-item" href="#">
+            <span class="menu-title">HISTORY</span>
+            <span class="menu-num">(03)</span>
           </a>
         </li>
-        <li>
-          <a href="#">
-            <span>MY PAGE</span>
-            <span>(04)</span>
+        <li class="menu-item-wrapper">
+          <a class="menu-item" href="#">
+            <span class="menu-title">MY PAGE</span>
+            <span class="menu-num">(04)</span>
           </a>
         </li>
       </ul>
@@ -119,7 +119,9 @@
         </div>
         <div class="product-item-right era-right">
           <h3>print</h3>
+          <div class="product-image-wrapper">
           <img src="./image/era-right.png" alt="era, print happiness">
+        </div>
           <h3>happiness</h3>
         </div>
       </div>
@@ -140,7 +142,9 @@
         </div>
         <div class="product-item-right retro-right">
           <h3>every</h3>
+          <div class="product-image-wrapper">
           <img src="./image/retro-right.png" alt="retro, every moment">
+        </div>
           <h3>moment</h3>
         </div>
       </div>
@@ -161,7 +165,9 @@
         </div>
         <div class="product-item-right cartridge-right">
           <h3>more</h3>
+          <div class="product-image-wrapper">
           <img src="./image/car-right.png" alt="cartridge, more sharply">
+        </div>
           <h3>Sharply</h3>
         </div>
       </div>
@@ -216,53 +222,58 @@
   </section>
 
   <section class="info">
-    <div class="info-row1">
+    <div class="info-item info-row1">
       <p>We lead</p>
-      <img src="./image/history_photo.jpg" alt="history_photo">
+      <div class="info-image-wrapper">
+        <img class="info-image" src="./image/history_photo.jpg" alt="history_photo">
+      </div>
       <p>the world with</p>
     </div>
-    <div class="info-row-mix">
+    <div class="info-item info-row-mix">
       <div class="info-row-mix-image">
         <img src="./image/info-Union.png" alt="info">
+        <div class="info-arrow">
+          <img class="info-arrow-item" id="arrow" src="./image/arrow-right-white.svg" alt="arrow">
+        </div>
       </div>
-      <div class="info-row-mix-text">
+      <div class="info-item info-row-mix-text">
         <p>unparalleled technology</p>
         <p>and create the best</p>
       </div>
     </div>
-    <div class="info-row4">
-      <a href="#">CAMERA</a><a href="#">FILM</a><a href="#">PHOTO PRINTER</a>
+    <div class="info-item info-row4">
+      <a class="info-tag" href="#">CAMERA</a><a class="info-tag" href="#">FILM</a><a class="info-tag" href="#">PHOTO PRINTER</a>
     </div>
-    <div class="info-row5">
+    <div class="info-item info-row5">
       <p>Create memorable moments with</p>
     </div>
-    <div class="info-row6">
+    <div class="info-item info-row6">
       <p>Eastman kodak</p>
     </div>
   </section>
 
   <footer>
-    <div class="footer-top">
-      <div class="footer-info">
+    <div class="footer-top flex">
+      <div class="footer-info flex">
         <div class="footer-info-cs">
-          <h4>CS CENTER</h4>
+          <h4 class="footer-title">CS CENTER</h4>
           <strong class="cs-tell">070.5213.7814</strong>
           <p>평일 10:00-17:00, 점심 12:00-13:00 <br>
             주말, 공휴일 휴무</p>
         </div>
         <div class="footer-info-bank">
-          <h4>BANK INFO</h4>
+          <h4 class="footer-title">BANK INFO</h4>
           <p>기업은행 28714657501158 <br>
             예금주 : 프리닉스(주)
           </p>
         </div>
       </div>
-      <div class="footer-menu">
-        <ul class="footer-menu-list">
+      <div class="footer-menu ">
+        <ul class="footer-menu-list flex">
           <li>
             <ul class="service">
               <li>
-                <h4>SERVICE</h4>
+                <h4 class="footer-title">SERVICE</h4>
               </li>
               <li><a href="#">자주 묻는 질문</a></li>
               <li><a href="#">상품후기</a></li>
@@ -271,7 +282,7 @@
           <li>
             <ul class="my-page">
               <li>
-                <h4>MY PAGE</h4>
+                <h4 class="footer-title">MY PAGE</h4>
               </li>
               <li><a href="#">마이페이지</a></li>
               <li><a href="#">로그인</a></li>
@@ -281,7 +292,7 @@
           <li>
             <ul class="social">
               <li>
-                <h4>SOCIAL</h4>
+                <h4 class="footer-title">SOCIAL</h4>
               </li>
               <li><a href="#">인스타그램</a></li>
             </ul>
@@ -289,24 +300,28 @@
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <ul class="footer-support">
+    <div class="footer-bottom ">
+      <ul class="footer-support flex">
         <li><a href="#">ABOUT</a></li>
         <li><a href="#">TERMS OF USE</a></li>
         <li><a href="#">HELP</a></li>
         <li><a href="#">PRIVACY POLICY</a></li>
       </ul>
-      <ul class="footer-address">
+      <ul class="footer-address flex">
         <li>상호 : 프리닉스 주식회사</li>
         <li>대표 : 노광호</li>
         <li>사업자등록번호 : 124-86-38688</li>
-        <li>통신판매업신고번호 : 2016-수원권선-0285</li>
+        <li>통신판매업신고번호 : 2016-수원권선-0285 </li>
+        <li><span><a href="#">[사업자정보확인]</a></span>
+        </li>
+        <br>
         <li>대표번호 : 070-5213-7814</li>
         <li>메일 : sales@prinics.com</li>
         <li>주소 : 프리닉스 경기 수원시 권선구 산업로156번길 197-50</li>
         <li>개인정보관리자 : 석인보</li>
       </ul>
       <p class="copyright">© kodakphotoprinter. All rights reserved.</p>
+      <img class="aster" src="./image/aster.svg" alt="*">
     </div>
   </footer>
 </body>

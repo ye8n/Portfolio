@@ -56,7 +56,7 @@ const swiper = new Swiper(".swiper-slider", {
 
 
 // marq2
-const marqueeContainer = document.querySelector('.marquee-s-container');
+/* const marqueeContainer = document.querySelector('.marquee-s-container');
     const totalWidth = Array.from(marqueeContainer.children).reduce((acc, item) => acc + item.offsetWidth, 0);
 
     // 애니메이션 설정: marquee-s-container만 왼쪽으로 이동
@@ -71,4 +71,4 @@ const marqueeContainer = document.querySelector('.marquee-s-container');
         repeat: -1,  // 무한 반복
         ease: "linear",  // 일정한 속도로 애니메이션
       }
-    );
+    ); */
