@@ -58,18 +58,6 @@ $(document).ready(function () {
 });
 
 
-//gsap
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-let smoother = ScrollSmoother.create({
-  smooth: 2, 
-  effects: true
-});
-gsap.config({trialWarn: false});
-
-
-//
-
 $(document).ready(function () {
   // 초기 slide-menu는 숨김 상태
   $(".slide-menu").hide();
@@ -84,3 +72,14 @@ $(document).ready(function () {
     $(".slide-menu").slideUp(500); // 500ms 동안 슬라이드 업
   });
 });
+
+
+//gsap
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+let smoother = ScrollSmoother.create({
+  smooth: 2, 
+  effects: true
+});
+gsap.config({trialWarn: false});
+
