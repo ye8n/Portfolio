@@ -1,15 +1,3 @@
-// swiper
-// var swiper = new Swiper(".mySwiper", {
-//   slidesPerView: "auto",
-//   centeredSlides: true,
-//   spaceBetween: 30,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
-
-
 const swiper = new Swiper(".swiper-slider", {
   // Optional parameters
   centeredSlides: true,
@@ -54,21 +42,45 @@ const swiper = new Swiper(".swiper-slider", {
   }
 });
 
+$(document).ready(function () {
+  // 초기 slide-menu는 숨김 상태
+  $(".slide-menu").hide();
 
-// marq2
-/* const marqueeContainer = document.querySelector('.marquee-s-container');
-    const totalWidth = Array.from(marqueeContainer.children).reduce((acc, item) => acc + item.offsetWidth, 0);
+  // 메뉴 열기 버튼
+  $(".toggle-open").click(function () {
+    $(".slide-menu").slideDown(800); // 500ms 동안 슬라이드 다운
+  });
 
-    // 애니메이션 설정: marquee-s-container만 왼쪽으로 이동
-    gsap.fromTo(
-      marqueeContainer, 
-      {
-        x: '100%'  // 시작 위치 (화면 오른쪽 끝)
-      }, 
-      {
-        x: `-${totalWidth}px`,  // 끝 위치 (전체 텍스트 길이만큼 왼쪽으로 이동)
-        duration: 10,  // 애니메이션 시간 (10초)
-        repeat: -1,  // 무한 반복
-        ease: "linear",  // 일정한 속도로 애니메이션
-      }
-    ); */
+  // 메뉴 닫기 버튼
+  $(".toggle-close").click(function () {
+    $(".slide-menu").slideUp(800); // 500ms 동안 슬라이드 업
+  });
+});
+
+
+//gsap
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+let smoother = ScrollSmoother.create({
+  smooth: 2, 
+  effects: true
+});
+gsap.config({trialWarn: false});
+
+
+//
+
+$(document).ready(function () {
+  // 초기 slide-menu는 숨김 상태
+  $(".slide-menu").hide();
+
+  // 메뉴 열기 버튼
+  $(".toggle-open").click(function () {
+    $(".slide-menu").slideDown(500); // 500ms 동안 슬라이드 다운
+  });
+
+  // 메뉴 닫기 버튼
+  $(".toggle-close").click(function () {
+    $(".slide-menu").slideUp(500); // 500ms 동안 슬라이드 업
+  });
+});
