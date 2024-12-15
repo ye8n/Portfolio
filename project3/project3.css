@@ -528,6 +528,13 @@ footer{
 }
 
 /* hover 이벤트 */
+
+.menu-item:hover {
+  font-size: 11.25rem;
+  font-weight: 900;
+  transition: font-weight 0.28s cubic-bezier(.68,-.55,.27,1.55);
+}
+
 .more-button, .info-tag {
   transition: background 0.5s, color 0.5s; /* 기본 상태에서의 트랜지션 설정 */
 }
