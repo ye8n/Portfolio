@@ -89,6 +89,7 @@ header {
   position: relative;
   width: 100%;
   justify-content: center;
+  margin-top: 130px;
 }
 
 .intro-image-wrapper img {
@@ -125,6 +126,7 @@ header {
   position: relative;
   bottom: 40px;
   z-index: 9;
+  user-select: none;
 }
 
 /**** marquee ****/
@@ -136,6 +138,7 @@ header {
   color: var(--white);
   text-transform: uppercase;
   overflow: hidden;
+  user-select: none;
 }
 
 .marquee-arrow {
@@ -166,24 +169,28 @@ header {
 
 .product {
   text-transform: uppercase;
+  
 }
 
 .product-main-title {
   padding: 54px;
   padding-bottom: 0;
   transform: translateY(25%);
+  user-select: none;
 }
 
 .product-main-slogan {
   font-family: var(--font-kr);
   font-size: 6rem;
   font-weight: 500;
+
 }
 
 .product-main-text {
   font-family: var(--font-en);
   font-size: 7.75rem;
   font-weight: 900;
+
 }
 
 .product-item {
@@ -202,6 +209,7 @@ header {
   font-family: var(--font-kr);
   font-size: 1.5rem;
   font-weight: 400;
+  user-select: none;
 }
 
 .product-list {
@@ -247,6 +255,7 @@ header {
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .product-item-right h3 {
@@ -317,9 +326,15 @@ header {
   margin: 0 50px;
   margin-top: 200px;
   z-index: 9;
+  user-select: none;
 }
 
 /* swiper */
+
+.swiper-slide {
+  cursor: pointer;
+}
+
 .slider-section{
   transform: translateY(-18%);
   position: relative;
@@ -360,6 +375,7 @@ header {
   background: var(--primary-yellow);
   overflow: hidden;
   margin-top: 72px;
+  user-select: none;
 }
 
 .marquee-s-container{
@@ -512,24 +528,25 @@ footer{
 }
 
 /* hover 이벤트 */
-.menu-item:hover {
-  font-size: 11.25rem;
-  font-weight: 900;
-  transition: font-weight 0.28s cubic-bezier(.68,-.55,.27,1.55);
+.more-button, .info-tag {
+  transition: background 0.5s, color 0.5s; /* 기본 상태에서의 트랜지션 설정 */
 }
 .more-button:hover, .info-tag:hover {
-  background:var(--primary-red);
+  background: var(--primary-red);
   color: var(--white);
-  transition: 0.5s;
+}
+.more-button:hover::after {
+  filter: invert(1);
+  transition: filter 0.5s; /* 호버 시 필터 변화를 부드럽게 처리 */
+}
+.more-button::after, .info-tag::after {
+  transition: filter 0.5s; /* 기본 상태에서도 필터의 트랜지션을 설정 */
 }
 
 .info-tag:hover{
   background: var(--primary-yellow);;
 }
-.more-button:hover::after {
-  filter: invert(1); /* 호버 시 SVG 색을 반전 */
-  transition: 0.5s;
-}
+
 .marquee-item:hover{
   font-weight: 900;
 }
