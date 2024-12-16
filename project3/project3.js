@@ -182,3 +182,46 @@ window.onload = function() {
     );
   });
 };
+
+// 
+let menuOpen = false; // 메뉴 열림 상태 추적 변수
+
+// 메뉴 열기 버튼
+$(".global-menu-toggle").click(function () {
+  if (!menuOpen) {
+    $(".slide-menu").slideDown(800); // 메뉴 열기
+    $("body").css("overflow", "hidden"); // 메뉴가 열리면 스크롤 비활성화
+    menuOpen = true;
+
+    // 메뉴 열릴 때 각 메뉴 항목에 애니메이션 적용
+    $(".menu-item-wrapper").each(function (index) {
+      gsap.to($(this).find(".menu-border"), {
+        duration: 0.3,  // 보더 애니메이션 속도를 더 빠르게 설정
+        width: "100%",  // 보더가 왼쪽에서 오른쪽으로 차례대로 등장
+        delay: index * 0.1, // 각 항목마다 0.1초씩 차이 두고 애니메이션
+        ease: "power2.out" // ease로 부드러운 효과 추가
+      });
+    });
+  }
+});
+
+// 메뉴 닫기 버튼
+$(".toggle-close").click(function () {
+  if (menuOpen) {
+    // 보더 애니메이션 먼저 실행
+    $(".menu-item-wrapper").each(function (index) {
+      gsap.to($(this).find(".menu-border"), {
+        duration: 0.08,  // 보더 애니메이션 속도를 더 빠르게 설정
+        width: "0%",  // 보더가 오른쪽에서 왼쪽으로 사라짐
+        delay: ($(".menu-item-wrapper").length - index - 1) * 0.1, // 역순으로 애니메이션
+        ease: "power2.in" // ease로 부드럽게
+      });
+    });
+
+    // 메뉴 닫기 애니메이션
+    $(".slide-menu").slideUp(800, function () {
+      $("body").css("overflow", "auto"); // 메뉴가 닫히면 스크롤 활성화
+      menuOpen = false;
+    });
+  }
+});
