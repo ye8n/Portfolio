@@ -56,7 +56,7 @@
     bottom: 0;
     left: 0;
     width: 0%; /* 초기 상태에서 0% */
-    height: 2px;
+    height: 4px;
     background-color: #000;
     transition: width 0.5s ease; /* width 애니메이션 추가 */
   }
@@ -66,7 +66,18 @@
     text-decoration: none;
   } 
 
-
+/* c추가2 */
+#hover-image {
+  position: fixed; /* 화면 어디든 따라다닐 수 있도록 설정 */
+  width: 100px; /* 이미지 크기 */
+  height: 100px; /* 이미지 크기 */
+  background-size: cover; /* 배경 이미지를 전체 크기에 맞춤 */
+  background-repeat: no-repeat; /* 이미지 반복 제거 */
+  background-position: center; /* 이미지 중앙 정렬 */
+  pointer-events: none; /* 마우스 이벤트가 이미지에 영향을 주지 않음 */
+  display: none; /* 기본 상태에서 숨김 */
+  z-index: 1000; /* 다른 요소 위에 표시되도록 설정 */
+}
 /**** header ****/
 
 header {
@@ -186,7 +197,7 @@ header {
 }
 
 .marquee-container:not(:nth-last-child(1)) {
-  border-bottom: 2px solid var(--white);
+  border-bottom: 4px solid var(--white);
 }
 
 /**** product ****/
@@ -221,11 +232,11 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 30px 50px;
-  border: 2px solid #000;
+  border: 4px solid #000;
 }
 
 .product-item-left {
-  border-right: 2px solid #000;
+  border-right: 4px solid #000;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -265,7 +276,7 @@ header {
 /* product 오른쪽 */
 
 .product-image-wrapper{
-  border: 2px solid #000;
+  border: 4px solid #000;
   overflow: hidden;
 }
 
@@ -295,7 +306,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #000;
+  outline: 4px solid #000;
   margin: 0 50px;
   border-radius: 100px;
 
@@ -445,7 +456,7 @@ header {
 .info-image-wrapper{
   height: 114px;
   border-radius: 60px;
-  border: 3px solid var(--primary-yellow);
+  border: 4px solid var(--primary-yellow);
   margin: 0 22px;
   width: auto;
 }
@@ -475,7 +486,7 @@ header {
 }
 
 .info-tag{
-  outline: 3px solid var(--primary-yellow);
+  outline: 4px solid var(--primary-yellow);
   border-radius: 60px;
   font-size: 3.75rem;
   font-weight: 400;
@@ -562,7 +573,7 @@ footer{
 .menu-item:hover {
   font-size: 11.25rem;
   font-weight: 900;
-  transition: font-weight 0.28s cubic-bezier(.68,-.55,.27,1.55);
+  transition:  font-weight 0.28s cubic-bezier(.68,-.55,.27,1.55);
 }
 
 .more-button, .info-tag {
@@ -571,6 +582,7 @@ footer{
 .more-button:hover, .info-tag:hover {
   background: var(--primary-red);
   color: var(--white);
+
 }
 .more-button:hover::after {
   filter: invert(1);
@@ -579,10 +591,21 @@ footer{
 .more-button::after, .info-tag::after {
   transition: filter 0.5s; /* 기본 상태에서도 필터의 트랜지션을 설정 */
 }
-
 .info-tag:hover{
   background: var(--primary-yellow);;
 }
+
+/* 호버 시 border와 그림자 효과 */
+.info-tag:hover {
+  outline: 4px solid #fff;
+  box-shadow: 0 0 20px 5px var(--primary-yellow);
+}
+.more-button:hover {
+  outline: 4px solid #fff;
+  box-shadow: 0 0 20px 5px var(--primary-red);
+}
+
+
 
 .marquee-item:hover{
   font-weight: 900;
@@ -596,24 +619,15 @@ footer{
   transform: scale(1.15); 
 }
 
-/* 
-
-*/
-.swiper-lazy-preloader {
-  width: 50px;
-  height: 50px;
-  border: 5px solid rgba(0, 0, 0, 0.2);
-  border-top: 5px solid #000;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin: auto;
+/* 추가 */
+.menu-item {
+  font-size: 3rem; /* 기본 크기 */
+  font-weight: 400; /* 기본 굵기 */
+  transition: font-size 0.4s ease-in-out, font-weight 0.4s cubic-bezier(.68,-.55,.27,1.55);
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.menu-item:hover {
+  font-size: 11.25rem; /* 마우스 올렸을 때 크기 */
+  font-weight: 900; /* 마우스 올렸을 때 굵기 */
+  transition: font-size 0.4s ease-in-out, font-weight 0.4s cubic-bezier(.68,-.55,.27,1.55);
 }

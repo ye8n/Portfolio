@@ -35,13 +35,13 @@ $(document).ready(function () {
 
   // 메뉴 열기 버튼
   $(".toggle-open").click(function () {
-    $(".slide-menu").slideDown(800); // 500ms 동안 슬라이드 다운
+    $(".slide-menu").slideDown(300); // 500ms 동안 슬라이드 다운
     $("body").css("overflow", "hidden"); // 메뉴가 열리면 스크롤 비활성화 // 추가함
   });
 
   // 메뉴 닫기 버튼
   $(".toggle-close").click(function () {
-    $(".slide-menu").slideUp(800); // 500ms 동안 슬라이드 업
+    $(".slide-menu").slideUp(300); // 500ms 동안 슬라이드 업
     $("body").css("overflow", "auto"); // 메뉴가 닫히면 스크롤 활성화
   });
 });
@@ -224,4 +224,8 @@ $(".toggle-close").click(function () {
       menuOpen = false;
     });
   }
+});
+
+$('a[href="#"]').on('click', function(e) {
+  e.preventDefault()
 });
