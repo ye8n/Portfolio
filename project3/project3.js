@@ -72,7 +72,7 @@ gsap.config({trialWarn: false});
 // GSAP 및 ScrollTrigger 등록
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.set(".intro-bottom h1", { x: "18vw" }); 
+gsap.set(".intro-bottom h1", { x: "10vw" }); 
 
 gsap.to(".intro-bottom h1", {
   x: "-35vw", // 텍스트를 화면 왼쪽으로 이동 (조정 가능)
