@@ -570,14 +570,8 @@ footer{
 
 /* hover 이벤트 */
 
-.menu-item:hover {
-  font-size: 11.25rem;
-  font-weight: 900;
-  transition:  font-weight 0.28s cubic-bezier(.68,-.55,.27,1.55);
-}
-
 .more-button, .info-tag {
-  transition: background 0.5s, color 0.5s; /* 기본 상태에서의 트랜지션 설정 */
+  transition: background 0.5s, color 0.5s; 
 }
 .more-button:hover, .info-tag:hover {
   background: var(--primary-red);
@@ -586,10 +580,10 @@ footer{
 }
 .more-button:hover::after {
   filter: invert(1);
-  transition: filter 0.5s; /* 호버 시 필터 변화를 부드럽게 처리 */
+  transition: filter 0.5s;
 }
 .more-button::after, .info-tag::after {
-  transition: filter 0.5s; /* 기본 상태에서도 필터의 트랜지션을 설정 */
+  transition: filter 0.5s;
 }
 .info-tag:hover{
   background: var(--primary-yellow);;
@@ -605,12 +599,14 @@ footer{
   box-shadow: 0 0 20px 5px var(--primary-red);
 }
 
-
-
-.marquee-item:hover{
-  font-weight: 900;
+.marquee-item{
+  font-variation-settings: 'wght' 400; /* 기본 굵기 */
+  transition: font-size 0.4s ease, font-variation-settings 0.4s ease; /* 부드러운 전환 */
 }
 
+.marquee-item:hover{
+  font-variation-settings: 'wght' 900;
+}
 
 .product-item-right img {
   transition: transform 0.3s cubic-bezier(.47, 0, .745, .715);
@@ -620,14 +616,13 @@ footer{
 }
 
 /* 추가 */
-.menu-item {
-  font-size: 3rem; /* 기본 크기 */
-  font-weight: 400; /* 기본 굵기 */
-  transition: font-size 0.4s ease-in-out, font-weight 0.4s cubic-bezier(.68,-.55,.27,1.55);
+.menu-title {
+  font-variation-settings: 'wght' 400; /* 기본 굵기 */
+  transition: font-size 0.4s ease, font-variation-settings 0.4s ease; /* 부드러운 전환 */
 }
 
-.menu-item:hover {
+/* hover 상태 */
+.menu-title:hover {
   font-size: 11.25rem; /* 마우스 올렸을 때 크기 */
-  font-weight: 900; /* 마우스 올렸을 때 굵기 */
-  transition: font-size 0.4s ease-in-out, font-weight 0.4s cubic-bezier(.68,-.55,.27,1.55);
+  font-variation-settings: 'wght' 900; /* 마우스 올렸을 때 굵기 */
 }
