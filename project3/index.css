@@ -45,20 +45,25 @@
     padding: 1.46rem 0;
 }
 
-
-
+.ui-style-guide .ui-style-guide-container{
+    grid-template-columns: auto;
+}
+.ui-style-guide img{
+    width: fit-content;
+}
+.ui-style-guide .ui-style-guide-container .color, .ui-style-guide .ui-style-guide-container .font,
+.ui-style-guide .ui-style-guide-container{
+    padding: 0;
+}
+/* 퍼블리싱 포인트 */
 .publishing-list{
     padding:0 2rem;
     list-style-type: circle;
-    line-height: 160%;
+    line-height: 200%;
 }
-
-
-
 .problem img{
     width: 220px;
 }
-
 .problem-img{
     right: 21%;
 }

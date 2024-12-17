@@ -11,9 +11,11 @@
   padding: 60px 0;
   display: none;
 } 
-.menu-item-wrapper:not(:last-child){
+/* .menu-item-wrapper{
   border-bottom: 2px solid #000;
-}
+} */
+
+
 
 .menu-item-wrapper:nth-child(1) .menu-item {padding-left: 20.521vw;}
 .menu-item-wrapper:nth-child(2) .menu-item {padding-left: 10.417vw;}
@@ -40,14 +42,42 @@
 .global-menu-toggle{
   font-size: 1.75rem;
 }
-.toggle-close{
+.toggle-close{  
   position: absolute;
   right: 54px;
   top: 45px;
   z-index: 999;
 }
+/* 추가 */
 
+  .menu-border {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%; /* 초기 상태에서 0% */
+    height: 4px;
+    background-color: #000;
+    transition: width 0.5s ease; /* width 애니메이션 추가 */
+  }
 
+  .menu-item-wrapper a {
+    display: block;
+    text-decoration: none;
+  } 
+
+/* c추가2 */
+#hover-image {
+  position: fixed; /* 화면 어디든 따라다닐 수 있도록 설정 */
+  width: 100px; /* 이미지 크기 */
+  height: 100px; /* 이미지 크기 */
+  background-size: cover; /* 배경 이미지를 전체 크기에 맞춤 */
+  background-repeat: no-repeat; /* 이미지 반복 제거 */
+  background-position: center; /* 이미지 중앙 정렬 */
+  pointer-events: none; /* 마우스 이벤트가 이미지에 영향을 주지 않음 */
+  display: none; /* 기본 상태에서 숨김 */
+  z-index: 1000; /* 다른 요소 위에 표시되도록 설정 */
+}
 /**** header ****/
 
 header {
@@ -129,6 +159,11 @@ header {
   user-select: none;
 }
 
+.intro-bottom h1{
+  padding-left: 8%;
+}
+
+
 /**** marquee ****/
 .marquee {
   background: #000;
@@ -162,7 +197,7 @@ header {
 }
 
 .marquee-container:not(:nth-last-child(1)) {
-  border-bottom: 2px solid var(--white);
+  border-bottom: 4px solid var(--white);
 }
 
 /**** product ****/
@@ -197,11 +232,11 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 30px 50px;
-  border: 2px solid #000;
+  border: 4px solid #000;
 }
 
 .product-item-left {
-  border-right: 2px solid #000;
+  border-right: 4px solid #000;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -241,7 +276,7 @@ header {
 /* product 오른쪽 */
 
 .product-image-wrapper{
-  border: 2px solid #000;
+  border: 4px solid #000;
   overflow: hidden;
 }
 
@@ -271,7 +306,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #000;
+  outline: 4px solid #000;
   margin: 0 50px;
   border-radius: 100px;
 
@@ -317,6 +352,7 @@ header {
   text-indent: -9999px;
   background: url(./image/star2.png) no-repeat 50% / cover;
   transform: translateY(20%);
+  
 }
 
 .event-top {
@@ -420,7 +456,7 @@ header {
 .info-image-wrapper{
   height: 114px;
   border-radius: 60px;
-  border: 3px solid var(--primary-yellow);
+  border: 4px solid var(--primary-yellow);
   margin: 0 22px;
   width: auto;
 }
@@ -450,7 +486,7 @@ header {
 }
 
 .info-tag{
-  outline: 3px solid var(--primary-yellow);
+  outline: 4px solid var(--primary-yellow);
   border-radius: 60px;
   font-size: 3.75rem;
   font-weight: 400;
@@ -499,6 +535,11 @@ footer{
 .footer-title{
   margin-bottom: 22px;
 }
+
+.footer-support li{
+  margin-right: 54px;
+}
+
 .cs-tell{
   font-size: 2.5rem;
   font-weight: 900;
@@ -529,39 +570,59 @@ footer{
 
 /* hover 이벤트 */
 
-.menu-item:hover {
-  font-size: 11.25rem;
-  font-weight: 900;
-  transition: font-weight 0.28s cubic-bezier(.68,-.55,.27,1.55);
-}
-
 .more-button, .info-tag {
-  transition: background 0.5s, color 0.5s; /* 기본 상태에서의 트랜지션 설정 */
+  transition: background 0.5s, color 0.5s; 
 }
 .more-button:hover, .info-tag:hover {
   background: var(--primary-red);
   color: var(--white);
+
 }
 .more-button:hover::after {
   filter: invert(1);
-  transition: filter 0.5s; /* 호버 시 필터 변화를 부드럽게 처리 */
+  transition: filter 0.5s;
 }
 .more-button::after, .info-tag::after {
-  transition: filter 0.5s; /* 기본 상태에서도 필터의 트랜지션을 설정 */
+  transition: filter 0.5s;
 }
-
 .info-tag:hover{
   background: var(--primary-yellow);;
 }
 
-.marquee-item:hover{
-  font-weight: 900;
+/* 호버 시 border와 그림자 효과 */
+.info-tag:hover {
+  outline: 4px solid #fff;
+  box-shadow: 0 0 20px 5px var(--primary-yellow);
+}
+.more-button:hover {
+  outline: 4px solid #fff;
+  box-shadow: 0 0 20px 5px var(--primary-red);
 }
 
+.marquee-item{
+  font-variation-settings: 'wght' 400; /* 기본 굵기 */
+  transition: font-size 0.4s ease, font-variation-settings 0.4s ease; /* 부드러운 전환 */
+}
+
+.marquee-item:hover{
+  font-variation-settings: 'wght' 900;
+}
 
 .product-item-right img {
   transition: transform 0.3s cubic-bezier(.47, 0, .745, .715);
 }
 .product-item-right:hover img {
   transform: scale(1.15); 
+}
+
+/* 추가 */
+.menu-title {
+  font-variation-settings: 'wght' 400; /* 기본 굵기 */
+  transition: font-size 0.4s ease, font-variation-settings 0.4s ease; /* 부드러운 전환 */
+}
+
+/* hover 상태 */
+.menu-title:hover {
+  font-size: 11.25rem; /* 마우스 올렸을 때 크기 */
+  font-variation-settings: 'wght' 900; /* 마우스 올렸을 때 굵기 */
 }
