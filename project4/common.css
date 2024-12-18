@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+:root{
+  --white: #ffffff;
+  --black: #000000;
+  --primary-orange: #EC5036;
+
+  --font-en:'Futura', -apple-system,BlinkMacSystemFont,Malgun Gothic,맑은 고딕,helvetica,Apple SD Gothic Neo,sans-serif;
+  --font-kr:'Pretendard', -apple-system,BlinkMacSystemFont,Malgun Gothic,맑은 고딕,helvetica,Apple SD Gothic Neo,sans-serif;
+  --font-title:'SCDream', -apple-system,BlinkMacSystemFont,Malgun Gothic,맑은 고딕,helvetica,Apple SD Gothic Neo,sans-serif;
+}

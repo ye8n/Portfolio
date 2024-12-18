@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <title>푸투라 서울 FUTURA SEOUL</title>
+
+  <!-- 퍼블리싱 후 필요없는 것 삭제할 것 -->
+  <link rel="stylesheet" href="../asset/style/reset.min.css">
+  <link rel="stylesheet" href="../asset/style/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../asset/style/fonts.css">
+  <link rel="stylesheet" href="./common.css">
+  <link rel="stylesheet" href="./project4.css">
+
+  <script src="../asset/script/jquery-3.7.1.min.js"></script>
+  <script src="../asset/script/swiper-bundle.min.js"></script>
+  <script src="../asset/script/gsap.min.js"></script>
+  <script src="../asset/script/ScrollTrigger.min.js"></script>
+  <script src="../asset/script/ScrollSmoother.min.js"></script>
+  <script defer src="./project4.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <nav class="headerNav">
+      <div class="mobileBurger">
+        <div class="burgerIcon">
+          <span class="burgerBar"></span>
+          <span class="burgerBar"></span>
+          <span class="burgerBar"></span>
+        </div>
+      </div>
+      <div class="logoWrapper" id="logo">
+        <a href="#">푸투라 서울 FUTURA SEOUL</a>
+      </div>
+      <div class="language">EN</div>
+    </nav>
+  </header>
+
+  <section class="home">
+    <div class="background">
+      <video autoplay muted loop class="background-video">
+        <source src="./image/futuraSeoul.mp4" type="video/mp4">
+      </video>
+      <div class="homeContainer">
+        <div class="homeTitle">
+          <h1>Connecting <br> Past and <br> Future</h1>
+          <p>푸투라 서울의 'Futura'는 미래를 뜻하는 라틴어입니다. 사대부들의 생활 공간이자 그들의 지적 유산이 깃든 북촌 가회동의 유구한 역사 위에서 미래를 향한 다각적인 시선을 담아내고자 합니다. 
+          <br>
+          푸투라 서울은 과거에서 현재 그리고 미래를 유연하게 넘나들며 개인과 지역 사회, 나아가 글로벌 예술 커뮤니티를 위한 진보적이고 다채로운 예술 경험을 제공할 것입니다.</p>
+          <div class="booking">
+            <a href="#" class="primaryBtn">
+              <span class="btnLabelRound">티켓 예매</spa>
+              <div class="btnIcon"></div>
+            </a>
+            <a href="#" class="subBtn">
+              <span class="btnLabel">단체 예약 바로가기</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="poems">
+    <div class="sectionTitle">
+      <h2 class="title">백 개의 시</h2>
+      <p class="content">‘백 개의 시’는 푸투라 서울의 하이라이트 전시 공간으로 전시 하나를 한 편의 시로 여기고 100개의 시를 써 내려가는 마음으로 준비한 공간입니다.
+        <br>
+        자연과 시간의 변화를 담은 공간에서 백 개의 시는 백 개의 전시로 변주되어 관람객 여러분과 함께합니다.
+      </p>
+      <a href="#" class="moreBtn">자세히보기</a>
+    </div>
+    <!-- swiper 구간 : 추가할 것-->
+    <section class="swiperTop"></section>
+  </section>
+
+  <section class="earth ">
+    <div class="sectionTitle">
+      <h2 class="title">지구의 밤</h2>
+      <p class="content">‘푸투라 서울은 다양한 분야의 예술가들이 인간과 미래에 대한 시선을 담아내는 ‘NIGHT ON EARTH: HUMAN, NATURE, MACHINE, AND FUTURE’라는 협업 프로그램을 기획하였습니다.
+      <br>
+      본 프로그램을 통해 다양한 창작자들과 관람객들이 자유롭게 서로의 생각과 영감을 공유하고 이해하는 장을 마련하고자 합니다.
+      </p>
+      <a href="#" class="moreBtn">자세히보기</a>
+    </div>
+    <!--  -->
+    <div class="contents">
+      <a href="#" class="primaryBtn">
+        <span class="btnLabelRound">Talk</span>
+        <div class="carouselBtnWrapper">
+          <div class="carouselBtn prev"></div>
+          <div class="carouselBtn next"></div>
+        </div>
+      </a>
+      <div class="earthInfo">
+        <div class="earthItem">
+          <div class="itemImg">
+            <img src="./image/talk1.png" alt="한스 울리히 토크 TALK (2024. 09. 04)">
+          </div>
+          <div class="itemText">
+            <p>2024.08.31(토) 14:00 - 16:00</p>
+            <p>푸투라 서울 1.5층 라운지</p>
+          </div>
+        </div>
+        <div class="earthItem">
+          <div class="itemImg">
+            <img src="./image/talk2.jpeg" alt="레픽 아나돌 x 한스 울리히 x 강이연 교수 Talk">
+          </div>
+          <div class="itemText">
+            <p>2024.08.31(토) 14:00 - 16:00</p>
+            <p>푸투라 서울 1.5층 라운지</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="space">
+    <div class="sectionTitle">
+      <h2 class="title">FUTURA SPACE</h2>
+      <p class="content">푸투라 서울의 공간은 두 개의 존으로 구분됩니다.
+      <br>
+      첫번째 존은 1층 로비와 후원, 2층 전시실과 중정공간, 3층 테라스와 옥상 정원으로 촘촘히 나뉘어 있는 반면 두번째 존은 10.8m 층고의 하나의 대형 전시실로 구성되어 두개의 존이 서로 대별되는 개성적인 공간으로 만들어져 있습니다.
+      </p>
+      <a href="#" class="subBtn">푸트라 서울 건축</a>
+    </div>
+    <div class="contents">
+      <ul class="spaceList">
+        <li>
+          <a href="#">
+            <div class="spaceImg"><img src="./image/외관1.jpeg" alt="건물외관"></div>
+            <div class="spaceText">
+              <p>건물 외관</p>
+              <p>BUILDING EXTERIOR</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="spaceImg"><img src="./image/1층과후원.png" alt="1층"></div>
+            <div class="spaceText">
+              <p>1층과 후원</p>
+              <p>FIRST FLOOR AND REAR GARDEN</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="spaceImg"><img src="./image/2층전시공간.jpg" alt="2층"></div>
+            <div class="spaceText">
+              <p>2층 전시 공간</p>
+              <p>SECOND FLOOR EXHIBITION SPACE</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="spaceImg"><img src="./image/3층테라스와루프탑.jpg" alt="3층"></div>
+            <div class="spaceText">
+              <p>3층 테라스와 루프탑</p>
+              <p>THIRD-FLOOR TERRACE AND ROOFTOP</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="spaceImg"><img src="./image/백개의시.png" alt="백개의시"></div>
+            <div class="spaceText">
+              <p>백 개의 시</p>
+              <p>100 Poems</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="foturaInfo">
+    <div class="infoTop">
+      <div class="infoText">
+      <div class="logoWrapper" id="logo">
+        <a href="#">푸투라 서울 FUTURA SEOUL</a>
+      </div>
+      <p>푸투라 서울에 들어선 순간, 여러분들의 일상 속 친숙한 주제들이 미래를 향한 창조적 사고와 통찰로 이어지기를 희망합니다. </p>
+    </div>
+    <div class="infoImg">
+      <img src="./image/info.png" alt="FUTURA SEOUL">
+    </div>
+    </div>
+    <div class="infoBottom">
+      <ul class="infoList">
+        <li class="story">
+          <h3>OUR STORY</h3>
+          <p>푸투라 서울의 'Futura'는 미래를 뜻하는 
+            라틴어입니다.</p>
+        </li>
+        <li class="contact">
+          <h3>CONTACT US</h3>
+          <p>일반 문의, 대관, 협업, 입점 등 모든 문의</p>
+          <div class="tel">
+            <p>TEL. 02-3676-1000</p>
+            <p>E-MAIL. info@futuraseoul.org</p>
+          </div>
+        </li>
+        <li class="rental">
+          <h3>SPACE RENTAL</h3>
+          <p>대관 문의</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="swiperBottom">
+    <!-- 스와이퍼 추가할 것 -->
+  </section>
+  <footer>
+    <div class="footerTop">
+      <a href="#">이용약관</a>
+      <a href="#">개인정보처리방침</a>
+    </div>
+    <div class="footerMiddle">
+      <p>푸투라 서울 | 서울특별시 종로구 북촌로 61(03052), FUTURA SEOUL</p>
+      <p>대표자명: 김한준</p>
+      <p>법인명: 주식회사 백산아트앤네트워크</p>
+      <p>사업자 등록번호: 229-87-01713 </p>
+      <p>TEL. 02-3676-1000 </p>
+      <p>CONTACT MAIL. info@futuraseoul.org</p>
+    </div>
+    <div class="footerBottom">
+      <a href="#" class="instargram">instargram</a>
+      <a href="#" class="youtube">youtube</a>
+    </div>
+  </footer>
+</body>
+</html>

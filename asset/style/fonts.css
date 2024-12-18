@@ -29,6 +29,11 @@
 	src: url('../font/Pretendard-Regular.woff2') format('woff2');
 	font-weight:400;
 }
+@font-face {
+	font-family: 'Pretendard';
+	src: url('../font/Pretendard-SemiBold.woff2') format('woff2');
+	font-weight:500;
+}
 /* pretendard - Bold */
 @font-face {
 	font-family: 'Pretendard';
@@ -134,3 +139,23 @@
   font-display: swap;
   font-weight: 400 900; /* 가변폰트 범위 */
 }
+
+/* project4 */
+/* 에스코어드림 */
+@font-face {
+  font-family: 'SCDream';
+  src: url('../font/SCDream5.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500; 
+}
+
+/* Futura-Medium */
+@font-face {
+  font-family: 'Futura';
+  src: url('../font/Futura-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400; 
+}
+
