@@ -190,6 +190,15 @@ header .header-main .header-wrapper .global-navigation-bar a:hover{
   text-transform: capitalize;
   color: var(--color-project1-primary);
   width: 100%;
+  height: 60vh;
+}
+
+.project-link{
+  width: 100%;
+  height: 60vh;
+  display: grid;
+  place-items: center;
+  align-content: center
 }
 
 .project_wrapper h2{
@@ -225,7 +234,17 @@ header .header-main .header-wrapper .global-navigation-bar a:hover{
   color:#FDFBF4;
 }
 
+.project-gh .bg-video{
+  filter: brightness(1.1);
+}
 
+.project-kd{
+  position: relative;
+}
+
+.project-kd .bg-video{
+  filter: brightness(0.48);
+}
 
 /**** skill ****/
 .skill {
@@ -422,8 +441,23 @@ footer{
  }
 }
 
+/* sticky */
 
 
-.cursor_container{
-  display: none;
+
+.project-01, .project-02, .project-03 {
+  position: sticky;
+  top: 0;
+}
+.project-01, .project-02, .project-03 {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white; /* 배경색을 설정하여 겹칠 때 불투명하게 보이지 않도록 */
+}
+.project-02 {
+  z-index: 2;
+}
+.project-03 {
+  z-index: 3;
 }

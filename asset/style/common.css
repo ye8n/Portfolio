@@ -37,6 +37,26 @@ html::-webkit-scrollbar-track{
   visibility: hidden;
 }
 
+.ball {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: var(--color-black); color: var(--bg-light);
+  position: fixed;
+  pointer-events: none; 
+  z-index: 9999;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+
+  display: grid; 
+  place-items: center; 
+  
+  top: 0;
+  left: 0;
+}
+
 .flex-wrapper{
   display: flex;
   align-items: center; 

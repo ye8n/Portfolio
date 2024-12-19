@@ -1,11 +1,26 @@
 @charset "utf-8";
 
+body{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.08);
+}
+.mobileContainer{
+  width: 390px;
+  position: absolute;
+  
+}
+
 /* header */
 header{
   height: 72px;
   background: var(--white);
   padding: 20px 40px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+  position: fixed;
+  width: 390px;
+  z-index: 9999;
 }
 .headerNav{
   display: flex;

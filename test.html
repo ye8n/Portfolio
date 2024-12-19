@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>test</title>
+  <style>
+    .project-rcr{
+  position: relative;
+}
+.bg-video {
+  height: 100%;
+  width: 100%;
+  z-index: -999;
+  opacity: 0.85;
+  position: relative;
+}
+.bg-video_content {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  height: 100vh;
+}
+.gradi{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(8,13,28,0.65);
+  z-index: -99;
+  top: 0; left: 0;
+}
+.project_wrapper{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-transform: capitalize;
+  color: var(--color-project1-primary);
+  width: 100%;
+}
+
+.project_wrapper h2{
+  font-family: 'Goia Display';
+  font-size: var(--font-xlg);
+  letter-spacing: -0.15rem;
+  margin-bottom: 1.667vw;
+
+}
+.project-desc-wrapper{
+  justify-content: center;
+  gap: 2rem; /* 공통 스타일로 변경*/
+ }
+
+.project .project_wrapper {
+  letter-spacing: -0.5px;
+
+}
+
+.project-desc-wrapper{
+  text-align: left;
+  font-size: var(--font-desc);
+}
+.mainTitle-en{
+  font-family: 'Goia Display';
+  text-transform: capitalize;
+  font-size: 7.292vw;
+  letter-spacing: -0.2rem;
+  
+}
+
+.project-title{
+  font-weight: bold;
+  font-size: 32px;
+  margin-top: var(--spacing-xlg);
+  margin-bottom: 2rem;
+
+}
+
+.rounded{
+  border: 1px solid var(--color-black);
+  padding: 4px 10px;
+  border-radius: 1rem;
+  margin: 0 2px;
+}
+
+.rounded-fill{
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 4px 10px;
+  border-radius: 1rem;
+  border: 1px solid var(--color-black);
+  margin: 0 2px;
+}
+
+section{    
+  word-break: keep-all;
+  line-height: 1.3;
+  letter-spacing: -1px;
+}
+
+.layout{
+  margin: var(--spacing-xlg);
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  background-color: red; /* 임시 색상 */
+  border-radius: 50%;
+  position: fixed; /* 화면 내에서 위치 고정 */
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%); /* 중심 맞추기 */
+  pointer-events: none; /* 마우스 이벤트 방지 */
+  z-index: 1000; /* 다른 요소 위에 표시 */
+}
+
+
+</style>
+<script src="./asset/script/gsap.min.js"></script>
+<script src="../asset/script/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <article class="project-rcr">
+    <div class="bg-video">
+        <video class="bg-video_content" src="./asset/video/project1_6s.mp4" muted autoplay loop></video>
+    </div>
+    <div class="gradi"></div>
+    <div class="project_wrapper">
+        <a href="./project1/project1.html">
+            <h2>railroad crime reporting</h2>
+            <div class="project-desc-wrapper flex-wrapper">
+                <img style="width: 340px;" src="./asset/image/project1_subtitle2.svg" alt="UX / UI 리디자인 프로젝트">
+                <div class="project-desc">
+                    <p>국토교통부 제공 철도범죄신고 APP <strong>리디자인</strong></p>
+                    <p><strong>사용자 중심 디자인</strong>을 반영한 직관적인 ux/ui 구현</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</article>
+
+  <div class="ball"></div>
+
+  <script>
+    window.onload = () => {
+  gsap.set(".ball", { xPercent: -50, yPercent: -50 });
+
+  const ball = document.querySelector(".ball");
+  if (!ball) {
+    console.error("Cannot find .ball element.");
+    return;
+  }
+
+  let pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 }; // 화면 중앙 초기화
+  let mouse = { x: pos.x, y: pos.y };
+  let speed = 0.1;
+
+  const xSet = gsap.quickSetter(ball, "x", "px");
+  const ySet = gsap.quickSetter(ball, "y", "px");
+
+  window.addEventListener("mousemove", (e) => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+
+  gsap.ticker.add(() => {
+    let dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
+    pos.x += (mouse.x - pos.x) * dt;
+    pos.y += (mouse.y - pos.y) * dt;
+    xSet(pos.x);
+    ySet(pos.y);
+  });
+
+  gsap.set(ball, { scale: 0 });
+
+  const projectWrapper = document.querySelector(".project_wrapper");
+  if (!projectWrapper) {
+    console.error("Cannot find .project_wrapper element.");
+    return;
+  }
+
+  projectWrapper.addEventListener("mouseenter", () => {
+    gsap.to(ball, { scale: 1, duration: 0.3 });
+  });
+
+  projectWrapper.addEventListener("mousedown", () => {
+    gsap.to(ball, { scale: 0.7, duration: 0.3 });
+  });
+
+  projectWrapper.addEventListener("mouseup", () => {
+    gsap.to(ball, { scale: 1, duration: 0.3 });
+  });
+
+  projectWrapper.addEventListener("mouseleave", () => {
+    gsap.to(ball, { scale: 0, duration: 0.3 });
+  });
+};
+
+  </script>
+</body>
+</html>

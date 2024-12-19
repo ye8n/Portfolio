@@ -27,8 +27,9 @@
 
     <script src="./asset/script/jquery-3.7.1.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-    <script src="./asset/script/cursor.js"></script>
+    <script src="./asset/script/gsap.min.js"></script>
+    <script defer src="./index.js"></script>
+
 
 </head>
 
@@ -72,31 +73,36 @@
   <!-- project 프로젝트 -->
     <section class="project">
       <!-- 철도신고범죄 -->
+      <div class="project-01">
       <article class="project-rcr">
         <div class="bg-video">
             <video class="bg-video_content" src="./asset/video/project1_6s.mp4" muted autoplay loop></video>
         </div>
         <div class="gradi"></div>
-        <a href="./project1/project1.html">
         <div class="project_wrapper">
-            <h2>railroad crime reporting</h2>
-            <div class="project-desc-wrapper flex-wrapper">
-                <img style="width: 340px;" src="./asset/image/project1_subtitle2.svg" alt="UX / UI 리디자인 프로젝트">
-                <div class="project-desc">
-                    <p>국토교통부 제공 철도범죄신고 APP <strong>리디자인</strong></p>
-                    <p><strong>사용자 중심 디자인</strong>을 반영한 직관적인 ux/ui 구현</p>
+            <a class="project-link" href="./project1/project1.html">
+                <h2>railroad crime reporting</h2>
+                <div class="project-desc-wrapper flex-wrapper">
+                    <img style="width: 340px;" src="./asset/image/project1_subtitle2.svg" alt="UX / UI 리디자인 프로젝트">
+                    <div class="project-desc">
+                        <p>국토교통부 제공 철도범죄신고 APP <strong>리디자인</strong></p>
+                        <p><strong>사용자 중심 디자인</strong>을 반영한 직관적인 ux/ui 구현</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
-      </a>
     </article>
+  </div>
+    
+
     <!-- 그랑핸드 -->
+    <div class="project-02">
     <article class="project-gh">
       <div class="bg-video">
       <video class="bg-video_content" src="./project2/image/granhand_7s.mp4" muted autoplay loop></video>
        </div>
-      <a href="./project2/project2.html">
         <div class="project_wrapper">
+          <a class="project-link" href="./project2/project2.html">
             <h2>GRANHAND.</h2>
             <div class="project-desc-wrapper flex-wrapper">
               <!-- 타이틀자리 비워둠, 제작할것 ... -->
@@ -107,16 +113,19 @@
                     <p><strong>반응형 사이트 구현</strong></p>
                 </div>
             </div>
+          </a>
         </div>
-      </a>
     </article>
+  </div>
     <!-- KODAK PhothPrinter -->
-    <article class="project-gh">
+    <div class="project-03">
+    <article class="project-kd">
       <div class="bg-video">
       <video class="bg-video_content" src="./project3/image/kodak_26s.mp4" muted autoplay loop></video>
        </div>
-      <a href="./project3/project3.html">
-        <div class="project_wrapper">
+       <div class="project_wrapper">
+      <a class="project-link" href="./project3/project3.html">
+        
             <h2 style="color: #FFB700;">KODAK PhotoPrinter</h2>
             <div class="project-desc-wrapper flex-wrapper">
               <!-- 타이틀자리 비워둠, 제작할것 ... -->
@@ -127,13 +136,13 @@
                     <p><strong>목표 수정할 것</strong></p>
                 </div>
             </div>
+          </a>
         </div>
-      </a>
     </article>
+  </div>
+</section>
 
-    <article class="project"></article>
-    <article class="project"></article>
-        </section>
+
         <section class="skill flex-wrapper">
             <div class="skill-container">
               <div class="skill-text">
@@ -232,153 +241,12 @@
       </section>   
         <!-- noise -->
         <div class="noise" style="opacity: 0.04; visibility: visible;"></div>
-    <script>
-        // main home - 텍스트 타이핑
-        var TxtRotate = function (el, toRotate, period) {
-            this.toRotate = toRotate;
-            this.el = el;
-            this.loopNum = 0;
-            this.period = parseInt(period, 10) || 2000;
-            this.txt = '';
-            this.tick();
-            this.isDeleting = false;
-        };
-        TxtRotate.prototype.tick = function () {
-            var i = this.loopNum % this.toRotate.length;
-            var fullTxt = this.toRotate[i];
+        <!-- ball -->
+        <div class="ball">
+          view 
+          <br>
+          More
+        </div>
 
-            if (this.isDeleting) {
-                this.txt = fullTxt.substring(0, this.txt.length - 1);
-            } else {
-                this.txt = fullTxt.substring(0, this.txt.length + 1);
-            }
-
-            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
-
-            var that = this;
-            var delta = 160 - Math.random() * 100;
-
-            if (this.isDeleting) { delta /= 2; }
-
-            if (!this.isDeleting && this.txt === fullTxt) {
-                delta = this.period;
-                this.isDeleting = true;
-            } else if (this.isDeleting && this.txt === '') {
-                this.isDeleting = false;
-                this.loopNum++;
-                delta = 500;
-            }
-
-            setTimeout(function () {
-                that.tick();
-            }, delta);
-        };
-
-        window.onload = function () {
-            var elements = document.getElementsByClassName('txt-rotate');
-            for (var i = 0; i < elements.length; i++) {
-                var toRotate = elements[i].getAttribute('data-rotate');
-                var period = elements[i].getAttribute('data-period');
-                if (toRotate) {
-                    new TxtRotate(elements[i], JSON.parse(toRotate), period);
-                }
-            }
-            // INJECT CSS
-            var css = document.createElement("style");
-            css.type = "text/css";
-            // css.innerHTML = ".txt-rotate > .wrap { border-right: 0.18em solid #ccc; }";
-            document.body.appendChild(css);
-        };
-    </script>
-
-    <!-- swiper -->
-    <script>
-        const cardActionsControllers = document.querySelectorAll(
-      ".card-actions-controller"
-    );
-    
-    cardActionsControllers.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const targetId = btn.getAttribute("data-target");
-        const cardActionsContent = document.getElementById(targetId);
-    
-        if (cardActionsContent) {
-          const isVisible = cardActionsContent.getAttribute("data-visible");
-    
-          if (isVisible === "false") {
-            cardActionsContent.setAttribute("data-visible", "true");
-            cardActionsContent.setAttribute("aria-hidden", "false");
-            btn.setAttribute("aria-expanded", "true");
-          } else {
-            cardActionsContent.setAttribute("data-visible", "false");
-            cardActionsContent.setAttribute("aria-hidden", "true");
-            btn.setAttribute("aria-expanded", "false");
-          }
-        }
-      });
-    });
-    
-    function handleClickOutside(event) {
-      cardActionsControllers.forEach((btn) => {
-        const targetId = btn.getAttribute("data-target");
-        const cardActionsContent = document.getElementById(targetId);
-    
-        if (cardActionsContent && cardActionsContent.getAttribute("data-visible") === "true") {
-          if (!cardActionsContent.contains(event.target) && event.target !== btn) {
-            cardActionsContent.setAttribute("data-visible", "false");
-            cardActionsContent.setAttribute("aria-hidden", "true");
-            btn.setAttribute("aria-expanded", "false");
-          }
-        }
-      });
-    }
-    
-    document.addEventListener("click", handleClickOutside);
-    
-    cardActionsControllers.forEach((btn) => {
-      btn.addEventListener("click", (event) => {
-        event.stopPropagation();
-      });
-    });
-    
-    const likeBtns = document.querySelectorAll(".card-like");
-    
-    likeBtns.forEach((likeBtn) => {
-      likeBtn.addEventListener("click", () => {
-        if (likeBtn.classList.contains("active")) {
-          likeBtn.classList.remove("active");
-        } else {
-          likeBtn.classList.add("active");
-        }
-      });
-    });
-    
-    // Swiper
-    
-    var swiper = new Swiper(".swiper", {
-      grabCursor: true,
-      speed: 400,
-      mousewheel: {
-        invert: false,
-      },
-      scrollbar: {
-        el: ".swiper-scrollbar",
-        draggable: true,
-      },
-      slidesPerView: 1,
-      spaceBetween: 10,
-      // Responsive breakpoints
-      breakpoints: {
-        900: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        1200: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-      },
-    });
-      </script> 
     </body> 
     </html>
