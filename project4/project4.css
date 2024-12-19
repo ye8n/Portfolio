@@ -35,6 +35,9 @@ header{
   height: 33px;
   text-indent: -9999px;
 }
+
+
+
 .burgerBar {
   position: relative;
   display: block;
@@ -42,6 +45,7 @@ header{
   background-color: #000; 
   margin: 8px 0; 
   transition: all 0.3s ease;
+  height: 2px;
 }
 .language{
   background: var(--black);
@@ -50,6 +54,9 @@ header{
   padding: 10px 24px;
   text-align: center;
 }
+
+
+
 
 /* home */
 .home {
@@ -137,20 +144,6 @@ header{
   align-items: center;
 }
 
-/* .btnLabel::after{
-  content: "";
-  flex-shrink: 0;
-  transition:
-transform .3s 
-cubic-bezier(.165,.84,.44,1);
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  background:#fff;
-  color: #000;
-  border-radius: 100%;  
-} */
-
 .btnLabel{
   position: relative;
   font-size: 16px;
@@ -201,7 +194,8 @@ cubic-bezier(.165,.84,.44,1);
   margin-bottom: 20px;
 }
 .sectionTitle{
-  padding: 0 21px;
+  padding: 74px 21px;
+  background: var(--white);
 }
 
 .moreBtn {
@@ -229,3 +223,29 @@ cubic-bezier(.165,.84,.44,1);
   color: var(--white); 
 }
 
+/* poems */
+/* swiper */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/* 지구의밤 */
